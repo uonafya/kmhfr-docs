@@ -1,6 +1,6 @@
-# Website
+# KMHFR Docs
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+The KMHFR Docs is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 ### Installation
 
