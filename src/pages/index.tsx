@@ -13,7 +13,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title} Version 3 Docs
+          {siteConfig.title} 
         </Heading>
         <p className='hero__subtitle'>Kenya Master Health Facility Registry (KMHFR) is a web based application which serves as the official registry of Health Facilities and Community Health Units in Kenya. </p>
         {/* <p className="hero__subtitle">{siteConfig.tagline}</p> */}
@@ -21,7 +21,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Learn More 
+            Get Started with the docs 📑
           </Link>
         </div>
       </div>
@@ -30,7 +30,9 @@ function HomepageHeader() {
 }
 
 export default function Home(): JSX.Element {
+  
   const {siteConfig} = useDocusaurusContext();
+
   return (
     <Layout
       title={`${siteConfig.title}`}

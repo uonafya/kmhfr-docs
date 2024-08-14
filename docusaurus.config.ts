@@ -101,7 +101,7 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
-        {href: 'https://kmhfltest.health.go.ke', label: 'Site', position: 'left'},
+        {href: 'https://kmhfr.health.go.ke', label: 'Site', position: 'left'},
         {href: 'https://elearning.health.go.ke/enrol/index.php?id=76', label: 'KMHFR E-learning', position: 'left'},
         {href: 'https://health.go.ke', label: 'Ministry of Health', position: 'left'},
 

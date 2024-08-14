@@ -14,7 +14,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_building.svg').default,
     description: (
       <>
-        KMHFR has over 1600 health facilities in kenya.
+        KMHFR has over 1400 health facilities in kenya.
       </>
     ),
   },
