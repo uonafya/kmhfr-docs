@@ -1,0 +1,4682 @@
+---
+sidebar_position: 3
+title: Community Units
+---
+
+# API
+
+This is a guide of all community unit API endpoints for KMHFR
+
+import BrowserWindow from '../../../src/components/BrowserWindow'
+
+
+## api_chul_chu_ratings_read
+
+<a id="opIdapi_chul_chu_ratings_read"></a>
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/chu_ratings/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/chul/chu_ratings/{id}/`
+
+Retrieves, updates and deletes a community health unit's rating
+
+<h3 id="api_chul_chu_ratings_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this chu rating.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "facility_name": "string",
+  "facility_id": "string",
+  "chu_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "rating": 5,
+  "comment": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "chu": "8ee344e7-8b56-4d87-bb63-7c1cdc6cb8ed"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_chu_ratings_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHURating](#schemachurating)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_chu_ratings_create
+
+<a id="opIdapi_chul_chu_ratings_create"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "rating": 5,
+  "comment": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "chu": "8ee344e7-8b56-4d87-bb63-7c1cdc6cb8ed"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/chu_ratings/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/chul/chu_ratings/`
+
+*Lists and creates community health unit ratings*
+
+chu -- A community health unit
+rating -- The rating given
+Created ---  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "rating": 5,
+  "comment": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "chu": "8ee344e7-8b56-4d87-bb63-7c1cdc6cb8ed"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_chu_ratings_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CHURating](#schemachurating)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "facility_name": "string",
+  "facility_id": "string",
+  "chu_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "rating": 5,
+  "comment": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "chu": "8ee344e7-8b56-4d87-bb63-7c1cdc6cb8ed"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_chu_ratings_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CHURating](#schemachurating)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_chu_ratings_update
+
+<a id="opIdapi_chul_chu_ratings_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "rating": 5,
+  "comment": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "chu": "8ee344e7-8b56-4d87-bb63-7c1cdc6cb8ed"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/chu_ratings/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/chul/chu_ratings/{id}/`
+
+Retrieves, updates and deletes a community health unit's rating
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "rating": 5,
+  "comment": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "chu": "8ee344e7-8b56-4d87-bb63-7c1cdc6cb8ed"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_chu_ratings_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CHURating](#schemachurating)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this chu rating.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "facility_name": "string",
+  "facility_id": "string",
+  "chu_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "rating": 5,
+  "comment": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "chu": "8ee344e7-8b56-4d87-bb63-7c1cdc6cb8ed"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_chu_ratings_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHURating](#schemachurating)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_chu_ratings_partial_update
+
+<a id="opIdapi_chul_chu_ratings_partial_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "rating": 5,
+  "comment": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "chu": "8ee344e7-8b56-4d87-bb63-7c1cdc6cb8ed"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/chu_ratings/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/chul/chu_ratings/{id}/`
+
+Retrieves, updates and deletes a community health unit's rating
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "rating": 5,
+  "comment": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "chu": "8ee344e7-8b56-4d87-bb63-7c1cdc6cb8ed"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_chu_ratings_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CHURating](#schemachurating)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this chu rating.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "facility_name": "string",
+  "facility_id": "string",
+  "chu_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "rating": 5,
+  "comment": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "chu": "8ee344e7-8b56-4d87-bb63-7c1cdc6cb8ed"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_chu_ratings_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHURating](#schemachurating)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_chu_ratings_delete
+
+<a id="opIdapi_chul_chu_ratings_delete"></a>
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/chu_ratings/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/chul/chu_ratings/{id}/`
+
+Retrieves, updates and deletes a community health unit's rating
+
+<h3 id="api_chul_chu_ratings_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this chu rating.|
+
+<h3 id="api_chul_chu_ratings_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_services_list
+
+<a id="opIdapi_chul_services_list"></a>
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/services/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/chul/services/`
+
+*Lists and creates statuses*
+
+Created ---  Date the status was Created
+Updated -- Date the status was Updated
+Created_by -- User who created the status
+Updated_by -- User who updated the status
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+name  --  Name of the service
+description -- The description of the service
+
+<h3 id="api_chul_services_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "name": "string",
+      "description": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_services_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_chul_services_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[CHUService](#schemachuservice)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» created|string(date-time)|false|none|none|
+|»» updated|string(date-time)|false|none|none|
+|»» deleted|boolean|false|none|none|
+|»» active|boolean|false|none|Indicates whether the record has been retired?|
+|»» search|string|false|read-only|none|
+|»» name|string|true|none|none|
+|»» description|string¦null|false|none|none|
+|»» created_by|integer|false|none|none|
+|»» updated_by|integer|false|none|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_services_create
+
+<a id="opIdapi_chul_services_create"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/services/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/chul/services/`
+
+*Lists and creates statuses*
+
+Created ---  Date the status was Created
+Updated -- Date the status was Updated
+Created_by -- User who created the status
+Updated_by -- User who updated the status
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+name  --  Name of the service
+description -- The description of the service
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_services_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CHUService](#schemachuservice)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_services_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CHUService](#schemachuservice)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_services_read
+
+<a id="opIdapi_chul_services_read"></a>
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/services/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/chul/services/{id}/`
+
+Retrieves a particular status
+
+<h3 id="api_chul_services_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this chu service.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_services_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHUService](#schemachuservice)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_services_update
+
+<a id="opIdapi_chul_services_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/services/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/chul/services/{id}/`
+
+Retrieves a particular status
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_services_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CHUService](#schemachuservice)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this chu service.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_services_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHUService](#schemachuservice)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_services_partial_update
+
+<a id="opIdapi_chul_services_partial_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/services/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/chul/services/{id}/`
+
+Retrieves a particular status
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_services_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CHUService](#schemachuservice)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this chu service.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_services_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHUService](#schemachuservice)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_services_delete
+
+<a id="opIdapi_chul_services_delete"></a>
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/services/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/chul/services/{id}/`
+
+Retrieves a particular status
+
+<h3 id="api_chul_services_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this chu service.|
+
+<h3 id="api_chul_services_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_statuses_list
+
+<a id="opIdapi_chul_statuses_list"></a>
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/statuses/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/chul/statuses/`
+
+*Lists and creates statuses*
+
+Created ---  Date the status was Created
+Updated -- Date the status was Updated
+Created_by -- User who created the status
+Updated_by -- User who updated the status
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_chul_statuses_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "name": "string",
+      "description": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_statuses_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_chul_statuses_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[Status](#schemastatus)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» created|string(date-time)|false|none|none|
+|»» updated|string(date-time)|false|none|none|
+|»» deleted|boolean|false|none|none|
+|»» active|boolean|false|none|Indicates whether the record has been retired?|
+|»» search|string|false|read-only|none|
+|»» name|string|true|none|none|
+|»» description|string¦null|false|none|none|
+|»» created_by|integer|false|none|none|
+|»» updated_by|integer|false|none|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_statuses_create
+
+<a id="opIdapi_chul_statuses_create"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/statuses/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/chul/statuses/`
+
+*Lists and creates statuses*
+
+Created ---  Date the status was Created
+Updated -- Date the status was Updated
+Created_by -- User who created the status
+Updated_by -- User who updated the status
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_statuses_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[Status](#schemastatus)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_statuses_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Status](#schemastatus)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_statuses_read
+
+<a id="opIdapi_chul_statuses_read"></a>
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/statuses/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/chul/statuses/{id}/`
+
+Retrieves a particular status
+
+<h3 id="api_chul_statuses_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this status.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_statuses_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Status](#schemastatus)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_statuses_update
+
+<a id="opIdapi_chul_statuses_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/statuses/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/chul/statuses/{id}/`
+
+Retrieves a particular status
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_statuses_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[Status](#schemastatus)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this status.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_statuses_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Status](#schemastatus)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_statuses_partial_update
+
+<a id="opIdapi_chul_statuses_partial_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/statuses/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/chul/statuses/{id}/`
+
+Retrieves a particular status
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_statuses_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[Status](#schemastatus)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this status.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_statuses_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Status](#schemastatus)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_statuses_delete
+
+<a id="opIdapi_chul_statuses_delete"></a>
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/statuses/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/chul/statuses/{id}/`
+
+Retrieves a particular status
+
+<h3 id="api_chul_statuses_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this status.|
+
+<h3 id="api_chul_statuses_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_unit_contacts_list
+
+<a id="opIdapi_chul_unit_contacts_list"></a>
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/unit_contacts/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/chul/unit_contacts/`
+
+*Lists and creates community unit contacts*
+
+health_unit -- A community health unit pk
+contact  -- A contact id
+Created ---  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_chul_unit_contacts_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+      "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_unit_contacts_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_chul_unit_contacts_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» created|string(date-time)|false|none|none|
+|»» updated|string(date-time)|false|none|none|
+|»» deleted|boolean|false|none|none|
+|»» active|boolean|false|none|Indicates whether the record has been retired?|
+|»» search|string|false|read-only|none|
+|»» created_by|integer|false|none|none|
+|»» updated_by|integer|false|none|none|
+|»» health_unit|string(uuid)|true|none|none|
+|»» contact|string(uuid)|true|none|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_unit_contacts_create
+
+<a id="opIdapi_chul_unit_contacts_create"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/unit_contacts/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/chul/unit_contacts/`
+
+*Lists and creates community unit contacts*
+
+health_unit -- A community health unit pk
+contact  -- A contact id
+Created ---  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_unit_contacts_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_unit_contacts_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_unit_contacts_read
+
+<a id="opIdapi_chul_unit_contacts_read"></a>
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/unit_contacts/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/chul/unit_contacts/{id}/`
+
+Retrieves a particular community health unit contact
+
+<h3 id="api_chul_unit_contacts_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this community health unit contact.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_unit_contacts_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_unit_contacts_update
+
+<a id="opIdapi_chul_unit_contacts_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/unit_contacts/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/chul/unit_contacts/{id}/`
+
+Retrieves a particular community health unit contact
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_unit_contacts_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this community health unit contact.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_unit_contacts_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_unit_contacts_partial_update
+
+<a id="opIdapi_chul_unit_contacts_partial_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/unit_contacts/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/chul/unit_contacts/{id}/`
+
+Retrieves a particular community health unit contact
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_unit_contacts_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this community health unit contact.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_unit_contacts_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_unit_contacts_delete
+
+<a id="opIdapi_chul_unit_contacts_delete"></a>
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/unit_contacts/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/chul/unit_contacts/{id}/`
+
+Retrieves a particular community health unit contact
+
+<h3 id="api_chul_unit_contacts_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this community health unit contact.|
+
+<h3 id="api_chul_unit_contacts_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_units_list
+
+<a id="opIdapi_chul_units_list"></a>
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/units/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/chul/units/`
+
+*Lists and creates community health units*
+
+Created ---  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the status
+Updated_by -- User who updated the status
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_chul_units_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "status_name": "string",
+      "health_unit_workers": "string",
+      "facility_name": "string",
+      "facility_ward": "string",
+      "facility_constituency": "string",
+      "facility_subcounty": "string",
+      "facility_county": "string",
+      "ward_code": "string",
+      "lat_long": "string",
+      "contacts": "string",
+      "geo_features": "string",
+      "boundaries": "string",
+      "pending_updates": "string",
+      "latest_update": "string",
+      "avg_rating": "string",
+      "number_of_ratings": "string",
+      "services": [
+        {
+          "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+          "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+          "service": "cd8c5e52-093e-43db-9c42-184f00e681dd",
+          "name": "string",
+          "health_unit_name": "string",
+          "created": "2019-08-24T14:15:22Z",
+          "updated": "2019-08-24T14:15:22Z",
+          "deleted": true,
+          "active": true,
+          "search": "string",
+          "created_by": 0,
+          "updated_by": 0
+        }
+      ],
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "name": "string",
+      "code": "string",
+      "households_monitored": 2147483647,
+      "date_established": "2019-08-24",
+      "date_operational": "2019-08-24",
+      "is_approved": true,
+      "approval_comment": "string",
+      "approval_date": "2019-08-24T14:15:22Z",
+      "location": "string",
+      "is_closed": true,
+      "closing_comment": "string",
+      "is_rejected": true,
+      "rejection_reason": "string",
+      "has_edits": true,
+      "number_of_chvs": 2147483647,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "status": "82eda2a6-0a31-45ba-9c43-cfddbcb85a6d"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_units_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_chul_units_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[CommunityHealthUnit](#schemacommunityhealthunit)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» status_name|string|false|read-only|none|
+|»» health_unit_workers|string|false|read-only|none|
+|»» facility_name|string|false|read-only|none|
+|»» facility_ward|string|false|read-only|none|
+|»» facility_constituency|string|false|read-only|none|
+|»» facility_subcounty|string|false|read-only|none|
+|»» facility_county|string|false|read-only|none|
+|»» ward_code|string|false|read-only|none|
+|»» lat_long|string|false|read-only|none|
+|»» contacts|string|false|read-only|none|
+|»» geo_features|string|false|read-only|none|
+|»» boundaries|string|false|read-only|none|
+|»» pending_updates|string|false|read-only|none|
+|»» latest_update|string|false|read-only|none|
+|»» avg_rating|string|false|read-only|none|
+|»» number_of_ratings|string|false|read-only|none|
+|»» services|[[CHUServiceLink](#schemachuservicelink)]|false|none|none|
+|»»» id|string(uuid)|false|read-only|none|
+|»»» health_unit|string(uuid)|false|none|none|
+|»»» service|string(uuid)|false|none|none|
+|»»» name|string|false|none|none|
+|»»» health_unit_name|string|false|none|none|
+|»»» created|string(date-time)|false|none|none|
+|»»» updated|string(date-time)|false|none|none|
+|»»» deleted|boolean|false|none|none|
+|»»» active|boolean|false|none|Indicates whether the record has been retired?|
+|»»» search|string|false|read-only|none|
+|»»» created_by|integer|false|none|none|
+|»»» updated_by|integer|false|none|none|
+|»» created|string(date-time)|false|none|none|
+|»» updated|string(date-time)|false|none|none|
+|»» deleted|boolean|false|none|none|
+|»» active|boolean|false|none|Indicates whether the record has been retired?|
+|»» search|string|false|read-only|none|
+|»» name|string|true|none|none|
+|»» code|string|false|read-only|A sequential number allocated to each chu|
+|»» households_monitored|integer|false|none|The number of house holds a CHU is in-charge of|
+|»» date_established|string(date)|false|none|none|
+|»» date_operational|string(date)¦null|false|none|none|
+|»» is_approved|boolean¦null|false|none|Determines if a chu has been approved|
+|»» approval_comment|string¦null|false|none|none|
+|»» approval_date|string(date-time)¦null|false|none|none|
+|»» location|string¦null|false|none|none|
+|»» is_closed|boolean|false|none|none|
+|»» closing_comment|string¦null|false|none|none|
+|»» is_rejected|boolean|false|none|none|
+|»» rejection_reason|string¦null|false|none|none|
+|»» has_edits|boolean|false|none|Indicates that a community health unit has updates that are pending approval|
+|»» number_of_chvs|integer|false|none|Number of Community Health volunteers in the CHU|
+|»» created_by|integer|false|none|none|
+|»» updated_by|integer|false|none|none|
+|»» facility|string(uuid)|true|none|The facility on which the health unit is tied to.|
+|»» status|string(uuid)|true|none|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_units_create
+
+<a id="opIdapi_chul_units_create"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "services": [
+    {
+      "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+      "service": "cd8c5e52-093e-43db-9c42-184f00e681dd",
+      "name": "string",
+      "health_unit_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "households_monitored": 2147483647,
+  "date_established": "2019-08-24",
+  "date_operational": "2019-08-24",
+  "is_approved": true,
+  "approval_comment": "string",
+  "approval_date": "2019-08-24T14:15:22Z",
+  "location": "string",
+  "is_closed": true,
+  "closing_comment": "string",
+  "is_rejected": true,
+  "rejection_reason": "string",
+  "has_edits": true,
+  "number_of_chvs": 2147483647,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "status": "82eda2a6-0a31-45ba-9c43-cfddbcb85a6d"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/units/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/chul/units/`
+
+*Lists and creates community health units*
+
+Created ---  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the status
+Updated_by -- User who updated the status
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "services": [
+    {
+      "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+      "service": "cd8c5e52-093e-43db-9c42-184f00e681dd",
+      "name": "string",
+      "health_unit_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "households_monitored": 2147483647,
+  "date_established": "2019-08-24",
+  "date_operational": "2019-08-24",
+  "is_approved": true,
+  "approval_comment": "string",
+  "approval_date": "2019-08-24T14:15:22Z",
+  "location": "string",
+  "is_closed": true,
+  "closing_comment": "string",
+  "is_rejected": true,
+  "rejection_reason": "string",
+  "has_edits": true,
+  "number_of_chvs": 2147483647,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "status": "82eda2a6-0a31-45ba-9c43-cfddbcb85a6d"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_units_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CommunityHealthUnit](#schemacommunityhealthunit)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "status_name": "string",
+  "health_unit_workers": "string",
+  "facility_name": "string",
+  "facility_ward": "string",
+  "facility_constituency": "string",
+  "facility_subcounty": "string",
+  "facility_county": "string",
+  "ward_code": "string",
+  "lat_long": "string",
+  "contacts": "string",
+  "geo_features": "string",
+  "boundaries": "string",
+  "pending_updates": "string",
+  "latest_update": "string",
+  "avg_rating": "string",
+  "number_of_ratings": "string",
+  "services": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+      "service": "cd8c5e52-093e-43db-9c42-184f00e681dd",
+      "name": "string",
+      "health_unit_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "households_monitored": 2147483647,
+  "date_established": "2019-08-24",
+  "date_operational": "2019-08-24",
+  "is_approved": true,
+  "approval_comment": "string",
+  "approval_date": "2019-08-24T14:15:22Z",
+  "location": "string",
+  "is_closed": true,
+  "closing_comment": "string",
+  "is_rejected": true,
+  "rejection_reason": "string",
+  "has_edits": true,
+  "number_of_chvs": 2147483647,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "status": "82eda2a6-0a31-45ba-9c43-cfddbcb85a6d"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_units_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CommunityHealthUnit](#schemacommunityhealthunit)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_units_read
+
+<a id="opIdapi_chul_units_read"></a>
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/units/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/chul/units/{id}/`
+
+Retrieves a particular community health  unit
+
+<h3 id="api_chul_units_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this community health unit.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "status_name": "string",
+  "health_unit_workers": "string",
+  "facility_name": "string",
+  "facility_ward": "string",
+  "facility_constituency": "string",
+  "facility_subcounty": "string",
+  "facility_county": "string",
+  "ward_code": "string",
+  "lat_long": "string",
+  "contacts": "string",
+  "geo_features": "string",
+  "boundaries": "string",
+  "pending_updates": "string",
+  "latest_update": "string",
+  "avg_rating": "string",
+  "number_of_ratings": "string",
+  "services": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+      "service": "cd8c5e52-093e-43db-9c42-184f00e681dd",
+      "name": "string",
+      "health_unit_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "households_monitored": 2147483647,
+  "date_established": "2019-08-24",
+  "date_operational": "2019-08-24",
+  "is_approved": true,
+  "approval_comment": "string",
+  "approval_date": "2019-08-24T14:15:22Z",
+  "location": "string",
+  "is_closed": true,
+  "closing_comment": "string",
+  "is_rejected": true,
+  "rejection_reason": "string",
+  "has_edits": true,
+  "number_of_chvs": 2147483647,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "status": "82eda2a6-0a31-45ba-9c43-cfddbcb85a6d"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_units_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnit](#schemacommunityhealthunit)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_units_update
+
+<a id="opIdapi_chul_units_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "services": [
+    {
+      "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+      "service": "cd8c5e52-093e-43db-9c42-184f00e681dd",
+      "name": "string",
+      "health_unit_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "households_monitored": 2147483647,
+  "date_established": "2019-08-24",
+  "date_operational": "2019-08-24",
+  "is_approved": true,
+  "approval_comment": "string",
+  "approval_date": "2019-08-24T14:15:22Z",
+  "location": "string",
+  "is_closed": true,
+  "closing_comment": "string",
+  "is_rejected": true,
+  "rejection_reason": "string",
+  "has_edits": true,
+  "number_of_chvs": 2147483647,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "status": "82eda2a6-0a31-45ba-9c43-cfddbcb85a6d"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/units/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/chul/units/{id}/`
+
+Retrieves a particular community health  unit
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "services": [
+    {
+      "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+      "service": "cd8c5e52-093e-43db-9c42-184f00e681dd",
+      "name": "string",
+      "health_unit_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "households_monitored": 2147483647,
+  "date_established": "2019-08-24",
+  "date_operational": "2019-08-24",
+  "is_approved": true,
+  "approval_comment": "string",
+  "approval_date": "2019-08-24T14:15:22Z",
+  "location": "string",
+  "is_closed": true,
+  "closing_comment": "string",
+  "is_rejected": true,
+  "rejection_reason": "string",
+  "has_edits": true,
+  "number_of_chvs": 2147483647,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "status": "82eda2a6-0a31-45ba-9c43-cfddbcb85a6d"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_units_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CommunityHealthUnit](#schemacommunityhealthunit)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this community health unit.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "status_name": "string",
+  "health_unit_workers": "string",
+  "facility_name": "string",
+  "facility_ward": "string",
+  "facility_constituency": "string",
+  "facility_subcounty": "string",
+  "facility_county": "string",
+  "ward_code": "string",
+  "lat_long": "string",
+  "contacts": "string",
+  "geo_features": "string",
+  "boundaries": "string",
+  "pending_updates": "string",
+  "latest_update": "string",
+  "avg_rating": "string",
+  "number_of_ratings": "string",
+  "services": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+      "service": "cd8c5e52-093e-43db-9c42-184f00e681dd",
+      "name": "string",
+      "health_unit_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "households_monitored": 2147483647,
+  "date_established": "2019-08-24",
+  "date_operational": "2019-08-24",
+  "is_approved": true,
+  "approval_comment": "string",
+  "approval_date": "2019-08-24T14:15:22Z",
+  "location": "string",
+  "is_closed": true,
+  "closing_comment": "string",
+  "is_rejected": true,
+  "rejection_reason": "string",
+  "has_edits": true,
+  "number_of_chvs": 2147483647,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "status": "82eda2a6-0a31-45ba-9c43-cfddbcb85a6d"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_units_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnit](#schemacommunityhealthunit)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_units_partial_update
+
+<a id="opIdapi_chul_units_partial_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "services": [
+    {
+      "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+      "service": "cd8c5e52-093e-43db-9c42-184f00e681dd",
+      "name": "string",
+      "health_unit_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "households_monitored": 2147483647,
+  "date_established": "2019-08-24",
+  "date_operational": "2019-08-24",
+  "is_approved": true,
+  "approval_comment": "string",
+  "approval_date": "2019-08-24T14:15:22Z",
+  "location": "string",
+  "is_closed": true,
+  "closing_comment": "string",
+  "is_rejected": true,
+  "rejection_reason": "string",
+  "has_edits": true,
+  "number_of_chvs": 2147483647,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "status": "82eda2a6-0a31-45ba-9c43-cfddbcb85a6d"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/units/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/chul/units/{id}/`
+
+Retrieves a particular community health  unit
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "services": [
+    {
+      "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+      "service": "cd8c5e52-093e-43db-9c42-184f00e681dd",
+      "name": "string",
+      "health_unit_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "households_monitored": 2147483647,
+  "date_established": "2019-08-24",
+  "date_operational": "2019-08-24",
+  "is_approved": true,
+  "approval_comment": "string",
+  "approval_date": "2019-08-24T14:15:22Z",
+  "location": "string",
+  "is_closed": true,
+  "closing_comment": "string",
+  "is_rejected": true,
+  "rejection_reason": "string",
+  "has_edits": true,
+  "number_of_chvs": 2147483647,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "status": "82eda2a6-0a31-45ba-9c43-cfddbcb85a6d"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_units_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CommunityHealthUnit](#schemacommunityhealthunit)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this community health unit.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "status_name": "string",
+  "health_unit_workers": "string",
+  "facility_name": "string",
+  "facility_ward": "string",
+  "facility_constituency": "string",
+  "facility_subcounty": "string",
+  "facility_county": "string",
+  "ward_code": "string",
+  "lat_long": "string",
+  "contacts": "string",
+  "geo_features": "string",
+  "boundaries": "string",
+  "pending_updates": "string",
+  "latest_update": "string",
+  "avg_rating": "string",
+  "number_of_ratings": "string",
+  "services": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+      "service": "cd8c5e52-093e-43db-9c42-184f00e681dd",
+      "name": "string",
+      "health_unit_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "households_monitored": 2147483647,
+  "date_established": "2019-08-24",
+  "date_operational": "2019-08-24",
+  "is_approved": true,
+  "approval_comment": "string",
+  "approval_date": "2019-08-24T14:15:22Z",
+  "location": "string",
+  "is_closed": true,
+  "closing_comment": "string",
+  "is_rejected": true,
+  "rejection_reason": "string",
+  "has_edits": true,
+  "number_of_chvs": 2147483647,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "status": "82eda2a6-0a31-45ba-9c43-cfddbcb85a6d"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_units_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnit](#schemacommunityhealthunit)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_units_delete
+
+<a id="opIdapi_chul_units_delete"></a>
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/units/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/chul/units/{id}/`
+
+Retrieves a particular community health  unit
+
+<h3 id="api_chul_units_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this community health unit.|
+
+<h3 id="api_chul_units_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_units_detail_report_read
+
+<a id="opIdapi_chul_units_detail_report_read"></a>
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/units_detail_report/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/chul/units_detail_report/{id}/`
+
+<h3 id="api_chul_units_detail_report_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this community health unit.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "status_name": "string",
+  "health_unit_workers": "string",
+  "facility_name": "string",
+  "facility_ward": "string",
+  "facility_constituency": "string",
+  "facility_subcounty": "string",
+  "facility_county": "string",
+  "ward_code": "string",
+  "lat_long": "string",
+  "contacts": "string",
+  "geo_features": "string",
+  "boundaries": "string",
+  "pending_updates": "string",
+  "latest_update": "string",
+  "avg_rating": "string",
+  "number_of_ratings": "string",
+  "services": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+      "service": "cd8c5e52-093e-43db-9c42-184f00e681dd",
+      "name": "string",
+      "health_unit_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "households_monitored": 2147483647,
+  "date_established": "2019-08-24",
+  "date_operational": "2019-08-24",
+  "is_approved": true,
+  "approval_comment": "string",
+  "approval_date": "2019-08-24T14:15:22Z",
+  "location": "string",
+  "is_closed": true,
+  "closing_comment": "string",
+  "is_rejected": true,
+  "rejection_reason": "string",
+  "has_edits": true,
+  "number_of_chvs": 2147483647,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "status": "82eda2a6-0a31-45ba-9c43-cfddbcb85a6d"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_units_detail_report_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnit](#schemacommunityhealthunit)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_updates_read
+
+<a id="opIdapi_chul_updates_read"></a>
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/updates/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/chul/updates/{id}/`
+
+<h3 id="api_chul_updates_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this chu update buffer.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "workers": "string",
+  "contacts": "string",
+  "basic": "string",
+  "is_approved": true,
+  "is_rejected": true,
+  "is_new": true,
+  "services": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_updates_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ChuUpdateBuffer](#schemachuupdatebuffer)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_updates_create
+
+<a id="opIdapi_chul_updates_create"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "workers": "string",
+  "contacts": "string",
+  "basic": "string",
+  "is_approved": true,
+  "is_rejected": true,
+  "is_new": true,
+  "services": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/updates/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/chul/updates/`
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "workers": "string",
+  "contacts": "string",
+  "basic": "string",
+  "is_approved": true,
+  "is_rejected": true,
+  "is_new": true,
+  "services": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_updates_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[ChuUpdateBuffer](#schemachuupdatebuffer)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "workers": "string",
+  "contacts": "string",
+  "basic": "string",
+  "is_approved": true,
+  "is_rejected": true,
+  "is_new": true,
+  "services": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_updates_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[ChuUpdateBuffer](#schemachuupdatebuffer)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_updates_update
+
+<a id="opIdapi_chul_updates_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "workers": "string",
+  "contacts": "string",
+  "basic": "string",
+  "is_approved": true,
+  "is_rejected": true,
+  "is_new": true,
+  "services": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/updates/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/chul/updates/{id}/`
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "workers": "string",
+  "contacts": "string",
+  "basic": "string",
+  "is_approved": true,
+  "is_rejected": true,
+  "is_new": true,
+  "services": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_updates_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[ChuUpdateBuffer](#schemachuupdatebuffer)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this chu update buffer.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "workers": "string",
+  "contacts": "string",
+  "basic": "string",
+  "is_approved": true,
+  "is_rejected": true,
+  "is_new": true,
+  "services": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_updates_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ChuUpdateBuffer](#schemachuupdatebuffer)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_updates_partial_update
+
+<a id="opIdapi_chul_updates_partial_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "workers": "string",
+  "contacts": "string",
+  "basic": "string",
+  "is_approved": true,
+  "is_rejected": true,
+  "is_new": true,
+  "services": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/updates/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/chul/updates/{id}/`
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "workers": "string",
+  "contacts": "string",
+  "basic": "string",
+  "is_approved": true,
+  "is_rejected": true,
+  "is_new": true,
+  "services": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_updates_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[ChuUpdateBuffer](#schemachuupdatebuffer)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this chu update buffer.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "workers": "string",
+  "contacts": "string",
+  "basic": "string",
+  "is_approved": true,
+  "is_rejected": true,
+  "is_new": true,
+  "services": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_updates_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ChuUpdateBuffer](#schemachuupdatebuffer)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_updates_delete
+
+<a id="opIdapi_chul_updates_delete"></a>
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/updates/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/chul/updates/{id}/`
+
+<h3 id="api_chul_updates_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this chu update buffer.|
+
+<h3 id="api_chul_updates_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_workers_list
+
+<a id="opIdapi_chul_workers_list"></a>
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/workers/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/chul/workers/`
+
+*Lists and creates community health workers*
+
+health_unit -- A community health  unit
+Created ---  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_chul_workers_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "first_name": "string",
+      "last_name": "string",
+      "is_incharge": true,
+      "created_by": 0,
+      "updated_by": 0,
+      "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_chul_workers_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[CommunityHealthWorker](#schemacommunityhealthworker)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» name|string|false|read-only|none|
+|»» created|string(date-time)|false|none|none|
+|»» updated|string(date-time)|false|none|none|
+|»» deleted|boolean|false|none|none|
+|»» active|boolean|false|none|Indicates whether the record has been retired?|
+|»» search|string|false|read-only|none|
+|»» first_name|string|true|none|none|
+|»» last_name|string¦null|false|none|none|
+|»» is_incharge|boolean|false|none|none|
+|»» created_by|integer|false|none|none|
+|»» updated_by|integer|false|none|none|
+|»» health_unit|string(uuid)|true|none|The health unit the worker is in-charge of|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_workers_create
+
+<a id="opIdapi_chul_workers_create"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "first_name": "string",
+  "last_name": "string",
+  "is_incharge": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/workers/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/chul/workers/`
+
+*Lists and creates community health workers*
+
+health_unit -- A community health  unit
+Created ---  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "first_name": "string",
+  "last_name": "string",
+  "is_incharge": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CommunityHealthWorker](#schemacommunityhealthworker)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "first_name": "string",
+  "last_name": "string",
+  "is_incharge": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CommunityHealthWorker](#schemacommunityhealthworker)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_workers_read
+
+<a id="opIdapi_chul_workers_read"></a>
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/workers/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/chul/workers/{id}/`
+
+Retrieves a particular health worker
+
+<h3 id="api_chul_workers_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this community health worker.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "first_name": "string",
+  "last_name": "string",
+  "is_incharge": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorker](#schemacommunityhealthworker)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_workers_update
+
+<a id="opIdapi_chul_workers_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "first_name": "string",
+  "last_name": "string",
+  "is_incharge": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/workers/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/chul/workers/{id}/`
+
+Retrieves a particular health worker
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "first_name": "string",
+  "last_name": "string",
+  "is_incharge": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CommunityHealthWorker](#schemacommunityhealthworker)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this community health worker.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "first_name": "string",
+  "last_name": "string",
+  "is_incharge": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorker](#schemacommunityhealthworker)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_workers_partial_update
+
+<a id="opIdapi_chul_workers_partial_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "first_name": "string",
+  "last_name": "string",
+  "is_incharge": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/workers/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/chul/workers/{id}/`
+
+Retrieves a particular health worker
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "first_name": "string",
+  "last_name": "string",
+  "is_incharge": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CommunityHealthWorker](#schemacommunityhealthworker)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this community health worker.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "first_name": "string",
+  "last_name": "string",
+  "is_incharge": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorker](#schemacommunityhealthworker)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_workers_delete
+
+<a id="opIdapi_chul_workers_delete"></a>
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/workers/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/chul/workers/{id}/`
+
+Retrieves a particular health worker
+
+<h3 id="api_chul_workers_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this community health worker.|
+
+<h3 id="api_chul_workers_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_workers_contacts_list
+
+<a id="opIdapi_chul_workers_contacts_list"></a>
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/workers_contacts/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/chul/workers_contacts/`
+
+*Lists and creates community health worker contacts*
+
+health_worker -- A community health worker
+contact -- A contact
+Created ---  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_chul_workers_contacts_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "health_worker": "931e939f-d0be-4af4-a85b-aff1e8c7c217",
+      "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_contacts_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_chul_workers_contacts_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» created|string(date-time)|false|none|none|
+|»» updated|string(date-time)|false|none|none|
+|»» deleted|boolean|false|none|none|
+|»» active|boolean|false|none|Indicates whether the record has been retired?|
+|»» search|string|false|read-only|none|
+|»» created_by|integer|false|none|none|
+|»» updated_by|integer|false|none|none|
+|»» health_worker|string(uuid)|true|none|none|
+|»» contact|string(uuid)|true|none|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_workers_contacts_create
+
+<a id="opIdapi_chul_workers_contacts_create"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_worker": "931e939f-d0be-4af4-a85b-aff1e8c7c217",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/workers_contacts/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/chul/workers_contacts/`
+
+*Lists and creates community health worker contacts*
+
+health_worker -- A community health worker
+contact -- A contact
+Created ---  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_worker": "931e939f-d0be-4af4-a85b-aff1e8c7c217",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_contacts_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_worker": "931e939f-d0be-4af4-a85b-aff1e8c7c217",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_contacts_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_workers_contacts_read
+
+<a id="opIdapi_chul_workers_contacts_read"></a>
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/workers_contacts/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/chul/workers_contacts/{id}/`
+
+*Retrieves a particular community health_worker contact*
+
+health_worker -- A community health worker
+contact -- A contact
+
+<h3 id="api_chul_workers_contacts_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this community health worker contact.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_worker": "931e939f-d0be-4af4-a85b-aff1e8c7c217",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_contacts_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_workers_contacts_update
+
+<a id="opIdapi_chul_workers_contacts_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_worker": "931e939f-d0be-4af4-a85b-aff1e8c7c217",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/workers_contacts/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/chul/workers_contacts/{id}/`
+
+*Retrieves a particular community health_worker contact*
+
+health_worker -- A community health worker
+contact -- A contact
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_worker": "931e939f-d0be-4af4-a85b-aff1e8c7c217",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_contacts_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this community health worker contact.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_worker": "931e939f-d0be-4af4-a85b-aff1e8c7c217",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_contacts_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_workers_contacts_partial_update
+
+<a id="opIdapi_chul_workers_contacts_partial_update"></a>
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_worker": "931e939f-d0be-4af4-a85b-aff1e8c7c217",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/workers_contacts/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/chul/workers_contacts/{id}/`
+
+*Retrieves a particular community health_worker contact*
+
+health_worker -- A community health worker
+contact -- A contact
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_worker": "931e939f-d0be-4af4-a85b-aff1e8c7c217",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_contacts_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this community health worker contact.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_worker": "931e939f-d0be-4af4-a85b-aff1e8c7c217",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_chul_workers_contacts_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## api_chul_workers_contacts_delete
+
+<a id="opIdapi_chul_workers_contacts_delete"></a>
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/chul/workers_contacts/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/chul/workers_contacts/{id}/`
+
+*Retrieves a particular community health_worker contact*
+
+health_worker -- A community health worker
+contact -- A contact
+
+<h3 id="api_chul_workers_contacts_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this community health worker contact.|
+
+<h3 id="api_chul_workers_contacts_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::

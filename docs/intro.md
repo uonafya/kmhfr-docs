@@ -170,6 +170,84 @@ supervisor is a system for controlling process state. To install it in Ubuntu 20
   ```
 
   If you have followed all the steps MFR API should now be listening on  the default port assigned by supervisor
+
+
+## MFR API Setup Issues and work-arounds
+  Postgres may bring some issues installing server-dev
+
+  ```
+  sudo apt install postgresql-server-dev-9.5 postgresql-9.5-postgis-2.2
+  ```
+
+  Add postgresql-contrib to installed packaged for KMHFR
+
+  For postgres ensure to create a user called mfr
+
+  ```createuser --interactive```
+
+  **WeasyPrint** package may bring issues on installation. There may be some dependencies that
+  are missing. The solution i found to work is to update the pip version being used:
+
+  ```
+  pip install --upgrade pip
+  ```
+
+  If this does not work install CairoSVG==0.5 then retry installing WeasyPrint package. I believe
+  the fail is because it tries to install the latest version of CairoSVG which dropped support for
+  python 2 after version 0.5.
+
+  - Change branch to xxxxxx
+  - Adding postgis extension
+    - Create database mfl;
+    - Create extension if not exists postgis;
+    - Dump database;
+  - No module named dateutil
+
+  ### Installing admin interface
+  - Npm install - install dependencies
+  - Bower install
+  - Grunt build
+  - Grunt connect
+  - Change server url in settings.js under /src/settings.js
+
+### Known Issues
+
+`📌`  WeasyPrint package is known to cause issues during installation.
+some WeasyPrint dependencies might not install when you run ``` pip install -r requirments.txt```.The solution to this issue is to update the pip version and install WeasyPrint=0.42.3:
+
+```
+pip install --upgrade pip
+pip install WeasyPrint=0.42.3
+```
+
+:::info[Setting up WeasyPrint]
+ For more information on setting up WeasyPrint, refer to [WeasyPrint Docs](https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#installation)
+:::
+
+`📌`  Pip migration may also fail due to some migration conflict with oauth2_provider. The work around for this is to fake the migrations:
+
+```
+pip migrate oauth2_provider --fake
+```
+### API Fixes
+
+Applying oauth2_provider.0002_08_updates...Traceback (most recent call last):
+django.db.utils.ProgrammingError: column "skip_authorization" of relation
+"oauth2_provider_application" already exist
+
+Solution:
+```
+django-admin migrate oauth2_provider 0001 --fake
+```
+Or
+```
+django-admin migrate oauth2_provider --fake
+```
+Or
+```
+django-admin migrate oauth2_provider
+```
+
   
 
 
