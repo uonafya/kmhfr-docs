@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'KMHFR',
+  title: 'KMHFR Docs',
   tagline: 'Kenya Master Health Facility Registry',
   favicon: 'img/favicon.ico',
 
