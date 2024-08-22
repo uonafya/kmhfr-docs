@@ -17,7 +17,7 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'uonafya', // Usually your GitHub org/user name.
   projectName: 'kmhfr-docs', // Usually your repo name.
-  deploymentBranch:'main',
+  deploymentBranch:'master',
   onBrokenLinks: 'throw', 
   trailingSlash: false,
   onBrokenMarkdownLinks: 'warn',
