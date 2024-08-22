@@ -1,25 +1,19 @@
 ---
-slug: welcome
-title: Welcome
-authors: [slorber, yangshun]
-tags: [facebook, hello, docusaurus]
+slug:  welcome
+title: Welcome To The KMHFR Blog
+authors: [Eric]
+tags: [KMHFR, MFR, API]
 ---
 
-[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
 
-Simply add Markdown files (or folders) to the `blog` directory.
+## News and Updates
 
-Regular blog authors can be added to `authors.yml`.
+Watch out for News and updates in this blog
 
-The blog post date can be extracted from filenames, such as:
+<!-- truncate -->
 
-- `2019-05-30-welcome.md`
-- `2019-05-30-welcome/index.md`
+Coming soon !!
 
-A blog post folder can be convenient to co-locate blog post images:
-
-![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)
-
-The blog supports tags as well!
-
-**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config.
+:::tip
+You will see any system updates and tutorials related to KMHFR in this blog post
+:::

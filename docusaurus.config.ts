@@ -101,6 +101,7 @@ const config: Config = {
           position: 'left',
           label: 'Guide',
         },
+        {href: '/blog', label: 'KMHFR blog', position: 'left'},
         {href: 'https://kmhfr.health.go.ke', label: 'KMHFR', position: 'left'},
         {href: 'https://elearning.health.go.ke/enrol/index.php?id=76', label: 'MOH Virtual Academy E-learning', position: 'left'},
         {href: 'https://health.go.ke', label: 'Ministry of Health', position: 'left'},
