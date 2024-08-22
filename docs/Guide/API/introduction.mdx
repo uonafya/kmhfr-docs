@@ -1,0 +1,296 @@
+---
+sidebar_position: 1
+---
+
+import BrowserWindow from '../../../src/components/BrowserWindow'
+
+# Introduction
+
+Lets dive in and look at the Ins and Outs of KMHFR API for a better understanding
+
+
+<h1 id="kenya-master-health-facility-registry-kmhfr-api">Kenya Master Health Facility Registry (KMHFR) API v3</h1>
+
+> Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.
+
+Kenya Master Health Facility Registry (KMHFR) API version 3
+
+Base URLs:
+
+* <a href="https://api.kmhfr.health.go.ke/">https://api.kmhfr.health.go.ke/</a>
+
+<a href="https://api.kmhfr.health.go.ke/terms/">Terms of service</a>
+Email: <a href="mailto:support@healthit.uonbi.ac.ke">Support</a> 
+ License: BSD License
+
+# Authentication
+
+- HTTP Authentication, scheme: basic 
+
+
+## API list
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/',
+{
+  method: 'GET'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/`
+
+*This view serves as the entry point to the entire API.*
+
+## Exploring the API
+There are two ways to explore this API:
+
+ * the [Swagger](http://swagger.io/)
+ [**sandbox** ( click here )](http://41.89.92.168/api/explore/#!/api)
+ * the [browsable API ( click here )](http://41.89.92.168/api/docs/)
+### Authentication
+Anonymous users have **read only** access to *most* ( not all ) views.
+If you want to try out the `POST`, `PUT`, `PATCH` and `DELETE` actions,
+you will need to log in using the link on the top right corner.
+
+For the experimental sandbox, you can get suitable credentials from
+[the documentation](#). For a live
+instance, you need to request for access from the administrators.
+
+<h3 id="api_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+
+
+
+
+
+## Registering a new OAuth2 application
+You can learn all that you need to know about oauth2 by reading
+
+<h3 id="api_users_applications_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": 0,
+      "client_id": "string",
+      "redirect_uris": "string",
+      "post_logout_redirect_uris": "string",
+      "client_type": "confidential",
+      "authorization_grant_type": "authorization-code",
+      "client_secret": "string",
+      "name": "string",
+      "skip_authorization": true,
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "algorithm": "",
+      "user": 0
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_applications_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_users_applications_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[MFLOAuthApplication](schema#mfloauthapplication)]|true|none|none|
+|»» id|integer|false|read-only|none|
+|»» client_id|string|false|none|none|
+|»» redirect_uris|string|false|none|Allowed URIs list, space separated|
+|»» post_logout_redirect_uris|string|false|none|Allowed Post Logout URIs list, space separated|
+|»» client_type|string|true|none|none|
+|»» authorization_grant_type|string|true|none|none|
+|»» client_secret|string|false|none|Hashed on Save. Copy it now if this is a new secret.|
+|»» name|string|false|none|none|
+|»» skip_authorization|boolean|false|none|none|
+|»» created|string(date-time)|false|read-only|none|
+|»» updated|string(date-time)|false|read-only|none|
+|»» algorithm|string|false|none|none|
+|»» user|integer¦null|false|none|none|
+
+#### Enumerated Values
+
+|Property|Value|
+|---|---|
+|client_type|confidential|
+|client_type|public|
+|authorization_grant_type|authorization-code|
+|authorization_grant_type|implicit|
+|authorization_grant_type|password|
+|authorization_grant_type|client-credentials|
+|authorization_grant_type|openid-hybrid|
+|algorithm||
+|algorithm|RS256|
+|algorithm|HS256|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+#### api users_applications_create
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "client_id": "string",
+  "redirect_uris": "string",
+  "post_logout_redirect_uris": "string",
+  "client_type": "confidential",
+  "authorization_grant_type": "authorization-code",
+  "client_secret": "string",
+  "name": "string",
+  "skip_authorization": true,
+  "algorithm": "",
+  "user": 0
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/users/applications/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/users/applications/`
+
+*List and register new OAuth2 applications*
+
+This is a controlled access API. It is limited to admin users
+( users with `is_admin` set to `True` ).
+
+Also - if you are using OAuth tokens, **the API server MUST be accessed
+over HTTPS**.
+
+# Registering a new OAuth2 application
+You can learn all that you need to know about oauth2 by reading
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "client_id": "string",
+  "redirect_uris": "string",
+  "post_logout_redirect_uris": "string",
+  "client_type": "confidential",
+  "authorization_grant_type": "authorization-code",
+  "client_secret": "string",
+  "name": "string",
+  "skip_authorization": true,
+  "algorithm": "",
+  "user": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_applications_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[MFLOAuthApplication](schema#mfloauthapplication)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": 0,
+  "client_id": "string",
+  "redirect_uris": "string",
+  "post_logout_redirect_uris": "string",
+  "client_type": "confidential",
+  "authorization_grant_type": "authorization-code",
+  "client_secret": "string",
+  "name": "string",
+  "skip_authorization": true,
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "algorithm": "",
+  "user": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_applications_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[MFLOAuthApplication](schema#mfloauthapplication)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+

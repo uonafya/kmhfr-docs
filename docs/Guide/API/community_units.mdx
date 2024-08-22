@@ -10,9 +10,9 @@ This is a guide of all community unit API endpoints for KMHFR
 import BrowserWindow from '../../../src/components/BrowserWindow'
 
 
-## api_chul_chu_ratings_read
+### api chul_chu_ratings_read
 
-<a id="opIdapi_chul_chu_ratings_read"></a>
+
 
 > Code samples
 
@@ -77,16 +77,16 @@ Retrieves, updates and deletes a community health unit's rating
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHURating](#schemachurating)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHURating](schema#churating)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_chu_ratings_create
+### api chul_chu_ratings_create
 
-<a id="opIdapi_chul_chu_ratings_create"></a>
+
 
 > Code samples
 
@@ -158,7 +158,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CHURating](#schemachurating)|true|none|
+|body|body|[CHURating](schema#churating)|true|none|
 
 > Example responses
 
@@ -191,16 +191,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CHURating](#schemachurating)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CHURating](schema#churating)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_chu_ratings_update
+### api chul_chu_ratings_update
 
-<a id="opIdapi_chul_chu_ratings_update"></a>
+
 
 > Code samples
 
@@ -263,7 +263,7 @@ Retrieves, updates and deletes a community health unit's rating
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CHURating](#schemachurating)|true|none|
+|body|body|[CHURating](schema#churating)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this chu rating.|
 
 > Example responses
@@ -297,16 +297,16 @@ Retrieves, updates and deletes a community health unit's rating
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHURating](#schemachurating)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHURating](schema#churating)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_chu_ratings_partial_update
+### api chul_chu_ratings_partial_update
 
-<a id="opIdapi_chul_chu_ratings_partial_update"></a>
+
 
 > Code samples
 
@@ -369,7 +369,7 @@ Retrieves, updates and deletes a community health unit's rating
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CHURating](#schemachurating)|true|none|
+|body|body|[CHURating](schema#churating)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this chu rating.|
 
 > Example responses
@@ -403,16 +403,16 @@ Retrieves, updates and deletes a community health unit's rating
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHURating](#schemachurating)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHURating](schema#churating)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_chu_ratings_delete
+### api chul_chu_ratings_delete
 
-<a id="opIdapi_chul_chu_ratings_delete"></a>
+
 
 > Code samples
 
@@ -452,9 +452,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_chul_services_list
+### api chul_services_list
 
-<a id="opIdapi_chul_services_list"></a>
+
 
 > Code samples
 
@@ -544,7 +544,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[CHUService](#schemachuservice)]|true|none|none|
+|» results|[[CHUService](schema#chuservice)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -561,9 +561,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_chul_services_create
+### api chul_services_create
 
-<a id="opIdapi_chul_services_create"></a>
+
 
 > Code samples
 
@@ -633,7 +633,7 @@ description -- The description of the service
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CHUService](#schemachuservice)|true|none|
+|body|body|[CHUService](schema#chuservice)|true|none|
 
 > Example responses
 
@@ -662,16 +662,16 @@ description -- The description of the service
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CHUService](#schemachuservice)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CHUService](schema#chuservice)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_services_read
+### api chul_services_read
 
-<a id="opIdapi_chul_services_read"></a>
+
 
 > Code samples
 
@@ -732,16 +732,16 @@ Retrieves a particular status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHUService](#schemachuservice)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHUService](schema#chuservice)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_services_update
+### api chul_services_update
 
-<a id="opIdapi_chul_services_update"></a>
+
 
 > Code samples
 
@@ -802,7 +802,7 @@ Retrieves a particular status
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CHUService](#schemachuservice)|true|none|
+|body|body|[CHUService](schema#chuservice)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this chu service.|
 
 > Example responses
@@ -832,16 +832,16 @@ Retrieves a particular status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHUService](#schemachuservice)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHUService](schema#chuservice)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_services_partial_update
+### api chul_services_partial_update
 
-<a id="opIdapi_chul_services_partial_update"></a>
+
 
 > Code samples
 
@@ -902,7 +902,7 @@ Retrieves a particular status
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CHUService](#schemachuservice)|true|none|
+|body|body|[CHUService](schema#chuservice)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this chu service.|
 
 > Example responses
@@ -932,16 +932,16 @@ Retrieves a particular status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHUService](#schemachuservice)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CHUService](schema#chuservice)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_services_delete
+### api chul_services_delete
 
-<a id="opIdapi_chul_services_delete"></a>
+
 
 > Code samples
 
@@ -981,9 +981,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_chul_statuses_list
+### api chul_statuses_list
 
-<a id="opIdapi_chul_statuses_list"></a>
+
 
 > Code samples
 
@@ -1071,7 +1071,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[Status](#schemastatus)]|true|none|none|
+|» results|[[Status](schema#status)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -1088,9 +1088,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_chul_statuses_create
+### api chul_statuses_create
 
-<a id="opIdapi_chul_statuses_create"></a>
+
 
 > Code samples
 
@@ -1158,7 +1158,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Status](#schemastatus)|true|none|
+|body|body|[Status](schema#status)|true|none|
 
 > Example responses
 
@@ -1187,16 +1187,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Status](#schemastatus)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Status](schema#status)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_statuses_read
+### api chul_statuses_read
 
-<a id="opIdapi_chul_statuses_read"></a>
+
 
 > Code samples
 
@@ -1257,16 +1257,16 @@ Retrieves a particular status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Status](#schemastatus)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Status](schema#status)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_statuses_update
+### api chul_statuses_update
 
-<a id="opIdapi_chul_statuses_update"></a>
+
 
 > Code samples
 
@@ -1327,7 +1327,7 @@ Retrieves a particular status
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Status](#schemastatus)|true|none|
+|body|body|[Status](schema#status)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this status.|
 
 > Example responses
@@ -1357,16 +1357,16 @@ Retrieves a particular status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Status](#schemastatus)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Status](schema#status)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_statuses_partial_update
+### api chul_statuses_partial_update
 
-<a id="opIdapi_chul_statuses_partial_update"></a>
+
 
 > Code samples
 
@@ -1427,7 +1427,7 @@ Retrieves a particular status
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Status](#schemastatus)|true|none|
+|body|body|[Status](schema#status)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this status.|
 
 > Example responses
@@ -1457,16 +1457,16 @@ Retrieves a particular status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Status](#schemastatus)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Status](schema#status)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_statuses_delete
+### api chul_statuses_delete
 
-<a id="opIdapi_chul_statuses_delete"></a>
+
 
 > Code samples
 
@@ -1506,9 +1506,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_chul_unit_contacts_list
+### api chul_unit_contacts_list
 
-<a id="opIdapi_chul_unit_contacts_list"></a>
+
 
 > Code samples
 
@@ -1598,7 +1598,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)]|true|none|none|
+|» results|[[CommunityHealthUnitContact](schema#communityhealthunitcontact)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -1615,9 +1615,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_chul_unit_contacts_create
+### api chul_unit_contacts_create
 
-<a id="opIdapi_chul_unit_contacts_create"></a>
+
 
 > Code samples
 
@@ -1687,7 +1687,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)|true|none|
+|body|body|[CommunityHealthUnitContact](schema#communityhealthunitcontact)|true|none|
 
 > Example responses
 
@@ -1716,16 +1716,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CommunityHealthUnitContact](schema#communityhealthunitcontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_unit_contacts_read
+### api chul_unit_contacts_read
 
-<a id="opIdapi_chul_unit_contacts_read"></a>
+
 
 > Code samples
 
@@ -1786,16 +1786,16 @@ Retrieves a particular community health unit contact
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnitContact](schema#communityhealthunitcontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_unit_contacts_update
+### api chul_unit_contacts_update
 
-<a id="opIdapi_chul_unit_contacts_update"></a>
+
 
 > Code samples
 
@@ -1856,7 +1856,7 @@ Retrieves a particular community health unit contact
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)|true|none|
+|body|body|[CommunityHealthUnitContact](schema#communityhealthunitcontact)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this community health unit contact.|
 
 > Example responses
@@ -1886,16 +1886,16 @@ Retrieves a particular community health unit contact
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnitContact](schema#communityhealthunitcontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_unit_contacts_partial_update
+### api chul_unit_contacts_partial_update
 
-<a id="opIdapi_chul_unit_contacts_partial_update"></a>
+
 
 > Code samples
 
@@ -1956,7 +1956,7 @@ Retrieves a particular community health unit contact
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)|true|none|
+|body|body|[CommunityHealthUnitContact](schema#communityhealthunitcontact)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this community health unit contact.|
 
 > Example responses
@@ -1986,16 +1986,16 @@ Retrieves a particular community health unit contact
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnitContact](#schemacommunityhealthunitcontact)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnitContact](schema#communityhealthunitcontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_unit_contacts_delete
+### api chul_unit_contacts_delete
 
-<a id="opIdapi_chul_unit_contacts_delete"></a>
+
 
 > Code samples
 
@@ -2035,9 +2035,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_chul_units_list
+### api chul_units_list
 
-<a id="opIdapi_chul_units_list"></a>
+
 
 > Code samples
 
@@ -2172,7 +2172,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[CommunityHealthUnit](#schemacommunityhealthunit)]|true|none|none|
+|» results|[[CommunityHealthUnit](schema#communityhealthunit)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» status_name|string|false|read-only|none|
 |»» health_unit_workers|string|false|read-only|none|
@@ -2190,7 +2190,7 @@ Status Code **200**
 |»» latest_update|string|false|read-only|none|
 |»» avg_rating|string|false|read-only|none|
 |»» number_of_ratings|string|false|read-only|none|
-|»» services|[[CHUServiceLink](#schemachuservicelink)]|false|none|none|
+|»» services|[[CHUServiceLink](schema#chuservicelink)]|false|none|none|
 |»»» id|string(uuid)|false|read-only|none|
 |»»» health_unit|string(uuid)|false|none|none|
 |»»» service|string(uuid)|false|none|none|
@@ -2233,9 +2233,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_chul_units_create
+### api chul_units_create
 
-<a id="opIdapi_chul_units_create"></a>
+
 
 > Code samples
 
@@ -2359,7 +2359,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CommunityHealthUnit](#schemacommunityhealthunit)|true|none|
+|body|body|[CommunityHealthUnit](schema#communityhealthunit)|true|none|
 
 > Example responses
 
@@ -2435,16 +2435,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CommunityHealthUnit](#schemacommunityhealthunit)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CommunityHealthUnit](schema#communityhealthunit)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_units_read
+### api chul_units_read
 
-<a id="opIdapi_chul_units_read"></a>
+
 
 > Code samples
 
@@ -2552,16 +2552,16 @@ Retrieves a particular community health  unit
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnit](#schemacommunityhealthunit)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnit](schema#communityhealthunit)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_units_update
+### api chul_units_update
 
-<a id="opIdapi_chul_units_update"></a>
+
 
 > Code samples
 
@@ -2678,7 +2678,7 @@ Retrieves a particular community health  unit
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CommunityHealthUnit](#schemacommunityhealthunit)|true|none|
+|body|body|[CommunityHealthUnit](schema#communityhealthunit)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this community health unit.|
 
 > Example responses
@@ -2755,16 +2755,16 @@ Retrieves a particular community health  unit
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnit](#schemacommunityhealthunit)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnit](schema#communityhealthunit)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_units_partial_update
+### api chul_units_partial_update
 
-<a id="opIdapi_chul_units_partial_update"></a>
+
 
 > Code samples
 
@@ -2881,7 +2881,7 @@ Retrieves a particular community health  unit
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CommunityHealthUnit](#schemacommunityhealthunit)|true|none|
+|body|body|[CommunityHealthUnit](schema#communityhealthunit)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this community health unit.|
 
 > Example responses
@@ -2958,16 +2958,16 @@ Retrieves a particular community health  unit
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnit](#schemacommunityhealthunit)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnit](schema#communityhealthunit)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_units_delete
+### api chul_units_delete
 
-<a id="opIdapi_chul_units_delete"></a>
+
 
 > Code samples
 
@@ -3007,9 +3007,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_chul_units_detail_report_read
+### api chul_units_detail_report_read
 
-<a id="opIdapi_chul_units_detail_report_read"></a>
+
 
 > Code samples
 
@@ -3115,16 +3115,16 @@ fetch('https://api.kmhfr.health.go.ke/api/chul/units_detail_report/{id}/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnit](#schemacommunityhealthunit)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthUnit](schema#communityhealthunit)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_updates_read
+### api chul_updates_read
 
-<a id="opIdapi_chul_updates_read"></a>
+
 
 > Code samples
 
@@ -3189,16 +3189,16 @@ fetch('https://api.kmhfr.health.go.ke/api/chul/updates/{id}/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ChuUpdateBuffer](#schemachuupdatebuffer)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ChuUpdateBuffer](schema#chuupdatebuffer)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_updates_create
+### api chul_updates_create
 
-<a id="opIdapi_chul_updates_create"></a>
+
 
 > Code samples
 
@@ -3269,7 +3269,7 @@ fetch('https://api.kmhfr.health.go.ke/api/chul/updates/',
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[ChuUpdateBuffer](#schemachuupdatebuffer)|true|none|
+|body|body|[ChuUpdateBuffer](schema#chuupdatebuffer)|true|none|
 
 > Example responses
 
@@ -3304,16 +3304,16 @@ fetch('https://api.kmhfr.health.go.ke/api/chul/updates/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[ChuUpdateBuffer](#schemachuupdatebuffer)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[ChuUpdateBuffer](schema#chuupdatebuffer)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_updates_update
+### api chul_updates_update
 
-<a id="opIdapi_chul_updates_update"></a>
+
 
 > Code samples
 
@@ -3384,7 +3384,7 @@ fetch('https://api.kmhfr.health.go.ke/api/chul/updates/{id}/',
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[ChuUpdateBuffer](#schemachuupdatebuffer)|true|none|
+|body|body|[ChuUpdateBuffer](schema#chuupdatebuffer)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this chu update buffer.|
 
 > Example responses
@@ -3420,16 +3420,16 @@ fetch('https://api.kmhfr.health.go.ke/api/chul/updates/{id}/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ChuUpdateBuffer](#schemachuupdatebuffer)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ChuUpdateBuffer](schema#chuupdatebuffer)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_updates_partial_update
+### api chul_updates_partial_update
 
-<a id="opIdapi_chul_updates_partial_update"></a>
+
 
 > Code samples
 
@@ -3500,7 +3500,7 @@ fetch('https://api.kmhfr.health.go.ke/api/chul/updates/{id}/',
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[ChuUpdateBuffer](#schemachuupdatebuffer)|true|none|
+|body|body|[ChuUpdateBuffer](schema#chuupdatebuffer)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this chu update buffer.|
 
 > Example responses
@@ -3536,16 +3536,16 @@ fetch('https://api.kmhfr.health.go.ke/api/chul/updates/{id}/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ChuUpdateBuffer](#schemachuupdatebuffer)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ChuUpdateBuffer](schema#chuupdatebuffer)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_updates_delete
+### api chul_updates_delete
 
-<a id="opIdapi_chul_updates_delete"></a>
+
 
 > Code samples
 
@@ -3583,9 +3583,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_chul_workers_list
+### api chul_workers_list
 
-<a id="opIdapi_chul_workers_list"></a>
+
 
 > Code samples
 
@@ -3677,7 +3677,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[CommunityHealthWorker](#schemacommunityhealthworker)]|true|none|none|
+|» results|[[CommunityHealthWorker](schema#communityhealthworker)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» name|string|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
@@ -3697,9 +3697,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_chul_workers_create
+### api chul_workers_create
 
-<a id="opIdapi_chul_workers_create"></a>
+
 
 > Code samples
 
@@ -3772,7 +3772,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CommunityHealthWorker](#schemacommunityhealthworker)|true|none|
+|body|body|[CommunityHealthWorker](schema#communityhealthworker)|true|none|
 
 > Example responses
 
@@ -3804,16 +3804,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CommunityHealthWorker](#schemacommunityhealthworker)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CommunityHealthWorker](schema#communityhealthworker)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_workers_read
+### api chul_workers_read
 
-<a id="opIdapi_chul_workers_read"></a>
+
 
 > Code samples
 
@@ -3877,16 +3877,16 @@ Retrieves a particular health worker
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorker](#schemacommunityhealthworker)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorker](schema#communityhealthworker)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_workers_update
+### api chul_workers_update
 
-<a id="opIdapi_chul_workers_update"></a>
+
 
 > Code samples
 
@@ -3951,7 +3951,7 @@ Retrieves a particular health worker
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CommunityHealthWorker](#schemacommunityhealthworker)|true|none|
+|body|body|[CommunityHealthWorker](schema#communityhealthworker)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this community health worker.|
 
 > Example responses
@@ -3984,16 +3984,16 @@ Retrieves a particular health worker
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorker](#schemacommunityhealthworker)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorker](schema#communityhealthworker)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_workers_partial_update
+### api chul_workers_partial_update
 
-<a id="opIdapi_chul_workers_partial_update"></a>
+
 
 > Code samples
 
@@ -4058,7 +4058,7 @@ Retrieves a particular health worker
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CommunityHealthWorker](#schemacommunityhealthworker)|true|none|
+|body|body|[CommunityHealthWorker](schema#communityhealthworker)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this community health worker.|
 
 > Example responses
@@ -4091,16 +4091,16 @@ Retrieves a particular health worker
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorker](#schemacommunityhealthworker)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorker](schema#communityhealthworker)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_workers_delete
+### api chul_workers_delete
 
-<a id="opIdapi_chul_workers_delete"></a>
+
 
 > Code samples
 
@@ -4140,9 +4140,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_chul_workers_contacts_list
+### api chul_workers_contacts_list
 
-<a id="opIdapi_chul_workers_contacts_list"></a>
+
 
 > Code samples
 
@@ -4232,7 +4232,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)]|true|none|none|
+|» results|[[CommunityHealthWorkerContact](schema#communityhealthworkercontact)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -4249,9 +4249,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_chul_workers_contacts_create
+### api chul_workers_contacts_create
 
-<a id="opIdapi_chul_workers_contacts_create"></a>
+
 
 > Code samples
 
@@ -4321,7 +4321,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)|true|none|
+|body|body|[CommunityHealthWorkerContact](schema#communityhealthworkercontact)|true|none|
 
 > Example responses
 
@@ -4350,16 +4350,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[CommunityHealthWorkerContact](schema#communityhealthworkercontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_workers_contacts_read
+### api chul_workers_contacts_read
 
-<a id="opIdapi_chul_workers_contacts_read"></a>
+
 
 > Code samples
 
@@ -4423,16 +4423,16 @@ contact -- A contact
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorkerContact](schema#communityhealthworkercontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_workers_contacts_update
+### api chul_workers_contacts_update
 
-<a id="opIdapi_chul_workers_contacts_update"></a>
+
 
 > Code samples
 
@@ -4496,7 +4496,7 @@ contact -- A contact
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)|true|none|
+|body|body|[CommunityHealthWorkerContact](schema#communityhealthworkercontact)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this community health worker contact.|
 
 > Example responses
@@ -4526,16 +4526,16 @@ contact -- A contact
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorkerContact](schema#communityhealthworkercontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_workers_contacts_partial_update
+### api chul_workers_contacts_partial_update
 
-<a id="opIdapi_chul_workers_contacts_partial_update"></a>
+
 
 > Code samples
 
@@ -4599,7 +4599,7 @@ contact -- A contact
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)|true|none|
+|body|body|[CommunityHealthWorkerContact](schema#communityhealthworkercontact)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this community health worker contact.|
 
 > Example responses
@@ -4629,16 +4629,16 @@ contact -- A contact
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorkerContact](#schemacommunityhealthworkercontact)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[CommunityHealthWorkerContact](schema#communityhealthworkercontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_chul_workers_contacts_delete
+### api chul_workers_contacts_delete
 
-<a id="opIdapi_chul_workers_contacts_delete"></a>
+
 
 > Code samples
 
@@ -4679,4 +4679,10 @@ contact -- A contact
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
+:::
+
+## Schema
+
+:::info[CommunityHealthUnit Schema]
+Please see the [CommunityHealthUnit Schema](schema#communityhealthunit)
 :::

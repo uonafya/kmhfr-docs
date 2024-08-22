@@ -1,0 +1,5021 @@
+---
+sidebar_position: 10
+title: Schema
+---
+
+
+import BrowserWindow from '../../../src/components/BrowserWindow' 
+
+Have a look at the schemas of all the KMHFR modules
+
+# Schemas
+
+## AdminOfficeContact
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "contact_type_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "contact": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+  "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|contact_type_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|contact|string|true|none|The actual contact of the person e.g test@mail.com, 07XXYYYZZZ|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|contact_type|string(uuid)|true|none|The type of contact that the given contact is e.g email or phone number|
+|admin_office|string(uuid)|true|none|none|
+
+## AdminOffice
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "name": "string",
+  "county_name": "string",
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "sub_county_name": "string",
+  "phone_number": "string",
+  "email": "user@example.com",
+  "is_national": true,
+  "contacts": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "contact_type_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "contact": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+      "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+    }
+  ]
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|name|string|true|none|none|
+|county_name|string|false|read-only|none|
+|county|string(uuid)¦null|false|none|none|
+|sub_county|string(uuid)¦null|false|none|none|
+|sub_county_name|string|false|read-only|none|
+|phone_number|string¦null|false|none|none|
+|email|string(email)¦null|false|none|none|
+|is_national|boolean|false|none|none|
+|contacts|[[AdminOfficeContact](schema#adminofficecontact)]|false|none|none|
+
+## CHURating
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "facility_name": "string",
+  "facility_id": "string",
+  "chu_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "rating": 5,
+  "comment": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "chu": "8ee344e7-8b56-4d87-bb63-7c1cdc6cb8ed"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|facility_name|string|false|read-only|none|
+|facility_id|string|false|read-only|none|
+|chu_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|rating|integer|true|none|none|
+|comment|string¦null|false|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|chu|string(uuid)|true|none|none|
+
+## CHUService
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|none|
+|description|string¦null|false|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## Status
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|none|
+|description|string¦null|false|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## CommunityHealthUnitContact
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|health_unit|string(uuid)|true|none|none|
+|contact|string(uuid)|true|none|none|
+
+## CHUServiceLink
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+  "service": "cd8c5e52-093e-43db-9c42-184f00e681dd",
+  "name": "string",
+  "health_unit_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|health_unit|string(uuid)|false|none|none|
+|service|string(uuid)|false|none|none|
+|name|string|false|none|none|
+|health_unit_name|string|false|none|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## CommunityHealthUnit
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "status_name": "string",
+  "health_unit_workers": "string",
+  "facility_name": "string",
+  "facility_ward": "string",
+  "facility_constituency": "string",
+  "facility_subcounty": "string",
+  "facility_county": "string",
+  "ward_code": "string",
+  "lat_long": "string",
+  "contacts": "string",
+  "geo_features": "string",
+  "boundaries": "string",
+  "pending_updates": "string",
+  "latest_update": "string",
+  "avg_rating": "string",
+  "number_of_ratings": "string",
+  "services": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a",
+      "service": "cd8c5e52-093e-43db-9c42-184f00e681dd",
+      "name": "string",
+      "health_unit_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "households_monitored": 2147483647,
+  "date_established": "2019-08-24",
+  "date_operational": "2019-08-24",
+  "is_approved": true,
+  "approval_comment": "string",
+  "approval_date": "2019-08-24T14:15:22Z",
+  "location": "string",
+  "is_closed": true,
+  "closing_comment": "string",
+  "is_rejected": true,
+  "rejection_reason": "string",
+  "has_edits": true,
+  "number_of_chvs": 2147483647,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "status": "82eda2a6-0a31-45ba-9c43-cfddbcb85a6d"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|status_name|string|false|read-only|none|
+|health_unit_workers|string|false|read-only|none|
+|facility_name|string|false|read-only|none|
+|facility_ward|string|false|read-only|none|
+|facility_constituency|string|false|read-only|none|
+|facility_subcounty|string|false|read-only|none|
+|facility_county|string|false|read-only|none|
+|ward_code|string|false|read-only|none|
+|lat_long|string|false|read-only|none|
+|contacts|string|false|read-only|none|
+|geo_features|string|false|read-only|none|
+|boundaries|string|false|read-only|none|
+|pending_updates|string|false|read-only|none|
+|latest_update|string|false|read-only|none|
+|avg_rating|string|false|read-only|none|
+|number_of_ratings|string|false|read-only|none|
+|services|[[CHUServiceLink](schema#chuservicelink)]|false|none|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|none|
+|code|string|false|read-only|A sequential number allocated to each chu|
+|households_monitored|integer|false|none|The number of house holds a CHU is in-charge of|
+|date_established|string(date)|false|none|none|
+|date_operational|string(date)¦null|false|none|none|
+|is_approved|boolean¦null|false|none|Determines if a chu has been approved|
+|approval_comment|string¦null|false|none|none|
+|approval_date|string(date-time)¦null|false|none|none|
+|location|string¦null|false|none|none|
+|is_closed|boolean|false|none|none|
+|closing_comment|string¦null|false|none|none|
+|is_rejected|boolean|false|none|none|
+|rejection_reason|string¦null|false|none|none|
+|has_edits|boolean|false|none|Indicates that a community health unit has updates that are pending approval|
+|number_of_chvs|integer|false|none|Number of Community Health volunteers in the CHU|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility|string(uuid)|true|none|The facility on which the health unit is tied to.|
+|status|string(uuid)|true|none|none|
+
+## ChuUpdateBuffer
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "workers": "string",
+  "contacts": "string",
+  "basic": "string",
+  "is_approved": true,
+  "is_rejected": true,
+  "is_new": true,
+  "services": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|workers|string¦null|false|none|none|
+|contacts|string¦null|false|none|none|
+|basic|string¦null|false|none|none|
+|is_approved|boolean|false|none|none|
+|is_rejected|boolean|false|none|none|
+|is_new|boolean|false|none|none|
+|services|string¦null|false|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|health_unit|string(uuid)|true|none|none|
+
+## CommunityHealthWorker
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "first_name": "string",
+  "last_name": "string",
+  "is_incharge": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "health_unit": "268ce1a2-3476-46be-a557-7ccb3fdd5c9a"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|first_name|string|true|none|none|
+|last_name|string¦null|false|none|none|
+|is_incharge|boolean|false|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|health_unit|string(uuid)|true|none|The health unit the worker is in-charge of|
+
+## CommunityHealthWorkerContact
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "health_worker": "931e939f-d0be-4af4-a85b-aff1e8c7c217",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|health_worker|string(uuid)|true|none|none|
+|contact|string(uuid)|true|none|none|
+
+## PhysicalAddress
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "town_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "nearest_landmark": "string",
+  "plot_number": "string",
+  "location_desc": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "town": "4fd742fe-0df3-471a-94cf-f763f28ca892"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|town_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|nearest_landmark|string¦null|false|none|well-known physical features /structure that can be used to simplify directions to a given place. e.g town market or village|
+|plot_number|string¦null|false|none|This is the same number found on the title deeds of thepiece of land on which this facility is located|
+|location_desc|string¦null|false|none|This field allows a more detailed description of the location|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|town|string(uuid)¦null|false|none|The town where the entity is located e.g Nakuru|
+
+## Constituency
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "county_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|county_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|Name of the administrative unit e.g Nairobi|
+|code|string|false|read-only|A unique_code 4 digit number representing the region.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|county|string(uuid)|true|none|Name of the county where the constituency is located|
+
+## ConstituencySlimDetail
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|Name of the administrative unit e.g Nairobi|
+|code|string|false|none|A unique_code 4 digit number representing the region.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|county|string(uuid)|true|none|Name of the county where the constituency is located|
+
+## ConstituencyDetail
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "bound": "string",
+  "county_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|bound|string|false|read-only|none|
+|county_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|Name of the administrative unit e.g Nairobi|
+|code|string|false|read-only|A unique_code 4 digit number representing the region.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|county|string(uuid)|true|none|Name of the county where the constituency is located|
+
+## ContactType
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|A short name, preferably 6 characters long, representing a certain type of contact e.g EMAIL|
+|description|string¦null|false|none|A brief description of the contact type.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## Contact
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "contact_type_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "contact": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|contact_type_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|contact|string|true|none|The actual contact of the person e.g test@mail.com, 07XXYYYZZZ|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|contact_type|string(uuid)|true|none|The type of contact that the given contact is e.g email or phone number|
+
+## County
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|Name of the administrative unit e.g Nairobi|
+|code|string|false|read-only|A unique_code 4 digit number representing the region.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## CountySlimDetail
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|Name of the administrative unit e.g Nairobi|
+|code|string|false|read-only|A unique_code 4 digit number representing the region.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## CountyDetail
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "bound": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|bound|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|Name of the administrative unit e.g Nairobi|
+|code|string|false|read-only|A unique_code 4 digit number representing the region.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## DocumentUpload
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "fyl": "http://example.com",
+  "document_type": "string",
+  "facility_name": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|read-only|none|
+|updated|string(date-time)|false|read-only|none|
+|deleted|boolean|false|read-only|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|none|
+|description|string¦null|false|none|none|
+|fyl|string(uri)¦null|false|read-only|none|
+|document_type|string|false|none|none|
+|facility_name|string¦null|false|none|none|
+|created_by|integer|false|read-only|none|
+|updated_by|integer|false|read-only|none|
+
+## ErrorQueue
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": 0,
+  "object_pk": "string",
+  "app_label": "string",
+  "model_name": "string",
+  "resolved": true,
+  "retries": -2147483648,
+  "except_message": "string",
+  "error_type": "SEARCH_INDEXING_ERROR",
+  "created": "2019-08-24T14:15:22Z"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|integer|false|read-only|none|
+|object_pk|string¦null|true|none|none|
+|app_label|string¦null|true|none|none|
+|model_name|string¦null|true|none|none|
+|resolved|boolean|false|none|none|
+|retries|integer|false|none|none|
+|except_message|string¦null|false|none|none|
+|error_type|string|true|none|none|
+|created|string(date-time)|false|none|none|
+
+#### Enumerated Values
+
+|Property|Value|
+|---|---|
+|error_type|SEARCH_INDEXING_ERROR|
+|error_type|SEND_EMAIL_ERROR|
+
+## NotificationGroup
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "group_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "group": 0,
+  "notification": "fb69cee8-5d6c-4135-9c4a-06e4518bc3ba"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|group_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|group|integer|true|none|none|
+|notification|string(uuid)|true|none|none|
+
+## Notification
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "summary": "string",
+  "notification_groups": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "group_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "group": 0,
+      "notification": "fb69cee8-5d6c-4135-9c4a-06e4518bc3ba"
+    }
+  ],
+  "simple_groups": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "title": "string",
+  "message": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|summary|string|false|read-only|none|
+|notification_groups|[[NotificationGroup](schema#notificationgroup)]|false|read-only|none|
+|simple_groups|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|title|string|true|none|none|
+|message|string|true|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## SubCounty
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "county_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|county_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|Name of the administrative unit e.g Nairobi|
+|code|string|false|none|A unique_code 4 digit number representing the region.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|county|string(uuid)|true|none|none|
+
+## Town
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string¦null|false|none|Name of the town|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## UserConstituency
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "user_email": "string",
+  "user_name": "string",
+  "constituency_name": "string",
+  "county_name": "string",
+  "county_id": "string",
+  "user": 0,
+  "constituency": "3b302467-f666-41c9-bbd5-ab5a690d8c29",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|user_email|string|false|read-only|none|
+|user_name|string|false|read-only|none|
+|constituency_name|string|false|read-only|none|
+|county_name|string|false|read-only|none|
+|county_id|string|false|read-only|none|
+|user|integer|false|none|none|
+|constituency|string(uuid)|false|none|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## UserContact
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4",
+  "user": 0,
+  "contact_text": "string",
+  "contact_type_text": "string",
+  "contact_type": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|contact|string(uuid)|false|none|none|
+|user|integer|false|none|none|
+|contact_text|string|false|none|none|
+|contact_type_text|string|false|read-only|none|
+|contact_type|string|true|none|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## UserCounty
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "user_full_name": "string",
+  "county_name": "string",
+  "county_code": "string",
+  "user_email": "string",
+  "user": 0,
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|user_full_name|string|false|read-only|none|
+|county_name|string|false|read-only|none|
+|county_code|string|false|read-only|none|
+|user_email|string|false|read-only|none|
+|user|integer|false|none|none|
+|county|string(uuid)|false|none|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## UserSubCounty
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "county_id": "string",
+  "county_name": "string",
+  "user": 0,
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "sub_county_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|county_id|string|false|read-only|none|
+|county_name|string|false|read-only|none|
+|user|integer|false|none|none|
+|sub_county|string(uuid)|false|none|none|
+|sub_county_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## Ward
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "county_name": "string",
+  "constituency_name": "string",
+  "sub_county_name": "string",
+  "sub_county": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "constituency": "3b302467-f666-41c9-bbd5-ab5a690d8c29"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|county_name|string|false|read-only|none|
+|constituency_name|string|false|read-only|none|
+|sub_county_name|string|false|read-only|none|
+|sub_county|string|true|none|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|Name of the administrative unit e.g Nairobi|
+|code|string|false|read-only|A unique_code 4 digit number representing the region.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|constituency|string(uuid)|true|none|The constituency where the ward is located.|
+
+## WardSlimDetail
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "county_name": "string",
+  "constituency_name": "string",
+  "sub_county_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "constituency": "3b302467-f666-41c9-bbd5-ab5a690d8c29",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|county_name|string|false|read-only|none|
+|constituency_name|string|false|read-only|none|
+|sub_county_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|Name of the administrative unit e.g Nairobi|
+|code|string|false|none|A unique_code 4 digit number representing the region.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|constituency|string(uuid)|true|none|The constituency where the ward is located.|
+|sub_county|string(uuid)¦null|false|none|The sub-county where the ward is located|
+
+## WardBoundary
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "center": "string",
+  "facility_count": "string",
+  "density": "string",
+  "bound": "string",
+  "ward_id": "string",
+  "geometry": "string",
+  "name": "string",
+  "code": "string",
+  "mpoly": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|center|string|false|read-only|none|
+|facility_count|string|false|read-only|none|
+|density|string|false|read-only|none|
+|bound|string|false|read-only|none|
+|ward_id|string|true|none|none|
+|geometry|string|false|read-only|none|
+|name|string|true|none|none|
+|code|string|true|none|none|
+|mpoly|string¦null|false|none|none|
+
+## WardDetail
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "ward_boundary": {
+    "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+    "center": "string",
+    "facility_count": "string",
+    "density": "string",
+    "bound": "string",
+    "ward_id": "string",
+    "geometry": "string",
+    "name": "string",
+    "code": "string",
+    "mpoly": "string"
+  },
+  "facility_coordinates": "string",
+  "county": {
+    "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+    "created": "2019-08-24T14:15:22Z",
+    "updated": "2019-08-24T14:15:22Z",
+    "deleted": true,
+    "active": true,
+    "search": "string",
+    "name": "string",
+    "code": "string",
+    "created_by": 0,
+    "updated_by": 0
+  },
+  "county_name": "string",
+  "constituency_name": "string",
+  "sub_county_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "code": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "constituency": "3b302467-f666-41c9-bbd5-ab5a690d8c29",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|ward_boundary|[WardBoundary](schema#wardboundary)|false|none|none|
+|facility_coordinates|string|false|read-only|none|
+|county|[County](schema#county)|false|none|none|
+|county_name|string|false|read-only|none|
+|constituency_name|string|false|read-only|none|
+|sub_county_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|Name of the administrative unit e.g Nairobi|
+|code|string|false|read-only|A unique_code 4 digit number representing the region.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|constituency|string(uuid)|true|none|The constituency where the ward is located.|
+|sub_county|string(uuid)¦null|false|none|The sub-county where the ward is located|
+
+## FacilityContact
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "contact_type": "string",
+  "actual_contact": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|contact_type|string|false|read-only|none|
+|actual_contact|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility|string(uuid)|true|none|none|
+|contact|string(uuid)|true|none|none|
+
+## Facility
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "regulatory_status_name": "string",
+  "facility_type_name": "string",
+  "facility_type_parent": "string",
+  "owner_name": "string",
+  "owner_type_name": "string",
+  "owner_type": "string",
+  "operation_status_name": "string",
+  "admission_status_name": "string",
+  "county": "string",
+  "constituency": "string",
+  "constituency_name": "string",
+  "ward_name": "string",
+  "average_rating": "string",
+  "facility_services": "string",
+  "facility_infrastructure": "string",
+  "facility_contacts": "string",
+  "facility_humanresources": "string",
+  "is_approved": "string",
+  "has_edits": "string",
+  "latest_update": "string",
+  "regulatory_body_name": "string",
+  "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+  "date_requested": "string",
+  "date_approved": "string",
+  "latest_approval_or_rejection": "string",
+  "sub_county_name": "string",
+  "sub_county_id": "string",
+  "county_name": "string",
+  "constituency_id": "string",
+  "county_id": "string",
+  "keph_level_name": "string",
+  "lat_long": "string",
+  "is_complete": "string",
+  "in_complete_details": "string",
+  "facility_checklist_document": "string",
+  "facility_license_document": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "official_name": "string",
+  "code": "string",
+  "registration_number": "string",
+  "abbreviation": "string",
+  "description": "string",
+  "number_of_beds": 2147483647,
+  "number_of_cots": 2147483647,
+  "number_of_emergency_casualty_beds": 2147483647,
+  "number_of_icu_beds": 2147483647,
+  "number_of_hdu_beds": 2147483647,
+  "number_of_inpatient_beds": 2147483647,
+  "number_of_maternity_beds": 2147483647,
+  "number_of_isolation_beds": 2147483647,
+  "number_of_general_theatres": 2147483647,
+  "number_of_maternity_theatres": 2147483647,
+  "open_whole_day": true,
+  "open_public_holidays": true,
+  "open_normal_day": true,
+  "open_weekends": true,
+  "open_late_night": true,
+  "is_classified": true,
+  "is_published": true,
+  "accredited_lab_iso_15189": true,
+  "attributes": "string",
+  "regulated": true,
+  "approved": true,
+  "rejected": true,
+  "bank_name": "string",
+  "branch_name": "string",
+  "bank_account": "string",
+  "facility_catchment_population": -2147483648,
+  "town_name": "string",
+  "nearest_landmark": "string",
+  "plot_number": "string",
+  "location_desc": "string",
+  "closed": true,
+  "closed_date": "2019-08-24T14:15:22Z",
+  "approvalrejection_date": "2019-08-24T14:15:22Z",
+  "closing_reason": "string",
+  "date_established": "2019-08-24",
+  "license_number": "string",
+  "admitting_maternity_only": true,
+  "admitting_maternity_general": true,
+  "reporting_in_dhis": true,
+  "nhif_accreditation": true,
+  "approved_national_level": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
+  "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+  "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999",
+  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+  "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "town": "4fd742fe-0df3-471a-94cf-f763f28ca892",
+  "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394",
+  "admission_status": "1ed11bc0-fe01-422d-a28d-7189f7c454c6",
+  "contacts": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ]
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|regulatory_status_name|string|false|read-only|none|
+|facility_type_name|string|false|read-only|none|
+|facility_type_parent|string|false|read-only|none|
+|owner_name|string|false|read-only|none|
+|owner_type_name|string|false|read-only|none|
+|owner_type|string|false|read-only|none|
+|operation_status_name|string|false|read-only|none|
+|admission_status_name|string|false|read-only|none|
+|county|string|false|read-only|none|
+|constituency|string|false|read-only|none|
+|constituency_name|string|false|read-only|none|
+|ward_name|string|false|read-only|none|
+|average_rating|string|false|read-only|none|
+|facility_services|string|false|read-only|none|
+|facility_infrastructure|string|false|read-only|none|
+|facility_contacts|string|false|read-only|none|
+|facility_humanresources|string|false|read-only|none|
+|is_approved|string|false|read-only|none|
+|has_edits|string|false|read-only|none|
+|latest_update|string|false|read-only|none|
+|regulatory_body_name|string|false|read-only|none|
+|owner|string(uuid)|false|none|none|
+|date_requested|string|false|read-only|none|
+|date_approved|string|false|read-only|none|
+|latest_approval_or_rejection|string|false|read-only|none|
+|sub_county_name|string|false|read-only|none|
+|sub_county_id|string|false|read-only|none|
+|county_name|string|false|read-only|none|
+|constituency_id|string|false|read-only|none|
+|county_id|string|false|read-only|none|
+|keph_level_name|string|false|read-only|none|
+|lat_long|string|false|read-only|none|
+|is_complete|string|false|read-only|none|
+|in_complete_details|string|false|read-only|none|
+|facility_checklist_document|string|false|read-only|none|
+|facility_license_document|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|This is the unique name of the facility|
+|official_name|string¦null|false|none|The official name of the facility|
+|code|string|false|read-only|A sequential number allocated to each facility|
+|registration_number|string¦null|false|none|The registration number given by the regulator|
+|abbreviation|string¦null|false|none|A short name for the facility.|
+|description|string¦null|false|none|A brief summary of the Facility|
+|number_of_beds|integer|false|none|The number of authorized inpatient beds that a facility has. e.g 0|
+|number_of_cots|integer|false|none|The number of authorized cots that a facility has e.g 0|
+|number_of_emergency_casualty_beds|integer|false|none|The number of emergency casualty beds  that a facility has e.g 0|
+|number_of_icu_beds|integer|false|none|The number of Intensive Care Units (ICU) beds that a facility has e.g 0|
+|number_of_hdu_beds|integer|false|none|The number of High Dependency Units (HDU) beds that a facility has e.g 0|
+|number_of_inpatient_beds|integer|false|none|The number of General In-patient beds that a facility has e.g 0|
+|number_of_maternity_beds|integer|false|none|The number of maternity beds that a facility has e.g 0|
+|number_of_isolation_beds|integer|false|none|The number of isolation beds that a facility has e.g 0|
+|number_of_general_theatres|integer|false|none|The number of general theatres  that a facility has e.g 0|
+|number_of_maternity_theatres|integer|false|none|The number of maternity theatres  that a facility has e.g 0|
+|open_whole_day|boolean|false|none|Does the facility operate 24 hours a day|
+|open_public_holidays|boolean|false|none|Is the facility open on public holidays?|
+|open_normal_day|boolean|false|none|Is the facility open from 8 am to 5 pm|
+|open_weekends|boolean|false|none|Is the facility_open during weekends?|
+|open_late_night|boolean|false|none|Indicates if a facility is open late night e.g upto 11 pm|
+|is_classified|boolean|false|none|Should the facility geo-codes be visible to the public?Certain facilities are kept 'off-the-map'|
+|is_published|boolean|false|none|COnfirmation by the CHRIO that the facility is okay|
+|accredited_lab_iso_15189|boolean|false|none|Indicate if facility is accredited Lab ISO 15189|
+|attributes|string¦null|false|none|none|
+|regulated|boolean|false|none|none|
+|approved|boolean¦null|false|none|Has the facility been approved at the county level|
+|rejected|boolean|false|none|none|
+|bank_name|string¦null|false|none|The name of the facility's banker e.g Equity Bank|
+|branch_name|string¦null|false|none|Branch name of the facility's bank|
+|bank_account|string¦null|false|none|none|
+|facility_catchment_population|integer¦null|false|none|The population size which the facility serves|
+|town_name|string¦null|false|none|The town where the entity is located e.g Nakuru|
+|nearest_landmark|string¦null|false|none|well-known physical features /structure that can be used to simplify directions to a given place. e.g town market or village|
+|plot_number|string¦null|false|none|This is the same number found on the title deeds of thepiece of land on which this facility is located|
+|location_desc|string¦null|false|none|This field allows a more detailed description of the location|
+|closed|boolean|false|none|Indicates whether a facility has been closed by the regulator|
+|closed_date|string(date-time)¦null|false|none|Date the facility was closed|
+|approvalrejection_date|string(date-time)¦null|false|none|Date the facility was approved or rejected|
+|closing_reason|string¦null|false|none|Reason for closing the facility|
+|date_established|string(date)¦null|false|none|The date when the facility became operational|
+|license_number|string¦null|false|none|The license number given to the hospital by the regulator|
+|admitting_maternity_only|boolean¦null|false|none|A flag to indicate whether facility admits only maternity patients|
+|admitting_maternity_general|boolean¦null|false|none|A flag to indicate whether facility admits both maternity & general casualty patients|
+|reporting_in_dhis|boolean¦null|false|none|A flag to indicate whether facility should have reporting in dhis|
+|nhif_accreditation|boolean¦null|false|none|A flag to indicate whether facility is accredited by nhif|
+|approved_national_level|boolean¦null|false|none|Has the facility been approved at the national level|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility_type|string(uuid)|true|none|This depends on who owns the facility. For MOH facilities,type is the gazetted classification of the facility.For Non-MOH check under the respective owners.|
+|operation_status|string(uuid)¦null|false|none|Indicates whether the facilityhas been approved to operate, is operating, is temporarilynon-operational, or is closed down|
+|ward|string(uuid)¦null|false|none|County ward in which the facility is located|
+|parent|string(uuid)¦null|false|none|Indicates the umbrella facility of a facility|
+|regulatory_body|string(uuid)¦null|false|none|none|
+|keph_level|string(uuid)¦null|false|none|The keph level of the facility|
+|sub_county|string(uuid)¦null|false|none|The sub county in which the facility has been assigned|
+|town|string(uuid)¦null|false|none|The town where the entity is located e.g Nakuru|
+|regulation_status|string(uuid)¦null|false|none|The regulatory status of the hospital|
+|admission_status|string(uuid)¦null|false|none|Indicates whether the facilityhas been approved to admit and the admission categories it caters for|
+|contacts|[string]|false|read-only|Facility contacts - email, phone, fax, postal etc|
+
+## FacilityInfrastructure
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "infrastructure_name": "string",
+  "option_display_value": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "count": -2147483648,
+  "present": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "infrastructure": "1d1f492c-f2d6-4e1d-bc79-8be05af7e78c"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|infrastructure_name|string|false|read-only|none|
+|option_display_value|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|count|integer|false|none|The actual number of infrastructure items in a facility.|
+|present|boolean|false|none|True if the listed infrastructure is present.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility|string(uuid)|true|none|none|
+|infrastructure|string(uuid)|true|none|none|
+
+## FacilitySpecialist
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "speciality_name": "string",
+  "option_display_value": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "count": -2147483648,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "speciality": "3cbdb815-046e-48df-9567-acbaf1b59428"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|speciality_name|string|false|read-only|none|
+|option_display_value|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|count|integer|false|none|The actual number of specialists for this speciality.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility|string(uuid)|true|none|none|
+|speciality|string(uuid)|true|none|none|
+
+## FacilityUnit
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "regulation_status": "string",
+  "unit_name": "string",
+  "regulating_body_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "license_number": "string",
+  "registration_number": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "unit": "96a6aa1e-fb68-45e6-a443-0913abfa47dd"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|regulation_status|string|false|read-only|none|
+|unit_name|string|false|read-only|none|
+|regulating_body_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|license_number|string¦null|false|none|none|
+|registration_number|string¦null|false|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility|string(uuid)|true|none|none|
+|unit|string(uuid)|true|none|none|
+
+## FacilityDetail
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "regulatory_status_name": "string",
+  "facility_type_name": "string",
+  "facility_type_parent": "string",
+  "owner_name": "string",
+  "owner_type_name": "string",
+  "owner_type": "string",
+  "operation_status_name": "string",
+  "admission_status_name": "string",
+  "county": "string",
+  "constituency": "string",
+  "constituency_name": "string",
+  "ward_name": "string",
+  "average_rating": "string",
+  "facility_services": "string",
+  "facility_infrastructure": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "infrastructure_name": "string",
+      "option_display_value": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "count": -2147483648,
+      "present": true,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "infrastructure": "1d1f492c-f2d6-4e1d-bc79-8be05af7e78c"
+    }
+  ],
+  "facility_contacts": "string",
+  "facility_humanresources": "string",
+  "is_approved": "string",
+  "has_edits": "string",
+  "latest_update": "string",
+  "regulatory_body_name": "string",
+  "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+  "date_requested": "string",
+  "date_approved": "string",
+  "latest_approval_or_rejection": "string",
+  "sub_county_name": "string",
+  "sub_county_id": "string",
+  "county_name": "string",
+  "constituency_id": "string",
+  "county_id": "string",
+  "keph_level_name": "string",
+  "lat_long": "string",
+  "is_complete": "string",
+  "in_complete_details": "string",
+  "facility_checklist_document": "string",
+  "facility_license_document": "string",
+  "coordinates": "string",
+  "latest_approval": "string",
+  "county_code": "string",
+  "constituency_code": "string",
+  "facility_specialists": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "speciality_name": "string",
+      "option_display_value": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "count": -2147483648,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "speciality": "3cbdb815-046e-48df-9567-acbaf1b59428"
+    }
+  ],
+  "ward_code": "string",
+  "service_catalogue_active": "string",
+  "facility_units": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "regulation_status": "string",
+      "unit_name": "string",
+      "regulating_body_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "license_number": "string",
+      "registration_number": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "unit": "96a6aa1e-fb68-45e6-a443-0913abfa47dd"
+    }
+  ],
+  "officer_in_charge": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "official_name": "string",
+  "code": "string",
+  "registration_number": "string",
+  "abbreviation": "string",
+  "description": "string",
+  "number_of_beds": 2147483647,
+  "number_of_cots": 2147483647,
+  "number_of_emergency_casualty_beds": 2147483647,
+  "number_of_icu_beds": 2147483647,
+  "number_of_hdu_beds": 2147483647,
+  "number_of_inpatient_beds": 2147483647,
+  "number_of_maternity_beds": 2147483647,
+  "number_of_isolation_beds": 2147483647,
+  "number_of_general_theatres": 2147483647,
+  "number_of_maternity_theatres": 2147483647,
+  "open_whole_day": true,
+  "open_public_holidays": true,
+  "open_normal_day": true,
+  "open_weekends": true,
+  "open_late_night": true,
+  "is_classified": true,
+  "is_published": true,
+  "accredited_lab_iso_15189": true,
+  "regulated": true,
+  "approved": true,
+  "rejected": true,
+  "bank_name": "string",
+  "branch_name": "string",
+  "bank_account": "string",
+  "facility_catchment_population": -2147483648,
+  "town_name": "string",
+  "nearest_landmark": "string",
+  "plot_number": "string",
+  "location_desc": "string",
+  "closed": true,
+  "closed_date": "2019-08-24T14:15:22Z",
+  "approvalrejection_date": "2019-08-24T14:15:22Z",
+  "closing_reason": "string",
+  "date_established": "2019-08-24",
+  "license_number": "string",
+  "admitting_maternity_only": true,
+  "admitting_maternity_general": true,
+  "reporting_in_dhis": true,
+  "nhif_accreditation": true,
+  "approved_national_level": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
+  "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+  "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999",
+  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+  "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "town": "4fd742fe-0df3-471a-94cf-f763f28ca892",
+  "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394",
+  "admission_status": "1ed11bc0-fe01-422d-a28d-7189f7c454c6",
+  "contacts": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ]
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|regulatory_status_name|string|false|read-only|none|
+|facility_type_name|string|false|read-only|none|
+|facility_type_parent|string|false|read-only|none|
+|owner_name|string|false|read-only|none|
+|owner_type_name|string|false|read-only|none|
+|owner_type|string|false|read-only|none|
+|operation_status_name|string|false|read-only|none|
+|admission_status_name|string|false|read-only|none|
+|county|string|false|read-only|none|
+|constituency|string|false|read-only|none|
+|constituency_name|string|false|read-only|none|
+|ward_name|string|false|read-only|none|
+|average_rating|string|false|read-only|none|
+|facility_services|string|false|read-only|none|
+|facility_infrastructure|[[FacilityInfrastructure](schema#facilityinfrastructure)]|false|none|none|
+|facility_contacts|string|false|read-only|none|
+|facility_humanresources|string|false|read-only|none|
+|is_approved|string|false|read-only|none|
+|has_edits|string|false|read-only|none|
+|latest_update|string|false|read-only|none|
+|regulatory_body_name|string|false|read-only|none|
+|owner|string(uuid)|false|none|none|
+|date_requested|string|false|read-only|none|
+|date_approved|string|false|read-only|none|
+|latest_approval_or_rejection|string|false|read-only|none|
+|sub_county_name|string|false|read-only|none|
+|sub_county_id|string|false|read-only|none|
+|county_name|string|false|read-only|none|
+|constituency_id|string|false|read-only|none|
+|county_id|string|false|read-only|none|
+|keph_level_name|string|false|read-only|none|
+|lat_long|string|false|read-only|none|
+|is_complete|string|false|read-only|none|
+|in_complete_details|string|false|read-only|none|
+|facility_checklist_document|string|false|read-only|none|
+|facility_license_document|string|false|read-only|none|
+|coordinates|string|false|read-only|none|
+|latest_approval|string|false|read-only|none|
+|county_code|string|false|read-only|none|
+|constituency_code|string|false|read-only|none|
+|facility_specialists|[[FacilitySpecialist](schema#facilityspecialist)]|false|none|none|
+|ward_code|string|false|read-only|none|
+|service_catalogue_active|string|false|read-only|none|
+|facility_units|[[FacilityUnit](schema#facilityunit)]|false|none|none|
+|officer_in_charge|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|This is the unique name of the facility|
+|official_name|string¦null|false|none|The official name of the facility|
+|code|string|false|read-only|A sequential number allocated to each facility|
+|registration_number|string¦null|false|none|The registration number given by the regulator|
+|abbreviation|string¦null|false|none|A short name for the facility.|
+|description|string¦null|false|none|A brief summary of the Facility|
+|number_of_beds|integer|false|none|The number of authorized inpatient beds that a facility has. e.g 0|
+|number_of_cots|integer|false|none|The number of authorized cots that a facility has e.g 0|
+|number_of_emergency_casualty_beds|integer|false|none|The number of emergency casualty beds  that a facility has e.g 0|
+|number_of_icu_beds|integer|false|none|The number of Intensive Care Units (ICU) beds that a facility has e.g 0|
+|number_of_hdu_beds|integer|false|none|The number of High Dependency Units (HDU) beds that a facility has e.g 0|
+|number_of_inpatient_beds|integer|false|none|The number of General In-patient beds that a facility has e.g 0|
+|number_of_maternity_beds|integer|false|none|The number of maternity beds that a facility has e.g 0|
+|number_of_isolation_beds|integer|false|none|The number of isolation beds that a facility has e.g 0|
+|number_of_general_theatres|integer|false|none|The number of general theatres  that a facility has e.g 0|
+|number_of_maternity_theatres|integer|false|none|The number of maternity theatres  that a facility has e.g 0|
+|open_whole_day|boolean|false|none|Does the facility operate 24 hours a day|
+|open_public_holidays|boolean|false|none|Is the facility open on public holidays?|
+|open_normal_day|boolean|false|none|Is the facility open from 8 am to 5 pm|
+|open_weekends|boolean|false|none|Is the facility_open during weekends?|
+|open_late_night|boolean|false|none|Indicates if a facility is open late night e.g upto 11 pm|
+|is_classified|boolean|false|none|Should the facility geo-codes be visible to the public?Certain facilities are kept 'off-the-map'|
+|is_published|boolean|false|none|COnfirmation by the CHRIO that the facility is okay|
+|accredited_lab_iso_15189|boolean|false|none|Indicate if facility is accredited Lab ISO 15189|
+|regulated|boolean|false|none|none|
+|approved|boolean¦null|false|none|Has the facility been approved at the county level|
+|rejected|boolean|false|none|none|
+|bank_name|string¦null|false|none|The name of the facility's banker e.g Equity Bank|
+|branch_name|string¦null|false|none|Branch name of the facility's bank|
+|bank_account|string¦null|false|none|none|
+|facility_catchment_population|integer¦null|false|none|The population size which the facility serves|
+|town_name|string¦null|false|none|The town where the entity is located e.g Nakuru|
+|nearest_landmark|string¦null|false|none|well-known physical features /structure that can be used to simplify directions to a given place. e.g town market or village|
+|plot_number|string¦null|false|none|This is the same number found on the title deeds of thepiece of land on which this facility is located|
+|location_desc|string¦null|false|none|This field allows a more detailed description of the location|
+|closed|boolean|false|none|Indicates whether a facility has been closed by the regulator|
+|closed_date|string(date-time)¦null|false|none|Date the facility was closed|
+|approvalrejection_date|string(date-time)¦null|false|none|Date the facility was approved or rejected|
+|closing_reason|string¦null|false|none|Reason for closing the facility|
+|date_established|string(date)¦null|false|none|The date when the facility became operational|
+|license_number|string¦null|false|none|The license number given to the hospital by the regulator|
+|admitting_maternity_only|boolean¦null|false|none|A flag to indicate whether facility admits only maternity patients|
+|admitting_maternity_general|boolean¦null|false|none|A flag to indicate whether facility admits both maternity & general casualty patients|
+|reporting_in_dhis|boolean¦null|false|none|A flag to indicate whether facility should have reporting in dhis|
+|nhif_accreditation|boolean¦null|false|none|A flag to indicate whether facility is accredited by nhif|
+|approved_national_level|boolean¦null|false|none|Has the facility been approved at the national level|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility_type|string(uuid)|true|none|This depends on who owns the facility. For MOH facilities,type is the gazetted classification of the facility.For Non-MOH check under the respective owners.|
+|operation_status|string(uuid)¦null|false|none|Indicates whether the facilityhas been approved to operate, is operating, is temporarilynon-operational, or is closed down|
+|ward|string(uuid)¦null|false|none|County ward in which the facility is located|
+|parent|string(uuid)¦null|false|none|Indicates the umbrella facility of a facility|
+|regulatory_body|string(uuid)¦null|false|none|none|
+|keph_level|string(uuid)¦null|false|none|The keph level of the facility|
+|sub_county|string(uuid)¦null|false|none|The sub county in which the facility has been assigned|
+|town|string(uuid)¦null|false|none|The town where the entity is located e.g Nakuru|
+|regulation_status|string(uuid)¦null|false|none|The regulatory status of the hospital|
+|admission_status|string(uuid)¦null|false|none|Indicates whether the facilityhas been approved to admit and the admission categories it caters for|
+|contacts|[string]|false|read-only|Facility contacts - email, phone, fax, postal etc|
+
+## FacilityList
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "code": "string",
+  "name": "string",
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "county": "string",
+  "constituency": "string",
+  "facility_type_name": "string",
+  "owner_name": "string",
+  "owner_type_name": "string",
+  "regulatory_status_name": "string",
+  "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+  "operation_status_name": "string",
+  "admission_status_name": "string",
+  "ward_name": "string",
+  "is_published": true,
+  "is_approved": "string",
+  "has_edits": "string",
+  "rejected": true
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|code|string|false|read-only|A sequential number allocated to each facility|
+|name|string|true|none|This is the unique name of the facility|
+|id|string(uuid)|false|read-only|none|
+|county|string|false|read-only|none|
+|constituency|string|false|read-only|none|
+|facility_type_name|string|false|read-only|none|
+|owner_name|string|false|read-only|none|
+|owner_type_name|string|false|read-only|none|
+|regulatory_status_name|string|false|read-only|none|
+|ward|string(uuid)¦null|false|none|County ward in which the facility is located|
+|operation_status_name|string|false|read-only|none|
+|admission_status_name|string|false|read-only|none|
+|ward_name|string|false|read-only|none|
+|is_published|boolean|false|none|COnfirmation by the CHRIO that the facility is okay|
+|is_approved|string|false|read-only|none|
+|has_edits|string|false|read-only|none|
+|rejected|boolean|false|none|none|
+
+## FacilityAdmissionStatus
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|A short name representing the admission status e.g NOT ADMITTING|
+|description|string¦null|false|none|A short explanation of what the admission status entails.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## FacilityApproval
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "done_by": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "comment": "string",
+  "is_cancelled": true,
+  "is_national_approval": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|done_by|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|comment|string¦null|false|none|none|
+|is_cancelled|boolean|false|none|Cancel a facility approval|
+|is_national_approval|boolean|false|none|Approval of the facility at the national level|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility|string(uuid)|true|none|none|
+
+## FacilityDepartment
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "regulatory_body_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|regulatory_body_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|none|
+|description|string¦null|false|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|regulatory_body|string(uuid)|true|none|none|
+
+## FacilityOfficer
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "facility_name": "string",
+  "officer_name": "string",
+  "id_number": "string",
+  "registration_number": "string",
+  "job_title": "string",
+  "contacts": "string",
+  "email": "string",
+  "postal": "string",
+  "mobile": "string",
+  "landline": "string",
+  "fax": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "officer": "8481ed7f-8db9-4614-a252-b14694bf5ad4"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|facility_name|string|false|read-only|none|
+|officer_name|string|false|read-only|none|
+|id_number|string|false|read-only|none|
+|registration_number|string|false|read-only|none|
+|job_title|string|false|read-only|none|
+|contacts|string|false|read-only|none|
+|email|string|false|read-only|none|
+|postal|string|false|read-only|none|
+|mobile|string|false|read-only|none|
+|landline|string|false|read-only|none|
+|fax|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility|string(uuid)|true|none|none|
+|officer|string(uuid)|true|none|none|
+
+## FacilityOperationState
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "reason": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|reason|string¦null|false|none|Additional information for the transition|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|operation_status|string(uuid)|true|none|Indicates whether the facilityhas been approved to operate, is operating, is temporarilynon-operational, or is closed down|
+|facility|string(uuid)|true|none|none|
+
+## FacilityRegulationStatus
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "reason": "string",
+  "license_number": "string",
+  "license_is_expired": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "regulating_body": "5abf85d7-bf44-415c-b650-888243175c54",
+  "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|reason|string¦null|false|none|An explanation for as to why is the facility is beingput in the particular status|
+|license_number|string¦null|false|none|The license number that the facility has been given by the regulator|
+|license_is_expired|boolean|false|none|A flag to indicate whether the license is valid or not|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility|string(uuid)|true|none|none|
+|regulating_body|string(uuid)¦null|false|none|none|
+|regulation_status|string(uuid)|true|none|none|
+
+## FacilityServiceRating
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "facility_name": "string",
+  "facility_id": "string",
+  "service_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "rating": 5,
+  "comment": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility_service": "8608a10b-37a7-48a1-9c5e-3b1c6415104c"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|facility_name|string|false|read-only|none|
+|facility_id|string|false|read-only|none|
+|service_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|rating|integer|true|none|none|
+|comment|string¦null|false|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility_service|string(uuid)|true|none|none|
+
+## FacilityService
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "service_name": "string",
+  "service_code": "string",
+  "option_display_value": "string",
+  "average_rating": "string",
+  "number_of_ratings": "string",
+  "service_has_options": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "is_confirmed": true,
+  "is_cancelled": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "option": "e7c2432c-b004-45c5-a282-bcaf6d903541",
+  "service": "cd8c5e52-093e-43db-9c42-184f00e681dd"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|service_name|string|false|read-only|none|
+|service_code|string|false|read-only|none|
+|option_display_value|string|false|read-only|none|
+|average_rating|string|false|read-only|none|
+|number_of_ratings|string|false|read-only|none|
+|service_has_options|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|is_confirmed|boolean|false|none|Indicates whether a service has been approved by the CHRIO|
+|is_cancelled|boolean|false|none|Indicates whether a service has been canceled by the CHRIO|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility|string(uuid)|true|none|none|
+|option|string(uuid)¦null|false|none|none|
+|service|string(uuid)|true|none|none|
+
+## FacilityStatus
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "is_public_visible": true,
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|A short name representing the operation status e.g OPERATIONAL|
+|description|string¦null|false|none|A short explanation of what the status entails.|
+|is_public_visible|boolean|false|none|The facilities with this status should be visible to the public|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## FacilityType
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "owner_type_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "abbreviation": "string",
+  "sub_division": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "owner_type": "2c36d811-befc-4f66-ac99-1f27e70bdb0b",
+  "preceding": "39541667-be02-4a84-8264-8868234629da",
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|owner_type_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|A short unique name for the facility type e.g DISPENSARY|
+|abbreviation|string¦null|false|none|none|
+|sub_division|string¦null|false|none|Parent of the facility type e.g sub-district hospitals are under Hospitals.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|owner_type|string(uuid)¦null|false|none|none|
+|preceding|string(uuid)¦null|false|none|The facility type that comes before this type|
+|parent|string(uuid)¦null|false|none|none|
+
+## FacilityUnitRegulation
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility_unit": "b3677d6c-3d3d-4e58-bf29-f097f559dec0",
+  "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility_unit|string(uuid)|true|none|none|
+|regulation_status|string(uuid)|true|none|none|
+
+## FacilityUpdates
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "facility_updated_json": "string",
+  "created_by_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "approved": true,
+  "cancelled": true,
+  "contacts": "string",
+  "services": "string",
+  "humanresources": "string",
+  "infrastructure": "string",
+  "officer_in_charge": "string",
+  "units": "string",
+  "geo_codes": "string",
+  "is_new": true,
+  "is_national_approval": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|facility_updated_json|string|false|read-only|none|
+|created_by_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|approved|boolean|false|none|none|
+|cancelled|boolean|false|none|none|
+|contacts|string¦null|false|none|none|
+|services|string¦null|false|none|none|
+|humanresources|string¦null|false|none|none|
+|infrastructure|string¦null|false|none|none|
+|officer_in_charge|string¦null|false|none|none|
+|units|string¦null|false|none|none|
+|geo_codes|string¦null|false|none|none|
+|is_new|boolean|false|none|none|
+|is_national_approval|boolean|false|none|Approval of the facility at the national level|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility|string(uuid)|true|none|none|
+
+## FacilityUpgrade
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "current_keph_level": "string",
+  "current_facility_type": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "is_confirmed": true,
+  "is_cancelled": true,
+  "is_upgrade": true,
+  "current_keph_level_name": "string",
+  "current_facility_type_name": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
+  "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2",
+  "reason": "82923651-ad20-41d1-9334-85fd9df8e817"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|current_keph_level|string|false|read-only|none|
+|current_facility_type|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|is_confirmed|boolean|false|none|Indicates whether a facility upgrade or downgrade has been confirmed|
+|is_cancelled|boolean|false|none|Indicates whether a facility upgrade or downgrade has beencanceled or not|
+|is_upgrade|boolean|false|none|none|
+|current_keph_level_name|string¦null|false|none|none|
+|current_facility_type_name|string¦null|false|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility|string(uuid)|true|none|none|
+|facility_type|string(uuid)|true|none|none|
+|keph_level|string(uuid)¦null|false|none|none|
+|reason|string(uuid)|true|none|none|
+
+## Infrastructure
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "category_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "numbers": true,
+  "code": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "category": "86d23d13-9dbb-46f3-82d0-25253c7750c3"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|category_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|none|
+|description|string¦null|false|none|none|
+|abbreviation|string¦null|false|none|A short form for the infrastructure|
+|numbers|boolean¦null|false|none|A flag to indicate whether an infrastructure item can have count/numbers tracked|
+|code|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|category|string(uuid)|true|none|The classification that the infrastructure item lies in.|
+
+## InfrastructureCategory
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|What is the name of the category?|
+|description|string¦null|false|none|none|
+|abbreviation|string¦null|false|none|A short form of the category e.g ANC for antenatal|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|parent|string(uuid)¦null|false|none|The parent category under which the category falls|
+
+## JobTitle
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "name": "string",
+  "abbreviation": "string",
+  "description": "string",
+  "search": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|name|string|true|none|A short name for the job title|
+|abbreviation|string¦null|false|none|The short name for the title|
+|description|string¦null|false|none|A short summary of the job title|
+|search|string¦null|false|none|A dummy field to enable search on the model through a filter|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+
+## KephLevel
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "is_facility_level": true,
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|The name of the KEPH e.g Level 1|
+|description|string¦null|false|none|A short description of the KEPH level|
+|is_facility_level|boolean|false|none|Is the KEPH level applicable to facilities|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## FacilityLevelChangeReason
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "reason": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|reason|string|true|none|none|
+|description|string|true|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## FacilityExportExcelMaterialView
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "code": -2147483648,
+  "name": "string",
+  "officialname": "string",
+  "registration_number": "string",
+  "keph_level_name": "5e2f7ef2-98aa-42b4-9a96-5828b8fa9307",
+  "facility_type_name": "string",
+  "facility_type_category": "string",
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+  "constituency": "3b302467-f666-41c9-bbd5-ab5a690d8c29",
+  "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+  "owner_name": "string",
+  "owner_type_name": "string",
+  "regulatory_body_name": "string",
+  "beds": -2147483648,
+  "cots": -2147483648,
+  "search": "string",
+  "county_name": "string",
+  "constituency_name": "string",
+  "sub_county": "string",
+  "sub_county_name": "string",
+  "ward_name": "string",
+  "keph_level": "string",
+  "facility_type": "string",
+  "owner_type": "string",
+  "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+  "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+  "operation_status_name": "string",
+  "admission_status_name": "string",
+  "open_whole_day": true,
+  "open_public_holidays": true,
+  "open_weekends": true,
+  "open_late_night": true,
+  "services": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ],
+  "categories": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ],
+  "service_names": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ],
+  "approved": true,
+  "is_public_visible": true,
+  "created": "2019-08-24T14:15:22Z",
+  "closed": true,
+  "is_published": true,
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "lat": "string",
+  "long": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|code|integer|true|none|The facility code|
+|name|string|true|none|Unique name of the facility|
+|officialname|string|true|none|Official name of the facility|
+|registration_number|string|true|none|The facilities registration_number|
+|keph_level_name|string(uuid)¦null|false|none|The facility's keph-level|
+|facility_type_name|string|true|none|The facility type|
+|facility_type_category|string|true|none|The facility category name|
+|county|string(uuid)¦null|false|none|Name of the facility's county|
+|constituency|string(uuid)¦null|false|none|The name of the facility's constituency|
+|ward|string(uuid)|true|none|Name of the facility's ward|
+|owner_name|string|true|none|The facility's owner|
+|owner_type_name|string|true|none|The facility's owner type name|
+|regulatory_body_name|string|true|none|The name of the facility's regulator|
+|beds|integer|true|none|The number of beds in the facility|
+|cots|integer|true|none|The number of cots in the facility|
+|search|string¦null|false|none|A dummy search field|
+|county_name|string¦null|false|none|none|
+|constituency_name|string¦null|false|none|none|
+|sub_county|string¦null|false|none|none|
+|sub_county_name|string¦null|false|none|none|
+|ward_name|string¦null|false|none|none|
+|keph_level|string¦null|false|none|none|
+|facility_type|string¦null|false|none|none|
+|owner_type|string¦null|false|none|none|
+|owner|string(uuid)¦null|false|none|none|
+|operation_status|string(uuid)¦null|false|none|none|
+|operation_status_name|string¦null|false|none|none|
+|admission_status_name|string¦null|false|none|none|
+|open_whole_day|boolean|false|none|Does the facility operate 24 hours a day|
+|open_public_holidays|boolean|false|none|Is the facility open on public holidays?|
+|open_weekends|boolean|false|none|Is the facility_open during weekends?|
+|open_late_night|boolean|false|none|Indicates if a facility is open late night e.g up-to 11 pm|
+|services|[string]¦null|false|none|none|
+|» Services|string(uuid)¦null|false|none|none|
+|categories|[string]¦null|false|none|none|
+|» Categories|string(uuid)¦null|false|none|none|
+|service_names|[string]¦null|false|none|none|
+|» Service names|string(uuid)¦null|false|none|none|
+|approved|boolean|false|none|none|
+|is_public_visible|boolean|false|none|none|
+|created|string(date-time)|true|none|none|
+|closed|boolean|false|none|none|
+|is_published|boolean|false|none|none|
+|id|string(uuid)|true|none|none|
+|lat|string¦null|false|none|none|
+|long|string¦null|false|none|none|
+
+## OfficerContact
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "officer": "8481ed7f-8db9-4614-a252-b14694bf5ad4",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|officer|string(uuid)|true|none|The is the officer in charge|
+|contact|string(uuid)|true|none|The contact of the officer in-charge may it be email,  mobile number etc|
+
+## Officer
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "job_title_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "id_number": "string",
+  "registration_number": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a",
+  "contacts": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ]
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|job_title_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|the name of the officer in-charge e.g Roselyne Wiyanga|
+|id_number|string¦null|false|none|The  National Identity number of the officer|
+|registration_number|string¦null|false|none|This is the license number of the officer. e.g for a nurse use the NCK registration number.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|job_title|string(uuid)|true|none|none|
+|contacts|[string]|false|read-only|Personal contacts of the officer in charge|
+
+## Option
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "value": "string",
+  "display_text": "string",
+  "is_exclusive_option": true,
+  "option_type": "BOOLEAN",
+  "created_by": 0,
+  "updated_by": 0,
+  "group": "fbd899a6-8a66-4f51-a95d-68668de198ae"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|value|string|true|none|none|
+|display_text|string|true|none|none|
+|is_exclusive_option|boolean|false|none|none|
+|option_type|string|true|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|group|string(uuid)|true|none|The option group where the option lies|
+
+#### Enumerated Values
+
+|Property|Value|
+|---|---|
+|option_type|BOOLEAN|
+|option_type|INTEGER|
+|option_type|DECIMAL|
+|option_type|TEXT|
+
+## OptionGroup
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "options": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "value": "string",
+      "display_text": "string",
+      "is_exclusive_option": true,
+      "option_type": "BOOLEAN",
+      "created_by": 0,
+      "updated_by": 0,
+      "group": "fbd899a6-8a66-4f51-a95d-68668de198ae"
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|options|[[Option](schema#option)]|false|none|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## OwnerType
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "abbreviation": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|Short unique name for a particular type of owners. e.g INDIVIDUAL|
+|abbreviation|string¦null|false|none|none|
+|description|string¦null|false|none|A brief summary of the particular type of owner.|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## Owner
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "owner_type_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "code": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "owner_type": "2c36d811-befc-4f66-ac99-1f27e70bdb0b"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|owner_type_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|The name of owner e.g Ministry of Health.|
+|description|string¦null|false|none|A brief summary of the owner.|
+|code|string|false|read-only|A unique number to identify the owner.Could be up to 7 characters long.|
+|abbreviation|string¦null|false|none|Short form of the name of the owner e.g Ministry of health could be shortened as MOH|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|owner_type|string(uuid)|true|none|The classification of the owner e.g INDIVIDUAL|
+
+## RegulatingBody
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "regulatory_body_type_name": "string",
+  "contacts": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "abbreviation": "string",
+  "regulation_verb": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "regulatory_body_type": "aa07e17c-b921-4751-83a7-e7c0b501cc5a",
+  "default_status": "b8f57bc6-6c97-4353-a272-ac451d5e14e3"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|regulatory_body_type_name|string|false|read-only|none|
+|contacts|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|The name of the regulating body|
+|abbreviation|string¦null|false|none|A short-form of the name of the regulating body e.g NursingCouncil of Kenya could be abbreviated as NCK.|
+|regulation_verb|string¦null|false|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|regulatory_body_type|string(uuid)¦null|false|none|Show the kind of institutions that the body regulates e.gprivate facilities|
+|default_status|string(uuid)¦null|false|none|The default status for the facilities regulated by the particular regulator|
+
+## RegulatingBodyContact
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "contact_text": "string",
+  "contact_type": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "regulating_body": "5abf85d7-bf44-415c-b650-888243175c54",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|contact_text|string|false|read-only|none|
+|contact_type|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|regulating_body|string(uuid)|true|none|none|
+|contact|string(uuid)|true|none|none|
+
+## RegulationStatus
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "next_state_name": "string",
+  "previous_state_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "is_initial_state": true,
+  "is_final_state": true,
+  "is_default": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "previous_status": "e735b27b-e10f-476e-9c51-4e2f6baade73",
+  "next_status": "dd007b8c-2b00-49a9-a744-39cf59834d69"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|next_state_name|string|false|read-only|none|
+|previous_state_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|A short unique name representing a state/stage of regulation e.g. PENDING_OPENING|
+|description|string¦null|false|none|A short description of the regulation state or state e.gPENDING_LICENSING could be described as 'waiting for the license tobegin operating'|
+|is_initial_state|boolean|false|none|Indicates whether it is the very first statein the regulation workflow.|
+|is_final_state|boolean|false|none|Indicates whether it is the last state in the regulation work-flow|
+|is_default|boolean|false|none|The default regulation status for facilities|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|previous_status|string(uuid)¦null|false|none|The regulation_status preceding this regulation status.|
+|next_status|string(uuid)¦null|false|none|The regulation_status succeeding this regulation status.|
+
+## RegulatorSync
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "county_name": "string",
+  "owner_name": "string",
+  "facility_type_name": "string",
+  "regulatory_body_name": "string",
+  "probable_matches": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "registration_number": "string",
+  "county": 2147483647,
+  "mfl_code": 0,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
+  "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|county_name|string|false|read-only|none|
+|owner_name|string|false|read-only|none|
+|facility_type_name|string|false|read-only|none|
+|regulatory_body_name|string|false|read-only|none|
+|probable_matches|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|The official name of the facility|
+|registration_number|string|true|none|The registration number given by the regulator|
+|county|integer|true|none|The code of the county|
+|mfl_code|integer¦null|false|read-only|The assigned MFL code|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility_type|string(uuid)|true|none|The type of the facility e.g Medical Clinic|
+|owner|string(uuid)|true|none|The owner of the facility|
+|regulatory_body|string(uuid)|false|read-only|The regulatory body the record came from|
+
+## RegulatoryBodyUser
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "user_email": "string",
+  "user_name": "string",
+  "regulatory_body_name": "string",
+  "user": 0,
+  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|user_email|string|false|read-only|none|
+|user_name|string|false|read-only|none|
+|regulatory_body_name|string|false|read-only|none|
+|user|integer|false|none|none|
+|regulatory_body|string(uuid)|false|none|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## ServiceCategory
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|What is the name of the category?|
+|description|string¦null|false|none|none|
+|abbreviation|string¦null|false|none|A short form of the category e.g ANC for antenatal|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|parent|string(uuid)¦null|false|none|The parent category under which the category falls|
+
+## Service
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "category_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "code": "string",
+  "has_options": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "category": "86d23d13-9dbb-46f3-82d0-25253c7750c3",
+  "group": "fbd899a6-8a66-4f51-a95d-68668de198ae",
+  "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|category_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|none|
+|description|string¦null|false|none|none|
+|abbreviation|string¦null|false|none|A short form for the service e.g FANC for Focused Antenatal Care|
+|code|string|false|read-only|none|
+|has_options|boolean|false|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|category|string(uuid)|true|none|The classification that the service lies in.|
+|group|string(uuid)|true|none|The option group containing service options|
+|keph_level|string(uuid)¦null|false|none|The KEPH level at which the service ought to be offered|
+
+## Speciality
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "category_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "code": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "category": "86d23d13-9dbb-46f3-82d0-25253c7750c3"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|category_name|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|none|
+|description|string¦null|false|none|none|
+|abbreviation|string¦null|false|none|A short form for the speciality|
+|code|string|false|read-only|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|category|string(uuid)|true|none|The classification that the specialities lies in.|
+
+## SpecialityCategory
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|What is the name of the category?|
+|description|string¦null|false|none|none|
+|abbreviation|string¦null|false|none|A short form of the category e.g ANC for antenatal|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|parent|string(uuid)¦null|false|none|The parent category under which the category falls|
+
+## ConstituencyBound
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "bound": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|bound|string|false|read-only|none|
+
+## FacilityCoordinatesDetail
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "facility_name": "string",
+  "facility_id": "string",
+  "ward": "string",
+  "constituency": "string",
+  "county": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "source": "07b8e003-7027-443f-88b0-24a5eb1cc68b",
+  "method": "caafb54c-a504-4c51-af48-219509c5f1d6"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|facility_name|string|false|read-only|none|
+|facility_id|string|false|read-only|none|
+|ward|string|false|read-only|none|
+|constituency|string|false|read-only|none|
+|county|string|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|coordinates|string|true|none|none|
+|collection_date|string(date-time)|false|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility|string(uuid)|true|none|none|
+|source|string(uuid)¦null|false|none|where the geo code came from|
+|method|string(uuid)¦null|false|none|Method used to obtain the geo codes. e.g taken with GPS device|
+
+## WorldBorder
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "center": "string",
+  "facility_count": "string",
+  "density": "string",
+  "bound": "string",
+  "geometry": "string",
+  "name": "string",
+  "code": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|center|string|false|read-only|none|
+|facility_count|string|false|read-only|none|
+|density|string|false|read-only|none|
+|bound|string|false|read-only|none|
+|geometry|string|false|read-only|none|
+|name|string|true|none|none|
+|code|string|true|none|none|
+
+## CountyBound
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "bound": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|bound|string|false|read-only|none|
+
+## CountyBoundary
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "center": "string",
+  "facility_count": "string",
+  "density": "string",
+  "bound": "string",
+  "constituency_boundary_ids": "string",
+  "county_id": "string",
+  "geometry": "string",
+  "name": "string",
+  "code": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|center|string|false|read-only|none|
+|facility_count|string|false|read-only|none|
+|density|string|false|read-only|none|
+|bound|string|false|read-only|none|
+|constituency_boundary_ids|string|false|read-only|none|
+|county_id|string|false|read-only|none|
+|geometry|string|false|read-only|none|
+|name|string|true|none|none|
+|code|string|true|none|none|
+
+## DrillWardBoundary
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "geometry": "string",
+  "center": "string",
+  "bound": "string",
+  "id": "string",
+  "area_id": "string",
+  "facility_count": "string",
+  "name": "string",
+  "county_name": "string",
+  "county_code": "string",
+  "constituency_code": "string",
+  "constituency_name": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|geometry|string|false|read-only|none|
+|center|string|false|read-only|none|
+|bound|string|false|read-only|none|
+|id|string|false|read-only|none|
+|area_id|string|false|read-only|none|
+|facility_count|string|false|read-only|none|
+|name|string|false|read-only|none|
+|county_name|string|false|read-only|none|
+|county_code|string|false|read-only|none|
+|constituency_code|string|false|read-only|none|
+|constituency_name|string|false|read-only|none|
+
+## DrillCountyBoundary
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "geometry": "string",
+  "center": "string",
+  "bound": "string",
+  "id": "string",
+  "facility_count": "string",
+  "name": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|geometry|string|false|read-only|none|
+|center|string|false|read-only|none|
+|bound|string|false|read-only|none|
+|id|string|false|read-only|none|
+|facility_count|string|false|read-only|none|
+|name|string|false|read-only|none|
+
+## DrillConstituencyBoundary
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "geometry": "string",
+  "center": "string",
+  "bound": "string",
+  "id": "string",
+  "facility_count": "string",
+  "name": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|geometry|string|false|read-only|none|
+|center|string|false|read-only|none|
+|bound|string|false|read-only|none|
+|id|string|false|read-only|none|
+|facility_count|string|false|read-only|none|
+|name|string|false|read-only|none|
+
+## FacilityCoordinateSimple
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "coordinates": "string",
+  "collection_date": "2019-08-24T14:15:22Z",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|coordinates|string|true|none|none|
+|collection_date|string(date-time)|false|none|none|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+|facility|string(uuid)|true|none|none|
+
+## GeoCodeMethod
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|The name of the method.|
+|description|string¦null|false|none|A short description of the method|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## GeoCodeSource
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string(uuid)|false|read-only|none|
+|created|string(date-time)|false|none|none|
+|updated|string(date-time)|false|none|none|
+|deleted|boolean|false|none|none|
+|active|boolean|false|none|Indicates whether the record has been retired?|
+|search|string|false|read-only|none|
+|name|string|true|none|The name of the collecting organization|
+|description|string¦null|false|none|A short summary of the collecting organization|
+|abbreviation|string¦null|false|none|An acronym of the collecting or e.g SAM|
+|created_by|integer|false|none|none|
+|updated_by|integer|false|none|none|
+
+## Login
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "username": "string",
+  "email": "user@example.com",
+  "password": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|username|string|false|none|none|
+|email|string(email)|false|none|none|
+|password|string|true|none|none|
+
+## MflPasswordChange
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "new_password1": "string",
+  "new_password2": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|new_password1|string|true|none|none|
+|new_password2|string|true|none|none|
+
+## PasswordReset
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "email": "user@example.com"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|email|string(email)|true|none|none|
+
+## PasswordResetConfirm
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "new_password1": "string",
+  "new_password2": "string",
+  "uid": "string",
+  "token": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|new_password1|string|true|none|none|
+|new_password2|string|true|none|none|
+|uid|string|true|none|none|
+|token|string|true|none|none|
+
+## Register
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "username": "string",
+  "email": "user@example.com",
+  "password1": "string",
+  "password2": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|username|string|true|none|none|
+|email|string(email)|true|none|none|
+|password1|string|true|none|none|
+|password2|string|true|none|none|
+
+## ResendEmailVerification
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "email": "user@example.com"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|email|string(email)|true|none|none|
+
+## VerifyEmail
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "key": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|key|string|true|none|none|
+
+## Permission
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": "string",
+  "name": "string",
+  "codename": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|string|false|read-only|none|
+|name|string|false|read-only|none|
+|codename|string|false|read-only|none|
+
+## Group
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": 0,
+  "name": "string",
+  "permissions": [
+    {
+      "id": "string",
+      "name": "string",
+      "codename": "string"
+    }
+  ],
+  "is_regulator": "string",
+  "is_national": "string",
+  "is_administrator": "string",
+  "is_county_level": "string",
+  "is_sub_county_level": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|integer|false|read-only|none|
+|name|string|true|none|none|
+|permissions|[[Permission](schema#permission)]|false|none|none|
+|is_regulator|string|false|read-only|none|
+|is_national|string|false|read-only|none|
+|is_administrator|string|false|read-only|none|
+|is_county_level|string|false|read-only|none|
+|is_sub_county_level|string|false|read-only|none|
+
+## MflUser
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": 0,
+  "email": "user@example.com",
+  "first_name": "string",
+  "last_name": "string",
+  "job_title_name": "string",
+  "other_names": "string",
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a",
+  "is_staff": true,
+  "is_active": true,
+  "sub_county_name": "string",
+  "date_joined": "2019-08-24T14:15:22Z",
+  "is_national": true,
+  "search": "string",
+  "deleted": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "updated": "2019-08-24T14:15:22Z",
+  "created": "2019-08-24T14:15:22Z",
+  "employee_number": "string",
+  "user_counties": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "user_full_name": "string",
+      "county_name": "string",
+      "county_code": "string",
+      "user_email": "string",
+      "user": 0,
+      "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "short_name": "string",
+  "full_name": "string",
+  "all_permissions": "string",
+  "requires_password_change": "string",
+  "groups": [
+    {
+      "id": 0,
+      "name": "string",
+      "permissions": [
+        {
+          "id": "string",
+          "name": "string",
+          "codename": "string"
+        }
+      ],
+      "is_regulator": "string",
+      "is_national": "string",
+      "is_administrator": "string",
+      "is_county_level": "string",
+      "is_sub_county_level": "string"
+    }
+  ],
+  "regulator": "string",
+  "regulator_name": "string",
+  "county": "string",
+  "county_name": "string",
+  "constituency": "string",
+  "constituency_name": "string",
+  "contacts": "string",
+  "regulatory_users": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "user_email": "string",
+      "user_name": "string",
+      "regulatory_body_name": "string",
+      "user": 0,
+      "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_constituencies": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "user_email": "string",
+      "user_name": "string",
+      "constituency_name": "string",
+      "county_name": "string",
+      "county_id": "string",
+      "user": 0,
+      "constituency": "3b302467-f666-41c9-bbd5-ab5a690d8c29",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_sub_counties": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "county_id": "string",
+      "county_name": "string",
+      "user": 0,
+      "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+      "sub_county_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "last_login": "string",
+  "user_groups": "string",
+  "is_superuser": true,
+  "password": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|integer|false|read-only|none|
+|email|string(email)|true|none|none|
+|first_name|string|false|none|none|
+|last_name|string|false|none|none|
+|job_title_name|string|false|read-only|none|
+|other_names|string|false|none|none|
+|job_title|string(uuid)¦null|false|none|The job title of the user e.g County Reproductive Health Officer|
+|is_staff|boolean|false|none|none|
+|is_active|boolean|false|none|none|
+|sub_county_name|string|false|read-only|none|
+|date_joined|string(date-time)|false|none|none|
+|is_national|boolean|false|none|none|
+|search|string¦null|false|none|none|
+|deleted|boolean|false|none|none|
+|created_by|integer¦null|false|none|none|
+|updated_by|integer¦null|false|none|none|
+|updated|string(date-time)|false|none|none|
+|created|string(date-time)|false|none|none|
+|employee_number|string|true|none|none|
+|user_counties|[[UserCounty](schema#usercounty)]|false|none|none|
+|short_name|string|false|read-only|none|
+|full_name|string|false|read-only|none|
+|all_permissions|string|false|read-only|none|
+|requires_password_change|string|false|read-only|none|
+|groups|[[Group](schema#group)]|false|none|none|
+|regulator|string|false|read-only|none|
+|regulator_name|string|false|read-only|none|
+|county|string|false|read-only|none|
+|county_name|string|false|read-only|none|
+|constituency|string|false|read-only|none|
+|constituency_name|string|false|read-only|none|
+|contacts|string|false|read-only|none|
+|regulatory_users|[[RegulatoryBodyUser](schema#regulatorybodyuser)]|false|none|none|
+|user_constituencies|[[UserConstituency](schema#userconstituency)]|false|none|none|
+|user_sub_counties|[[UserSubCounty](schema#usersubcounty)]|false|none|none|
+|last_login|string|false|read-only|none|
+|user_groups|string|false|read-only|none|
+|is_superuser|boolean|false|none|Designates that this user has all permissions without explicitly assigning them.|
+|password|string|true|none|none|
+
+## AuthToken
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "username": "string",
+  "password": "string",
+  "token": "string"
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|username|string|true|none|none|
+|password|string|true|none|none|
+|token|string|false|read-only|none|
+
+## MFLOAuthApplication
+
+
+
+
+
+
+<BrowserWindow>
+```json
+{
+  "id": 0,
+  "client_id": "string",
+  "redirect_uris": "string",
+  "post_logout_redirect_uris": "string",
+  "client_type": "confidential",
+  "authorization_grant_type": "authorization-code",
+  "client_secret": "string",
+  "name": "string",
+  "skip_authorization": true,
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "algorithm": "",
+  "user": 0
+}
+
+```
+</BrowserWindow>
+
+### Properties
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|id|integer|false|read-only|none|
+|client_id|string|false|none|none|
+|redirect_uris|string|false|none|Allowed URIs list, space separated|
+|post_logout_redirect_uris|string|false|none|Allowed Post Logout URIs list, space separated|
+|client_type|string|true|none|none|
+|authorization_grant_type|string|true|none|none|
+|client_secret|string|false|none|Hashed on Save. Copy it now if this is a new secret.|
+|name|string|false|none|none|
+|skip_authorization|boolean|false|none|none|
+|created|string(date-time)|false|read-only|none|
+|updated|string(date-time)|false|read-only|none|
+|algorithm|string|false|none|none|
+|user|integer¦null|false|none|none|
+
+#### Enumerated Values
+
+|Property|Value|
+|---|---|
+|client_type|confidential|
+|client_type|public|
+|authorization_grant_type|authorization-code|
+|authorization_grant_type|implicit|
+|authorization_grant_type|password|
+|authorization_grant_type|client-credentials|
+|authorization_grant_type|openid-hybrid|
+|algorithm||
+|algorithm|RS256|
+|algorithm|HS256|
+

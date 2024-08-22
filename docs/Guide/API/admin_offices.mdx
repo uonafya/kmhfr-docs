@@ -1,0 +1,962 @@
+---
+sidebar_position: 4
+title: Admin Offices
+---
+
+import BrowserWindow from '../../../src/components/BrowserWindow'
+
+# API
+
+This is a guide of all Admin offices API endpoints for KMHFR
+
+### api admin_offices_read
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/admin_offices/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/admin_offices/{id}/`
+
+Retrieves a particular Admin Office
+
+<h3 id="api_admin_offices_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this admin office.|
+
+> Example responses
+
+> 200 Response
+
+
+<h3 id="api_admin_offices_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[AdminOffice](schema#adminoffice)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api admin_offices_create
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "name": "string",
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "phone_number": "string",
+  "email": "user@example.com",
+  "is_national": true,
+  "contacts": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "contact": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+      "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+    }
+  ]
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/admin_offices/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/admin_offices/`
+
+Lists and creates admin offices
+Created ---  Date the admin office was Created
+Updated -- Date the admin office was Updated
+Created_by -- User who created the admin office
+Updated_by -- User who updated the admin office
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+name  -- Name of the admin office
+county --  The county of the admin office
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "name": "string",
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "phone_number": "string",
+  "email": "user@example.com",
+  "is_national": true,
+  "contacts": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "contact": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+      "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+<h3 id="api_admin_offices_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[AdminOffice](schema#adminoffice)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "name": "string",
+  "county_name": "string",
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "sub_county_name": "string",
+  "phone_number": "string",
+  "email": "user@example.com",
+  "is_national": true,
+  "contacts": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "contact_type_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "contact": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+      "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_admin_offices_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[AdminOffice](schema#adminoffice)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api admin_offices_contacts_read
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/admin_offices/contacts/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/admin_offices/contacts/{id}/`
+
+Retrieves a particular Admin Office Contact
+
+<h3 id="api_admin_offices_contacts_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this admin office contact.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "contact_type_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "contact": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+  "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_admin_offices_contacts_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[AdminOfficeContact](schema#adminofficecontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api admin_offices_contacts_create
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "contact": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+  "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/admin_offices/contacts/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/admin_offices/contacts/`
+
+Lists and creates admin offices cotacts
+Created ---  Date the admin office was Created
+Updated -- Date the admin office was Updated
+Created_by -- User who created the admin office
+Updated_by -- User who updated the admin office
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+contact_type -- The type of contact **``pk``**
+admin_office -- The admin_office **``Pk``**
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "contact": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+  "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_admin_offices_contacts_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[AdminOfficeContact](schema#adminofficecontact)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "contact_type_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "contact": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+  "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_admin_offices_contacts_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[AdminOfficeContact](schema#adminofficecontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api admin_offices_contacts_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "contact": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+  "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/admin_offices/contacts/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/admin_offices/contacts/{id}/`
+
+Retrieves a particular Admin Office Contact
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "contact": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+  "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_admin_offices_contacts_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[AdminOfficeContact](schema#adminofficecontact)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this admin office contact.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "contact_type_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "contact": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+  "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_admin_offices_contacts_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[AdminOfficeContact](schema#adminofficecontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api admin_offices_contacts_partial_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "contact": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+  "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/admin_offices/contacts/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/admin_offices/contacts/{id}/`
+
+Retrieves a particular Admin Office Contact
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "contact": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+  "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_admin_offices_contacts_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[AdminOfficeContact](schema#adminofficecontact)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this admin office contact.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "contact_type_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "contact": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+  "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_admin_offices_contacts_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[AdminOfficeContact](schema#adminofficecontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api admin_offices_contacts_delete
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/admin_offices/contacts/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/admin_offices/contacts/{id}/`
+
+Retrieves a particular Admin Office Contact
+
+<h3 id="api_admin_offices_contacts_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this admin office contact.|
+
+<h3 id="api_admin_offices_contacts_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api admin_offices_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "name": "string",
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "phone_number": "string",
+  "email": "user@example.com",
+  "is_national": true,
+  "contacts": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "contact": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+      "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+    }
+  ]
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/admin_offices/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/admin_offices/{id}/`
+
+Retrieves a particular Admin Office
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "name": "string",
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "phone_number": "string",
+  "email": "user@example.com",
+  "is_national": true,
+  "contacts": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "contact": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+      "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_admin_offices_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[AdminOffice](schema#adminoffice)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this admin office.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "name": "string",
+  "county_name": "string",
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "sub_county_name": "string",
+  "phone_number": "string",
+  "email": "user@example.com",
+  "is_national": true,
+  "contacts": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "contact_type_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "contact": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+      "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_admin_offices_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[AdminOffice](schema#adminoffice)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api admin_offices_partial_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "name": "string",
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "phone_number": "string",
+  "email": "user@example.com",
+  "is_national": true,
+  "contacts": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "contact": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+      "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+    }
+  ]
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/admin_offices/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/admin_offices/{id}/`
+
+Retrieves a particular Admin Office
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "name": "string",
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "phone_number": "string",
+  "email": "user@example.com",
+  "is_national": true,
+  "contacts": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "contact": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+      "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_admin_offices_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[AdminOffice](schema#adminoffice)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this admin office.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "name": "string",
+  "county_name": "string",
+  "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "sub_county_name": "string",
+  "phone_number": "string",
+  "email": "user@example.com",
+  "is_national": true,
+  "contacts": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "contact_type_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "contact": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "contact_type": "a470a35e-25cd-426a-a117-ea4e98536915",
+      "admin_office": "16e91d20-8317-4390-9b1a-0b69667fa894"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_admin_offices_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[AdminOffice](schema#adminoffice)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api admin_offices_delete
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/admin_offices/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/admin_offices/{id}/`
+
+Retrieves a particular Admin Office
+
+<h3 id="api_admin_offices_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this admin office.|
+
+<h3 id="api_admin_offices_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## Schema
+
+:::info[AdminOffice Schemas]
+You can find all AdminOffice related Schemas :
+- [AdminOffice Schema](schema#adminoffice)
+- [AdminOfficeContact Schema](schema#adminofficecontact)
+:::
+

@@ -1,8 +1,0 @@
-{
-  "label": "Others",
-  "position": 4,
-  "link": {
-    "type": "generated-index",
-    "description": "Explore other api endpoints from modules like admin_offices, system_setup, common and users"
-  }
-}

@@ -1,0 +1,1839 @@
+---
+sidebar_position: 5
+title: Users
+---
+
+import BrowserWindow from '../../../src/components/BrowserWindow'
+
+# API
+
+This is a guide of all User API endpoints for KMHFR
+
+
+### api users_applications_read
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/users/applications/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/users/applications/{id}/`
+
+View, update and retire specific OAuth2 application authorizations
+
+<h3 id="api_users_applications_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|integer|true|A unique integer value identifying this mfl oauth application.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": 0,
+  "client_id": "string",
+  "redirect_uris": "string",
+  "post_logout_redirect_uris": "string",
+  "client_type": "confidential",
+  "authorization_grant_type": "authorization-code",
+  "client_secret": "string",
+  "name": "string",
+  "skip_authorization": true,
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "algorithm": "",
+  "user": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_applications_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[MFLOAuthApplication](schema#mfloauthapplication)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api users_applications_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "client_id": "string",
+  "redirect_uris": "string",
+  "post_logout_redirect_uris": "string",
+  "client_type": "confidential",
+  "authorization_grant_type": "authorization-code",
+  "client_secret": "string",
+  "name": "string",
+  "skip_authorization": true,
+  "algorithm": "",
+  "user": 0
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/users/applications/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/users/applications/{id}/`
+
+View, update and retire specific OAuth2 application authorizations
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "client_id": "string",
+  "redirect_uris": "string",
+  "post_logout_redirect_uris": "string",
+  "client_type": "confidential",
+  "authorization_grant_type": "authorization-code",
+  "client_secret": "string",
+  "name": "string",
+  "skip_authorization": true,
+  "algorithm": "",
+  "user": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_applications_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[MFLOAuthApplication](schema#mfloauthapplication)|true|none|
+|id|path|integer|true|A unique integer value identifying this mfl oauth application.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": 0,
+  "client_id": "string",
+  "redirect_uris": "string",
+  "post_logout_redirect_uris": "string",
+  "client_type": "confidential",
+  "authorization_grant_type": "authorization-code",
+  "client_secret": "string",
+  "name": "string",
+  "skip_authorization": true,
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "algorithm": "",
+  "user": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_applications_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[MFLOAuthApplication](schema#mfloauthapplication)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api users_applications_partial_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "client_id": "string",
+  "redirect_uris": "string",
+  "post_logout_redirect_uris": "string",
+  "client_type": "confidential",
+  "authorization_grant_type": "authorization-code",
+  "client_secret": "string",
+  "name": "string",
+  "skip_authorization": true,
+  "algorithm": "",
+  "user": 0
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/users/applications/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/users/applications/{id}/`
+
+View, update and retire specific OAuth2 application authorizations
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "client_id": "string",
+  "redirect_uris": "string",
+  "post_logout_redirect_uris": "string",
+  "client_type": "confidential",
+  "authorization_grant_type": "authorization-code",
+  "client_secret": "string",
+  "name": "string",
+  "skip_authorization": true,
+  "algorithm": "",
+  "user": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_applications_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[MFLOAuthApplication](schema#mfloauthapplication)|true|none|
+|id|path|integer|true|A unique integer value identifying this mfl oauth application.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": 0,
+  "client_id": "string",
+  "redirect_uris": "string",
+  "post_logout_redirect_uris": "string",
+  "client_type": "confidential",
+  "authorization_grant_type": "authorization-code",
+  "client_secret": "string",
+  "name": "string",
+  "skip_authorization": true,
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "algorithm": "",
+  "user": 0
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_applications_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[MFLOAuthApplication](schema#mfloauthapplication)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api users_applications_delete
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/users/applications/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/users/applications/{id}/`
+
+View, update and retire specific OAuth2 application authorizations
+
+<h3 id="api_users_applications_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|integer|true|A unique integer value identifying this mfl oauth application.|
+
+<h3 id="api_users_applications_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api users_groups_list
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/users/groups/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/users/groups/`
+
+<h3 id="api_users_groups_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": 0,
+      "name": "string",
+      "permissions": [
+        {
+          "id": "string",
+          "name": "string",
+          "codename": "string"
+        }
+      ],
+      "is_regulator": "string",
+      "is_national": "string",
+      "is_administrator": "string",
+      "is_county_level": "string",
+      "is_sub_county_level": "string"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_groups_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_users_groups_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[Group](schema#group)]|true|none|none|
+|»» id|integer|false|read-only|none|
+|»» name|string|true|none|none|
+|»» permissions|[[Permission](schema#permission)]|false|none|none|
+|»»» id|string|false|read-only|none|
+|»»» name|string|false|read-only|none|
+|»»» codename|string|false|read-only|none|
+|»» is_regulator|string|false|read-only|none|
+|»» is_national|string|false|read-only|none|
+|»» is_administrator|string|false|read-only|none|
+|»» is_county_level|string|false|read-only|none|
+|»» is_sub_county_level|string|false|read-only|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api users_groups_create
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "name": "string",
+  "permissions": [
+    {}
+  ]
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/users/groups/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/users/groups/`
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "name": "string",
+  "permissions": [
+    {}
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_groups_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[Group](schema#group)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": 0,
+  "name": "string",
+  "permissions": [
+    {
+      "id": "string",
+      "name": "string",
+      "codename": "string"
+    }
+  ],
+  "is_regulator": "string",
+  "is_national": "string",
+  "is_administrator": "string",
+  "is_county_level": "string",
+  "is_sub_county_level": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_groups_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Group](schema#group)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api users_groups_read
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/users/groups/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/users/groups/{id}/`
+
+<h3 id="api_users_groups_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|integer|true|A unique integer value identifying this proxy group.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": 0,
+  "name": "string",
+  "permissions": [
+    {
+      "id": "string",
+      "name": "string",
+      "codename": "string"
+    }
+  ],
+  "is_regulator": "string",
+  "is_national": "string",
+  "is_administrator": "string",
+  "is_county_level": "string",
+  "is_sub_county_level": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_groups_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Group](schema#group)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api users_groups_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "name": "string",
+  "permissions": [
+    {}
+  ]
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/users/groups/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/users/groups/{id}/`
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "name": "string",
+  "permissions": [
+    {}
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_groups_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[Group](schema#group)|true|none|
+|id|path|integer|true|A unique integer value identifying this proxy group.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": 0,
+  "name": "string",
+  "permissions": [
+    {
+      "id": "string",
+      "name": "string",
+      "codename": "string"
+    }
+  ],
+  "is_regulator": "string",
+  "is_national": "string",
+  "is_administrator": "string",
+  "is_county_level": "string",
+  "is_sub_county_level": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_groups_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Group](schema#group)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api users_groups_partial_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "name": "string",
+  "permissions": [
+    {}
+  ]
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/users/groups/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/users/groups/{id}/`
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "name": "string",
+  "permissions": [
+    {}
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_groups_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[Group](schema#group)|true|none|
+|id|path|integer|true|A unique integer value identifying this proxy group.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": 0,
+  "name": "string",
+  "permissions": [
+    {
+      "id": "string",
+      "name": "string",
+      "codename": "string"
+    }
+  ],
+  "is_regulator": "string",
+  "is_national": "string",
+  "is_administrator": "string",
+  "is_county_level": "string",
+  "is_sub_county_level": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_groups_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Group](schema#group)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api users_groups_delete
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/users/groups/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/users/groups/{id}/`
+
+<h3 id="api_users_groups_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|integer|true|A unique integer value identifying this proxy group.|
+
+<h3 id="api_users_groups_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api users_permissions_list
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/users/permissions/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/users/permissions/`
+
+*This is a read-only list view; intentionally.*
+
+The system's role based access control is built on the foundations put in
+place in `django.contrib.auth` and `django.contrib.admin`. The official
+web front-ends rely on the "automatic" permissions.
+
+<h3 id="api_users_permissions_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "string",
+      "name": "string",
+      "codename": "string"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_permissions_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_users_permissions_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[Permission](schema#permission)]|true|none|none|
+|»» id|string|false|read-only|none|
+|»» name|string|false|read-only|none|
+|»» codename|string|false|read-only|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api users_read
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/users/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/users/{id}/`
+
+<h3 id="api_users_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|integer|true|A unique integer value identifying this mfl user.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": 0,
+  "email": "user@example.com",
+  "first_name": "string",
+  "last_name": "string",
+  "job_title_name": "string",
+  "other_names": "string",
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a",
+  "is_staff": true,
+  "is_active": true,
+  "sub_county_name": "string",
+  "date_joined": "2019-08-24T14:15:22Z",
+  "is_national": true,
+  "search": "string",
+  "deleted": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "updated": "2019-08-24T14:15:22Z",
+  "created": "2019-08-24T14:15:22Z",
+  "employee_number": "string",
+  "user_counties": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "user_full_name": "string",
+      "county_name": "string",
+      "county_code": "string",
+      "user_email": "string",
+      "user": 0,
+      "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "short_name": "string",
+  "full_name": "string",
+  "all_permissions": "string",
+  "requires_password_change": "string",
+  "groups": [
+    {
+      "id": 0,
+      "name": "string",
+      "permissions": [
+        {
+          "id": "string",
+          "name": "string",
+          "codename": "string"
+        }
+      ],
+      "is_regulator": "string",
+      "is_national": "string",
+      "is_administrator": "string",
+      "is_county_level": "string",
+      "is_sub_county_level": "string"
+    }
+  ],
+  "regulator": "string",
+  "regulator_name": "string",
+  "county": "string",
+  "county_name": "string",
+  "constituency": "string",
+  "constituency_name": "string",
+  "contacts": "string",
+  "regulatory_users": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "user_email": "string",
+      "user_name": "string",
+      "regulatory_body_name": "string",
+      "user": 0,
+      "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_constituencies": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "user_email": "string",
+      "user_name": "string",
+      "constituency_name": "string",
+      "county_name": "string",
+      "county_id": "string",
+      "user": 0,
+      "constituency": "3b302467-f666-41c9-bbd5-ab5a690d8c29",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_sub_counties": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "county_id": "string",
+      "county_name": "string",
+      "user": 0,
+      "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+      "sub_county_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "last_login": "string",
+  "user_groups": "string",
+  "is_superuser": true,
+  "password": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[MflUser](schema#mfluser)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api users_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "email": "user@example.com",
+  "first_name": "string",
+  "last_name": "string",
+  "other_names": "string",
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a",
+  "is_staff": true,
+  "is_active": true,
+  "date_joined": "2019-08-24T14:15:22Z",
+  "is_national": true,
+  "search": "string",
+  "deleted": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "updated": "2019-08-24T14:15:22Z",
+  "created": "2019-08-24T14:15:22Z",
+  "employee_number": "string",
+  "user_counties": [
+    {
+      "user": 0,
+      "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "groups": [
+    {
+      "name": "string",
+      "permissions": [
+        {}
+      ]
+    }
+  ],
+  "regulatory_users": [
+    {
+      "user": 0,
+      "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_constituencies": [
+    {
+      "user": 0,
+      "constituency": "3b302467-f666-41c9-bbd5-ab5a690d8c29",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_sub_counties": [
+    {
+      "user": 0,
+      "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "is_superuser": true,
+  "password": "string"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/users/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/users/{id}/`
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "email": "user@example.com",
+  "first_name": "string",
+  "last_name": "string",
+  "other_names": "string",
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a",
+  "is_staff": true,
+  "is_active": true,
+  "date_joined": "2019-08-24T14:15:22Z",
+  "is_national": true,
+  "search": "string",
+  "deleted": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "updated": "2019-08-24T14:15:22Z",
+  "created": "2019-08-24T14:15:22Z",
+  "employee_number": "string",
+  "user_counties": [
+    {
+      "user": 0,
+      "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "groups": [
+    {
+      "name": "string",
+      "permissions": [
+        {}
+      ]
+    }
+  ],
+  "regulatory_users": [
+    {
+      "user": 0,
+      "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_constituencies": [
+    {
+      "user": 0,
+      "constituency": "3b302467-f666-41c9-bbd5-ab5a690d8c29",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_sub_counties": [
+    {
+      "user": 0,
+      "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "is_superuser": true,
+  "password": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[MflUser](schema#mfluser)|true|none|
+|id|path|integer|true|A unique integer value identifying this mfl user.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": 0,
+  "email": "user@example.com",
+  "first_name": "string",
+  "last_name": "string",
+  "job_title_name": "string",
+  "other_names": "string",
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a",
+  "is_staff": true,
+  "is_active": true,
+  "sub_county_name": "string",
+  "date_joined": "2019-08-24T14:15:22Z",
+  "is_national": true,
+  "search": "string",
+  "deleted": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "updated": "2019-08-24T14:15:22Z",
+  "created": "2019-08-24T14:15:22Z",
+  "employee_number": "string",
+  "user_counties": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "user_full_name": "string",
+      "county_name": "string",
+      "county_code": "string",
+      "user_email": "string",
+      "user": 0,
+      "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "short_name": "string",
+  "full_name": "string",
+  "all_permissions": "string",
+  "requires_password_change": "string",
+  "groups": [
+    {
+      "id": 0,
+      "name": "string",
+      "permissions": [
+        {
+          "id": "string",
+          "name": "string",
+          "codename": "string"
+        }
+      ],
+      "is_regulator": "string",
+      "is_national": "string",
+      "is_administrator": "string",
+      "is_county_level": "string",
+      "is_sub_county_level": "string"
+    }
+  ],
+  "regulator": "string",
+  "regulator_name": "string",
+  "county": "string",
+  "county_name": "string",
+  "constituency": "string",
+  "constituency_name": "string",
+  "contacts": "string",
+  "regulatory_users": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "user_email": "string",
+      "user_name": "string",
+      "regulatory_body_name": "string",
+      "user": 0,
+      "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_constituencies": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "user_email": "string",
+      "user_name": "string",
+      "constituency_name": "string",
+      "county_name": "string",
+      "county_id": "string",
+      "user": 0,
+      "constituency": "3b302467-f666-41c9-bbd5-ab5a690d8c29",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_sub_counties": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "county_id": "string",
+      "county_name": "string",
+      "user": 0,
+      "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+      "sub_county_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "last_login": "string",
+  "user_groups": "string",
+  "is_superuser": true,
+  "password": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[MflUser](schema#mfluser)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api users_partial_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "email": "user@example.com",
+  "first_name": "string",
+  "last_name": "string",
+  "other_names": "string",
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a",
+  "is_staff": true,
+  "is_active": true,
+  "date_joined": "2019-08-24T14:15:22Z",
+  "is_national": true,
+  "search": "string",
+  "deleted": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "updated": "2019-08-24T14:15:22Z",
+  "created": "2019-08-24T14:15:22Z",
+  "employee_number": "string",
+  "user_counties": [
+    {
+      "user": 0,
+      "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "groups": [
+    {
+      "name": "string",
+      "permissions": [
+        {}
+      ]
+    }
+  ],
+  "regulatory_users": [
+    {
+      "user": 0,
+      "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_constituencies": [
+    {
+      "user": 0,
+      "constituency": "3b302467-f666-41c9-bbd5-ab5a690d8c29",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_sub_counties": [
+    {
+      "user": 0,
+      "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "is_superuser": true,
+  "password": "string"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/users/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/users/{id}/`
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "email": "user@example.com",
+  "first_name": "string",
+  "last_name": "string",
+  "other_names": "string",
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a",
+  "is_staff": true,
+  "is_active": true,
+  "date_joined": "2019-08-24T14:15:22Z",
+  "is_national": true,
+  "search": "string",
+  "deleted": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "updated": "2019-08-24T14:15:22Z",
+  "created": "2019-08-24T14:15:22Z",
+  "employee_number": "string",
+  "user_counties": [
+    {
+      "user": 0,
+      "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "groups": [
+    {
+      "name": "string",
+      "permissions": [
+        {}
+      ]
+    }
+  ],
+  "regulatory_users": [
+    {
+      "user": 0,
+      "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_constituencies": [
+    {
+      "user": 0,
+      "constituency": "3b302467-f666-41c9-bbd5-ab5a690d8c29",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_sub_counties": [
+    {
+      "user": 0,
+      "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "is_superuser": true,
+  "password": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[MflUser](schema#mfluser)|true|none|
+|id|path|integer|true|A unique integer value identifying this mfl user.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": 0,
+  "email": "user@example.com",
+  "first_name": "string",
+  "last_name": "string",
+  "job_title_name": "string",
+  "other_names": "string",
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a",
+  "is_staff": true,
+  "is_active": true,
+  "sub_county_name": "string",
+  "date_joined": "2019-08-24T14:15:22Z",
+  "is_national": true,
+  "search": "string",
+  "deleted": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "updated": "2019-08-24T14:15:22Z",
+  "created": "2019-08-24T14:15:22Z",
+  "employee_number": "string",
+  "user_counties": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "user_full_name": "string",
+      "county_name": "string",
+      "county_code": "string",
+      "user_email": "string",
+      "user": 0,
+      "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "short_name": "string",
+  "full_name": "string",
+  "all_permissions": "string",
+  "requires_password_change": "string",
+  "groups": [
+    {
+      "id": 0,
+      "name": "string",
+      "permissions": [
+        {
+          "id": "string",
+          "name": "string",
+          "codename": "string"
+        }
+      ],
+      "is_regulator": "string",
+      "is_national": "string",
+      "is_administrator": "string",
+      "is_county_level": "string",
+      "is_sub_county_level": "string"
+    }
+  ],
+  "regulator": "string",
+  "regulator_name": "string",
+  "county": "string",
+  "county_name": "string",
+  "constituency": "string",
+  "constituency_name": "string",
+  "contacts": "string",
+  "regulatory_users": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "user_email": "string",
+      "user_name": "string",
+      "regulatory_body_name": "string",
+      "user": 0,
+      "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_constituencies": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "user_email": "string",
+      "user_name": "string",
+      "constituency_name": "string",
+      "county_name": "string",
+      "county_id": "string",
+      "user": 0,
+      "constituency": "3b302467-f666-41c9-bbd5-ab5a690d8c29",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "user_sub_counties": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "county_id": "string",
+      "county_name": "string",
+      "user": 0,
+      "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+      "sub_county_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0
+    }
+  ],
+  "last_login": "string",
+  "user_groups": "string",
+  "is_superuser": true,
+  "password": "string"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_users_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[MflUser](schema#mfluser)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+Properties
+### api users_delete
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/users/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/users/{id}/`
+
+<h3 id="api_users_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|integer|true|A unique integer value identifying this mfl user.|
+
+<h3 id="api_users_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+## Schema
+
+:::info[User Schema]
+Please see the [User Schema](schema#user)
+:::

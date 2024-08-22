@@ -10,9 +10,9 @@ This is a guide of all facility API endpoints for KMHFR
 
 import BrowserWindow from '../../../src/components/BrowserWindow'
 
-## api_facilities_contacts_list
+### api facilities_contacts_list
 
-<a id="opIdapi_facilities_contacts_list"></a>
+
 
 > Code samples
 
@@ -104,7 +104,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityContact](#schemafacilitycontact)]|true|none|none|
+|» results|[[FacilityContact](schema#facilitycontact)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» contact_type|string|false|read-only|none|
 |»» actual_contact|string|false|read-only|none|
@@ -123,9 +123,10 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_contacts_create
 
-<a id="opIdapi_facilities_contacts_create"></a>
+### api facilities_contacts_create
+
+
 
 > Code samples
 
@@ -195,7 +196,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityContact](#schemafacilitycontact)|true|none|
+|body|body|[FacilityContact](schema#facilitycontact)|true|none|
 
 > Example responses
 
@@ -226,16 +227,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityContact](#schemafacilitycontact)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityContact](schema#facilitycontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_contacts_read
+### api facilities_contacts_read
 
-<a id="opIdapi_facilities_contacts_read"></a>
+
 
 > Code samples
 
@@ -298,16 +299,16 @@ Retrieves a particular facility contact
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityContact](#schemafacilitycontact)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityContact](schema#facilitycontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_contacts_update
+### api facilities_contacts_update
 
-<a id="opIdapi_facilities_contacts_update"></a>
+
 
 > Code samples
 
@@ -368,7 +369,7 @@ Retrieves a particular facility contact
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityContact](#schemafacilitycontact)|true|none|
+|body|body|[FacilityContact](schema#facilitycontact)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility contact.|
 
 > Example responses
@@ -400,16 +401,16 @@ Retrieves a particular facility contact
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityContact](#schemafacilitycontact)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityContact](schema#facilitycontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_contacts_partial_update
+### api facilities_contacts_partial_update
 
-<a id="opIdapi_facilities_contacts_partial_update"></a>
+
 
 > Code samples
 
@@ -470,7 +471,7 @@ Retrieves a particular facility contact
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityContact](#schemafacilitycontact)|true|none|
+|body|body|[FacilityContact](schema#facilitycontact)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility contact.|
 
 > Example responses
@@ -502,16 +503,16 @@ Retrieves a particular facility contact
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityContact](#schemafacilitycontact)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityContact](schema#facilitycontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_contacts_delete
+### api facilities_contacts_delete
 
-<a id="opIdapi_facilities_contacts_delete"></a>
+
 
 > Code samples
 
@@ -551,9 +552,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_dashboard_list
+### api facilities_dashboard_list
 
-<a id="opIdapi_facilities_dashboard_list"></a>
+
 
 > Code samples
 
@@ -585,9 +586,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facilities_list
+### api facilities_facilities_list
 
-<a id="opIdapi_facilities_facilities_list"></a>
+
 
 > Code samples
 
@@ -789,7 +790,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[Facility](#schemafacility)]|true|none|none|
+|» results|[[Facility](schema#facility)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» regulatory_status_name|string|false|read-only|none|
 |»» facility_type_name|string|false|read-only|none|
@@ -898,9 +899,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facilities_create
+### api facilities_facilities_create
 
-<a id="opIdapi_facilities_facilities_create"></a>
+
 
 > Code samples
 
@@ -1098,7 +1099,7 @@ deleted -- Boolean is the record deleted<br/>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Facility](#schemafacility)|true|none|
+|body|body|[Facility](schema#facility)|true|none|
 
 > Example responses
 
@@ -1221,16 +1222,16 @@ deleted -- Boolean is the record deleted<br/>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Facility](#schemafacility)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Facility](schema#facility)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facilities_read
+### api facilities_facilities_read
 
-<a id="opIdapi_facilities_facilities_read"></a>
+
 
 > Code samples
 
@@ -1444,16 +1445,16 @@ Retrieves a particular facility
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityDetail](#schemafacilitydetail)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityDetail](schema#facilitydetail)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facilities_update
+### api facilities_facilities_update
 
-<a id="opIdapi_facilities_facilities_update"></a>
+
 
 > Code samples
 
@@ -1704,7 +1705,7 @@ Retrieves a particular facility
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityDetail](#schemafacilitydetail)|true|none|
+|body|body|[FacilityDetail](schema#facilitydetail)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility.|
 
 > Example responses
@@ -1887,16 +1888,16 @@ Retrieves a particular facility
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityDetail](#schemafacilitydetail)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityDetail](schema#facilitydetail)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facilities_partial_update
+### api facilities_facilities_partial_update
 
-<a id="opIdapi_facilities_facilities_partial_update"></a>
+
 
 > Code samples
 
@@ -2147,7 +2148,7 @@ Retrieves a particular facility
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityDetail](#schemafacilitydetail)|true|none|
+|body|body|[FacilityDetail](schema#facilitydetail)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility.|
 
 > Example responses
@@ -2330,16 +2331,16 @@ Retrieves a particular facility
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityDetail](#schemafacilitydetail)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityDetail](schema#facilitydetail)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facilities_delete
+### api facilities_facilities_delete
 
-<a id="opIdapi_facilities_facilities_delete"></a>
+
 
 > Code samples
 
@@ -2379,9 +2380,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facilities_list_list
+### api facilities_facilities_list_list
 
-<a id="opIdapi_facilities_facilities_list_list"></a>
+
 
 > Code samples
 
@@ -2469,7 +2470,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityList](#schemafacilitylist)]|true|none|none|
+|» results|[[FacilityList](schema#facilitylist)]|true|none|none|
 |»» code|string|false|read-only|A sequential number allocated to each facility|
 |»» name|string|true|none|This is the unique name of the facility|
 |»» id|string(uuid)|false|read-only|none|
@@ -2493,9 +2494,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_admission_status_list
+### api facilities_facility_admission_status_list
 
-<a id="opIdapi_facilities_facility_admission_status_list"></a>
+
 
 > Code samples
 
@@ -2583,7 +2584,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityAdmissionStatus](#schemafacilityadmissionstatus)]|true|none|none|
+|» results|[[FacilityAdmissionStatus](schema#facilityadmissionstatus)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -2600,9 +2601,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_admission_status_create
+### api facilities_facility_admission_status_create
 
-<a id="opIdapi_facilities_facility_admission_status_create"></a>
+
 
 > Code samples
 
@@ -2670,7 +2671,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityAdmissionStatus](#schemafacilityadmissionstatus)|true|none|
+|body|body|[FacilityAdmissionStatus](schema#facilityadmissionstatus)|true|none|
 
 > Example responses
 
@@ -2699,16 +2700,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityAdmissionStatus](#schemafacilityadmissionstatus)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityAdmissionStatus](schema#facilityadmissionstatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_admission_status_read
+### api facilities_facility_admission_status_read
 
-<a id="opIdapi_facilities_facility_admission_status_read"></a>
+
 
 > Code samples
 
@@ -2769,16 +2770,16 @@ Retrieves a particular admission status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityAdmissionStatus](#schemafacilityadmissionstatus)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityAdmissionStatus](schema#facilityadmissionstatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_admission_status_update
+### api facilities_facility_admission_status_update
 
-<a id="opIdapi_facilities_facility_admission_status_update"></a>
+
 
 > Code samples
 
@@ -2839,7 +2840,7 @@ Retrieves a particular admission status
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityAdmissionStatus](#schemafacilityadmissionstatus)|true|none|
+|body|body|[FacilityAdmissionStatus](schema#facilityadmissionstatus)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility admission status.|
 
 > Example responses
@@ -2869,16 +2870,16 @@ Retrieves a particular admission status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityAdmissionStatus](#schemafacilityadmissionstatus)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityAdmissionStatus](schema#facilityadmissionstatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_admission_status_partial_update
+### api facilities facility admission status partial update
 
-<a id="opIdapi_facilities_facility_admission_status_partial_update"></a>
+
 
 > Code samples
 
@@ -2939,7 +2940,7 @@ Retrieves a particular admission status
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityAdmissionStatus](#schemafacilityadmissionstatus)|true|none|
+|body|body|[FacilityAdmissionStatus](schema#facilityadmissionstatus)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility admission status.|
 
 > Example responses
@@ -2969,16 +2970,16 @@ Retrieves a particular admission status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityAdmissionStatus](#schemafacilityadmissionstatus)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityAdmissionStatus](schema#facilityadmissionstatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_admission_status_delete
+### api facilities_facility_admission_status_delete
 
-<a id="opIdapi_facilities_facility_admission_status_delete"></a>
+
 
 > Code samples
 
@@ -3018,9 +3019,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_approvals_list
+### api facilities_facility_approvals_list
 
-<a id="opIdapi_facilities_facility_approvals_list"></a>
+
 
 > Code samples
 
@@ -3112,7 +3113,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityApproval](#schemafacilityapproval)]|true|none|none|
+|» results|[[FacilityApproval](schema#facilityapproval)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» done_by|string|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
@@ -3132,9 +3133,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_approvals_create
+### api facilities_facility_approvals_create
 
-<a id="opIdapi_facilities_facility_approvals_create"></a>
+
 
 > Code samples
 
@@ -3207,7 +3208,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityApproval](#schemafacilityapproval)|true|none|
+|body|body|[FacilityApproval](schema#facilityapproval)|true|none|
 
 > Example responses
 
@@ -3239,16 +3240,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityApproval](#schemafacilityapproval)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityApproval](schema#facilityapproval)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_approvals_read
+### api facilities_facility_approvals_read
 
-<a id="opIdapi_facilities_facility_approvals_read"></a>
+
 
 > Code samples
 
@@ -3312,16 +3313,16 @@ Retrieves a particular facility approval
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityApproval](#schemafacilityapproval)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityApproval](schema#facilityapproval)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_approvals_update
+### api facilities_facility_approvals_update
 
-<a id="opIdapi_facilities_facility_approvals_update"></a>
+
 
 > Code samples
 
@@ -3386,7 +3387,7 @@ Retrieves a particular facility approval
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityApproval](#schemafacilityapproval)|true|none|
+|body|body|[FacilityApproval](schema#facilityapproval)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility approval.|
 
 > Example responses
@@ -3419,16 +3420,16 @@ Retrieves a particular facility approval
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityApproval](#schemafacilityapproval)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityApproval](schema#facilityapproval)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_approvals_partial_update
+### api facilities_facility_approvals_partial_update
 
-<a id="opIdapi_facilities_facility_approvals_partial_update"></a>
+
 
 > Code samples
 
@@ -3493,7 +3494,7 @@ Retrieves a particular facility approval
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityApproval](#schemafacilityapproval)|true|none|
+|body|body|[FacilityApproval](schema#facilityapproval)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility approval.|
 
 > Example responses
@@ -3526,16 +3527,16 @@ Retrieves a particular facility approval
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityApproval](#schemafacilityapproval)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityApproval](schema#facilityapproval)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_approvals_delete
+### api facilities_facility_approvals_delete
 
-<a id="opIdapi_facilities_facility_approvals_delete"></a>
+
 
 > Code samples
 
@@ -3575,9 +3576,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_correction_template_read
+### api facilities_facility_correction_template_read
 
-<a id="opIdapi_facilities_facility_correction_template_read"></a>
+
 
 > Code samples
 
@@ -3730,16 +3731,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_correction_templat
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Facility](#schemafacility)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Facility](schema#facility)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_cover_report_read
+### api facilities_facility_cover_report_read
 
-<a id="opIdapi_facilities_facility_cover_report_read"></a>
+
 
 > Code samples
 
@@ -3892,16 +3893,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_cover_report/{id}/
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Facility](#schemafacility)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Facility](schema#facility)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_depts_list
+### api facilities_facility_depts_list
 
-<a id="opIdapi_facilities_facility_depts_list"></a>
+
 
 > Code samples
 
@@ -3991,7 +3992,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityDepartment](#schemafacilitydepartment)]|true|none|none|
+|» results|[[FacilityDepartment](schema#facilitydepartment)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» regulatory_body_name|string|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
@@ -4010,9 +4011,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_depts_create
+### api facilities_facility_depts_create
 
-<a id="opIdapi_facilities_facility_depts_create"></a>
+
 
 > Code samples
 
@@ -4082,7 +4083,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityDepartment](#schemafacilitydepartment)|true|none|
+|body|body|[FacilityDepartment](schema#facilitydepartment)|true|none|
 
 > Example responses
 
@@ -4113,16 +4114,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityDepartment](#schemafacilitydepartment)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityDepartment](schema#facilitydepartment)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_depts_read
+### api facilities_facility_depts_read
 
-<a id="opIdapi_facilities_facility_depts_read"></a>
+
 
 > Code samples
 
@@ -4185,16 +4186,16 @@ Retrieves, updates and removes facility departments
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityDepartment](#schemafacilitydepartment)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityDepartment](schema#facilitydepartment)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_depts_update
+### api facilities_facility_depts_update
 
-<a id="opIdapi_facilities_facility_depts_update"></a>
+
 
 > Code samples
 
@@ -4257,7 +4258,7 @@ Retrieves, updates and removes facility departments
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityDepartment](#schemafacilitydepartment)|true|none|
+|body|body|[FacilityDepartment](schema#facilitydepartment)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility department.|
 
 > Example responses
@@ -4289,16 +4290,16 @@ Retrieves, updates and removes facility departments
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityDepartment](#schemafacilitydepartment)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityDepartment](schema#facilitydepartment)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_depts_partial_update
+### api facilities_facility_depts_partial_update
 
-<a id="opIdapi_facilities_facility_depts_partial_update"></a>
+
 
 > Code samples
 
@@ -4361,7 +4362,7 @@ Retrieves, updates and removes facility departments
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityDepartment](#schemafacilitydepartment)|true|none|
+|body|body|[FacilityDepartment](schema#facilitydepartment)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility department.|
 
 > Example responses
@@ -4393,16 +4394,16 @@ Retrieves, updates and removes facility departments
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityDepartment](#schemafacilitydepartment)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityDepartment](schema#facilitydepartment)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_depts_delete
+### api facilities_facility_depts_delete
 
-<a id="opIdapi_facilities_facility_depts_delete"></a>
+
 
 > Code samples
 
@@ -4442,9 +4443,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_detail_report_read
+### api facilities_facility_detail_report_read
 
-<a id="opIdapi_facilities_facility_detail_report_read"></a>
+
 
 > Code samples
 
@@ -4597,16 +4598,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_detail_report/{id}
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Facility](#schemafacility)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Facility](schema#facility)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_infrastructure_list
+### api facilities_facility_infrastructure_list
 
-<a id="opIdapi_facilities_facility_infrastructure_list"></a>
+
 
 > Code samples
 
@@ -4699,7 +4700,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityInfrastructure](#schemafacilityinfrastructure)]|true|none|none|
+|» results|[[FacilityInfrastructure](schema#facilityinfrastructure)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» infrastructure_name|string|false|read-only|none|
 |»» option_display_value|string|false|read-only|none|
@@ -4720,9 +4721,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_infrastructure_create
+### api facilities_facility_infrastructure_create
 
-<a id="opIdapi_facilities_facility_infrastructure_create"></a>
+
 
 > Code samples
 
@@ -4795,7 +4796,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityInfrastructure](#schemafacilityinfrastructure)|true|none|
+|body|body|[FacilityInfrastructure](schema#facilityinfrastructure)|true|none|
 
 > Example responses
 
@@ -4828,16 +4829,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityInfrastructure](#schemafacilityinfrastructure)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityInfrastructure](schema#facilityinfrastructure)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_infrastructure_read
+### api facilities_facility_infrastructure_read
 
-<a id="opIdapi_facilities_facility_infrastructure_read"></a>
+
 
 > Code samples
 
@@ -4902,16 +4903,16 @@ Retrieves a particular facility infrastructure detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityInfrastructure](#schemafacilityinfrastructure)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityInfrastructure](schema#facilityinfrastructure)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_infrastructure_update
+### api facilities_facility_infrastructure_update
 
-<a id="opIdapi_facilities_facility_infrastructure_update"></a>
+
 
 > Code samples
 
@@ -4976,7 +4977,7 @@ Retrieves a particular facility infrastructure detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityInfrastructure](#schemafacilityinfrastructure)|true|none|
+|body|body|[FacilityInfrastructure](schema#facilityinfrastructure)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility infrastructure.|
 
 > Example responses
@@ -5010,16 +5011,16 @@ Retrieves a particular facility infrastructure detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityInfrastructure](#schemafacilityinfrastructure)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityInfrastructure](schema#facilityinfrastructure)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_infrastructure_partial_update
+### api facilities_facility_infrastructure_partial_update
 
-<a id="opIdapi_facilities_facility_infrastructure_partial_update"></a>
+
 
 > Code samples
 
@@ -5084,7 +5085,7 @@ Retrieves a particular facility infrastructure detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityInfrastructure](#schemafacilityinfrastructure)|true|none|
+|body|body|[FacilityInfrastructure](schema#facilityinfrastructure)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility infrastructure.|
 
 > Example responses
@@ -5118,16 +5119,16 @@ Retrieves a particular facility infrastructure detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityInfrastructure](#schemafacilityinfrastructure)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityInfrastructure](schema#facilityinfrastructure)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_infrastructure_delete
+### api facilities_facility_infrastructure_delete
 
-<a id="opIdapi_facilities_facility_infrastructure_delete"></a>
+
 
 > Code samples
 
@@ -5167,9 +5168,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_inspection_report_read
+### api facilities_facility_inspection_report_read
 
-<a id="opIdapi_facilities_facility_inspection_report_read"></a>
+
 
 > Code samples
 
@@ -5322,16 +5323,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_inspection_report/
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Facility](#schemafacility)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Facility](schema#facility)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_officers_list
+### api facilities_facility_officers_list
 
-<a id="opIdapi_facilities_facility_officers_list"></a>
+
 
 > Code samples
 
@@ -5421,7 +5422,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityOfficer](#schemafacilityofficer)]|true|none|none|
+|» results|[[FacilityOfficer](schema#facilityofficer)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» facility_name|string|false|read-only|none|
 |»» officer_name|string|false|read-only|none|
@@ -5449,9 +5450,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_officers_create
+### api facilities_facility_officers_create
 
-<a id="opIdapi_facilities_facility_officers_create"></a>
+
 
 > Code samples
 
@@ -5510,7 +5511,7 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_officers/',
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityOfficer](#schemafacilityofficer)|true|none|
+|body|body|[FacilityOfficer](schema#facilityofficer)|true|none|
 
 > Example responses
 
@@ -5550,16 +5551,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_officers/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityOfficer](#schemafacilityofficer)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityOfficer](schema#facilityofficer)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_officers_read
+### api facilities_facility_officers_read
 
-<a id="opIdapi_facilities_facility_officers_read"></a>
+
 
 > Code samples
 
@@ -5629,16 +5630,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_officers/{id}/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityOfficer](#schemafacilityofficer)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityOfficer](schema#facilityofficer)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_officers_update
+### api facilities_facility_officers_update
 
-<a id="opIdapi_facilities_facility_officers_update"></a>
+
 
 > Code samples
 
@@ -5697,7 +5698,7 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_officers/{id}/',
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityOfficer](#schemafacilityofficer)|true|none|
+|body|body|[FacilityOfficer](schema#facilityofficer)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility officer.|
 
 > Example responses
@@ -5738,16 +5739,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_officers/{id}/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityOfficer](#schemafacilityofficer)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityOfficer](schema#facilityofficer)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_officers_partial_update
+### api facilities_facility_officers_partial_update
 
-<a id="opIdapi_facilities_facility_officers_partial_update"></a>
+
 
 > Code samples
 
@@ -5806,7 +5807,7 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_officers/{id}/',
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityOfficer](#schemafacilityofficer)|true|none|
+|body|body|[FacilityOfficer](schema#facilityofficer)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility officer.|
 
 > Example responses
@@ -5847,16 +5848,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_officers/{id}/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityOfficer](#schemafacilityofficer)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityOfficer](schema#facilityofficer)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_officers_delete
+### api facilities_facility_officers_delete
 
-<a id="opIdapi_facilities_facility_officers_delete"></a>
+
 
 > Code samples
 
@@ -5894,9 +5895,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_operation_state_list
+### api facilities_facility_operation_state_list
 
-<a id="opIdapi_facilities_facility_operation_state_list"></a>
+
 
 > Code samples
 
@@ -5985,7 +5986,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityOperationState](#schemafacilityoperationstate)]|true|none|none|
+|» results|[[FacilityOperationState](schema#facilityoperationstate)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -6003,9 +6004,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_operation_state_create
+### api facilities_facility_operation_state_create
 
-<a id="opIdapi_facilities_facility_operation_state_create"></a>
+
 
 > Code samples
 
@@ -6075,7 +6076,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityOperationState](#schemafacilityoperationstate)|true|none|
+|body|body|[FacilityOperationState](schema#facilityoperationstate)|true|none|
 
 > Example responses
 
@@ -6105,16 +6106,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityOperationState](#schemafacilityoperationstate)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityOperationState](schema#facilityoperationstate)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_operation_state_read
+### api facilities_facility_operation_state_read
 
-<a id="opIdapi_facilities_facility_operation_state_read"></a>
+
 
 > Code samples
 
@@ -6176,16 +6177,16 @@ Retrieves a particular operation status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityOperationState](#schemafacilityoperationstate)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityOperationState](schema#facilityoperationstate)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_operation_state_update
+### api facilities_facility_operation_state_update
 
-<a id="opIdapi_facilities_facility_operation_state_update"></a>
+
 
 > Code samples
 
@@ -6248,7 +6249,7 @@ Retrieves a particular operation status
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityOperationState](#schemafacilityoperationstate)|true|none|
+|body|body|[FacilityOperationState](schema#facilityoperationstate)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility operation state.|
 
 > Example responses
@@ -6279,16 +6280,16 @@ Retrieves a particular operation status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityOperationState](#schemafacilityoperationstate)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityOperationState](schema#facilityoperationstate)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_operation_state_partial_update
+### api facilities facility operation state partial update
 
-<a id="opIdapi_facilities_facility_operation_state_partial_update"></a>
+
 
 > Code samples
 
@@ -6351,7 +6352,7 @@ Retrieves a particular operation status
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityOperationState](#schemafacilityoperationstate)|true|none|
+|body|body|[FacilityOperationState](schema#facilityoperationstate)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility operation state.|
 
 > Example responses
@@ -6382,16 +6383,16 @@ Retrieves a particular operation status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityOperationState](#schemafacilityoperationstate)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityOperationState](schema#facilityoperationstate)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_operation_state_delete
+### api facilities_facility_operation_state_delete
 
-<a id="opIdapi_facilities_facility_operation_state_delete"></a>
+
 
 > Code samples
 
@@ -6431,9 +6432,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_regulation_status_list
+### api facilities_facility_regulation_status_list
 
-<a id="opIdapi_facilities_facility_regulation_status_list"></a>
+
 
 > Code samples
 
@@ -6529,7 +6530,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityRegulationStatus](#schemafacilityregulationstatus)]|true|none|none|
+|» results|[[FacilityRegulationStatus](schema#facilityregulationstatus)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -6550,9 +6551,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_regulation_status_create
+### api facilities_facility_regulation_status_create
 
-<a id="opIdapi_facilities_facility_regulation_status_create"></a>
+
 
 > Code samples
 
@@ -6632,7 +6633,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityRegulationStatus](#schemafacilityregulationstatus)|true|none|
+|body|body|[FacilityRegulationStatus](schema#facilityregulationstatus)|true|none|
 
 > Example responses
 
@@ -6665,16 +6666,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityRegulationStatus](#schemafacilityregulationstatus)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityRegulationStatus](schema#facilityregulationstatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_regulation_status_read
+### api facilities_facility_regulation_status_read
 
-<a id="opIdapi_facilities_facility_regulation_status_read"></a>
+
 
 > Code samples
 
@@ -6739,16 +6740,16 @@ Retrieves a particular facility's regulation status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityRegulationStatus](#schemafacilityregulationstatus)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityRegulationStatus](schema#facilityregulationstatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_regulation_status_update
+### api facilities_facility_regulation_status_update
 
-<a id="opIdapi_facilities_facility_regulation_status_update"></a>
+
 
 > Code samples
 
@@ -6817,7 +6818,7 @@ Retrieves a particular facility's regulation status
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityRegulationStatus](#schemafacilityregulationstatus)|true|none|
+|body|body|[FacilityRegulationStatus](schema#facilityregulationstatus)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility regulation status.|
 
 > Example responses
@@ -6851,16 +6852,16 @@ Retrieves a particular facility's regulation status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityRegulationStatus](#schemafacilityregulationstatus)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityRegulationStatus](schema#facilityregulationstatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_regulation_status_partial_update
+### api facilities facility regulation status partial update
 
-<a id="opIdapi_facilities_facility_regulation_status_partial_update"></a>
+
 
 > Code samples
 
@@ -6929,7 +6930,7 @@ Retrieves a particular facility's regulation status
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityRegulationStatus](#schemafacilityregulationstatus)|true|none|
+|body|body|[FacilityRegulationStatus](schema#facilityregulationstatus)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility regulation status.|
 
 > Example responses
@@ -6963,16 +6964,16 @@ Retrieves a particular facility's regulation status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityRegulationStatus](#schemafacilityregulationstatus)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityRegulationStatus](schema#facilityregulationstatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_regulation_status_delete
+### api facilities_facility_regulation_status_delete
 
-<a id="opIdapi_facilities_facility_regulation_status_delete"></a>
+
 
 > Code samples
 
@@ -7012,9 +7013,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_service_ratings_list
+### api facilities_facility_service_ratings_list
 
-<a id="opIdapi_facilities_facility_service_ratings_list"></a>
+
 
 > Code samples
 
@@ -7099,7 +7100,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityServiceRating](#schemafacilityservicerating)]|true|none|none|
+|» results|[[FacilityServiceRating](schema#facilityservicerating)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» facility_name|string|false|read-only|none|
 |»» facility_id|string|false|read-only|none|
@@ -7120,9 +7121,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_service_ratings_create
+### api facilities_facility_service_ratings_create
 
-<a id="opIdapi_facilities_facility_service_ratings_create"></a>
+
 
 > Code samples
 
@@ -7185,7 +7186,7 @@ Lists and creates facility's services ratings
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityServiceRating](#schemafacilityservicerating)|true|none|
+|body|body|[FacilityServiceRating](schema#facilityservicerating)|true|none|
 
 > Example responses
 
@@ -7218,16 +7219,16 @@ Lists and creates facility's services ratings
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityServiceRating](#schemafacilityservicerating)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityServiceRating](schema#facilityservicerating)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_service_ratings_read
+### api facilities_facility_service_ratings_read
 
-<a id="opIdapi_facilities_facility_service_ratings_read"></a>
+
 
 > Code samples
 
@@ -7292,16 +7293,16 @@ Retrieves a particular facility service rating
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityServiceRating](#schemafacilityservicerating)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityServiceRating](schema#facilityservicerating)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_service_ratings_update
+### api facilities_facility_service_ratings_update
 
-<a id="opIdapi_facilities_facility_service_ratings_update"></a>
+
 
 > Code samples
 
@@ -7364,7 +7365,7 @@ Retrieves a particular facility service rating
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityServiceRating](#schemafacilityservicerating)|true|none|
+|body|body|[FacilityServiceRating](schema#facilityservicerating)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility service rating.|
 
 > Example responses
@@ -7398,16 +7399,16 @@ Retrieves a particular facility service rating
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityServiceRating](#schemafacilityservicerating)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityServiceRating](schema#facilityservicerating)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_service_ratings_partial_update
+### api facilities facility service ratings partial update
 
-<a id="opIdapi_facilities_facility_service_ratings_partial_update"></a>
+
 
 > Code samples
 
@@ -7470,7 +7471,7 @@ Retrieves a particular facility service rating
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityServiceRating](#schemafacilityservicerating)|true|none|
+|body|body|[FacilityServiceRating](schema#facilityservicerating)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility service rating.|
 
 > Example responses
@@ -7504,16 +7505,16 @@ Retrieves a particular facility service rating
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityServiceRating](#schemafacilityservicerating)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityServiceRating](schema#facilityservicerating)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_service_ratings_delete
+### api facilities_facility_service_ratings_delete
 
-<a id="opIdapi_facilities_facility_service_ratings_delete"></a>
+
 
 > Code samples
 
@@ -7553,9 +7554,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_services_list
+### api facilities_facility_services_list
 
-<a id="opIdapi_facilities_facility_services_list"></a>
+
 
 > Code samples
 
@@ -7654,7 +7655,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityService](#schemafacilityservice)]|true|none|none|
+|» results|[[FacilityService](schema#facilityservice)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» service_name|string|false|read-only|none|
 |»» service_code|string|false|read-only|none|
@@ -7680,9 +7681,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_services_create
+### api facilities_facility_services_create
 
-<a id="opIdapi_facilities_facility_services_create"></a>
+
 
 > Code samples
 
@@ -7758,7 +7759,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityService](#schemafacilityservice)|true|none|
+|body|body|[FacilityService](schema#facilityservice)|true|none|
 
 > Example responses
 
@@ -7796,16 +7797,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityService](#schemafacilityservice)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityService](schema#facilityservice)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_services_read
+### api facilities_facility_services_read
 
-<a id="opIdapi_facilities_facility_services_read"></a>
+
 
 > Code samples
 
@@ -7875,16 +7876,16 @@ Retrieves a particular facility service detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityService](#schemafacilityservice)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityService](schema#facilityservice)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_services_update
+### api facilities_facility_services_update
 
-<a id="opIdapi_facilities_facility_services_update"></a>
+
 
 > Code samples
 
@@ -7951,7 +7952,7 @@ Retrieves a particular facility service detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityService](#schemafacilityservice)|true|none|
+|body|body|[FacilityService](schema#facilityservice)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility service.|
 
 > Example responses
@@ -7990,16 +7991,16 @@ Retrieves a particular facility service detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityService](#schemafacilityservice)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityService](schema#facilityservice)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_services_partial_update
+### api facilities_facility_services_partial_update
 
-<a id="opIdapi_facilities_facility_services_partial_update"></a>
+
 
 > Code samples
 
@@ -8066,7 +8067,7 @@ Retrieves a particular facility service detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityService](#schemafacilityservice)|true|none|
+|body|body|[FacilityService](schema#facilityservice)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility service.|
 
 > Example responses
@@ -8105,16 +8106,16 @@ Retrieves a particular facility service detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityService](#schemafacilityservice)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityService](schema#facilityservice)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_services_delete
+### api facilities_facility_services_delete
 
-<a id="opIdapi_facilities_facility_services_delete"></a>
+
 
 > Code samples
 
@@ -8154,9 +8155,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_specialists_list
+### api facilities_facility_specialists_list
 
-<a id="opIdapi_facilities_facility_specialists_list"></a>
+
 
 > Code samples
 
@@ -8248,7 +8249,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilitySpecialist](#schemafacilityspecialist)]|true|none|none|
+|» results|[[FacilitySpecialist](schema#facilityspecialist)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» speciality_name|string|false|read-only|none|
 |»» option_display_value|string|false|read-only|none|
@@ -8268,9 +8269,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_specialists_create
+### api facilities_facility_specialists_create
 
-<a id="opIdapi_facilities_facility_specialists_create"></a>
+
 
 > Code samples
 
@@ -8341,7 +8342,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilitySpecialist](#schemafacilityspecialist)|true|none|
+|body|body|[FacilitySpecialist](schema#facilityspecialist)|true|none|
 
 > Example responses
 
@@ -8373,16 +8374,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilitySpecialist](#schemafacilityspecialist)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilitySpecialist](schema#facilityspecialist)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_specialists_read
+### api facilities_facility_specialists_read
 
-<a id="opIdapi_facilities_facility_specialists_read"></a>
+
 
 > Code samples
 
@@ -8446,16 +8447,16 @@ Retrieves a particular facility specialist detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilitySpecialist](#schemafacilityspecialist)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilitySpecialist](schema#facilityspecialist)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_specialists_update
+### api facilities_facility_specialists_update
 
-<a id="opIdapi_facilities_facility_specialists_update"></a>
+
 
 > Code samples
 
@@ -8518,7 +8519,7 @@ Retrieves a particular facility specialist detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilitySpecialist](#schemafacilityspecialist)|true|none|
+|body|body|[FacilitySpecialist](schema#facilityspecialist)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility specialist.|
 
 > Example responses
@@ -8551,16 +8552,16 @@ Retrieves a particular facility specialist detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilitySpecialist](#schemafacilityspecialist)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilitySpecialist](schema#facilityspecialist)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_specialists_partial_update
+### api facilities_facility_specialists_partial_update
 
-<a id="opIdapi_facilities_facility_specialists_partial_update"></a>
+
 
 > Code samples
 
@@ -8623,7 +8624,7 @@ Retrieves a particular facility specialist detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilitySpecialist](#schemafacilityspecialist)|true|none|
+|body|body|[FacilitySpecialist](schema#facilityspecialist)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility specialist.|
 
 > Example responses
@@ -8656,16 +8657,16 @@ Retrieves a particular facility specialist detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilitySpecialist](#schemafacilityspecialist)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilitySpecialist](schema#facilityspecialist)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_specialists_delete
+### api facilities_facility_specialists_delete
 
-<a id="opIdapi_facilities_facility_specialists_delete"></a>
+
 
 > Code samples
 
@@ -8705,9 +8706,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_status_list
+### api facilities_facility_status_list
 
-<a id="opIdapi_facilities_facility_status_list"></a>
+
 
 > Code samples
 
@@ -8796,7 +8797,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityStatus](#schemafacilitystatus)]|true|none|none|
+|» results|[[FacilityStatus](schema#facilitystatus)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -8814,9 +8815,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_status_create
+### api facilities_facility_status_create
 
-<a id="opIdapi_facilities_facility_status_create"></a>
+
 
 > Code samples
 
@@ -8886,7 +8887,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityStatus](#schemafacilitystatus)|true|none|
+|body|body|[FacilityStatus](schema#facilitystatus)|true|none|
 
 > Example responses
 
@@ -8916,16 +8917,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityStatus](#schemafacilitystatus)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityStatus](schema#facilitystatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_status_read
+### api facilities_facility_status_read
 
-<a id="opIdapi_facilities_facility_status_read"></a>
+
 
 > Code samples
 
@@ -8987,16 +8988,16 @@ Retrieves a particular operation status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityStatus](#schemafacilitystatus)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityStatus](schema#facilitystatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_status_update
+### api facilities_facility_status_update
 
-<a id="opIdapi_facilities_facility_status_update"></a>
+
 
 > Code samples
 
@@ -9059,7 +9060,7 @@ Retrieves a particular operation status
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityStatus](#schemafacilitystatus)|true|none|
+|body|body|[FacilityStatus](schema#facilitystatus)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility status.|
 
 > Example responses
@@ -9090,16 +9091,16 @@ Retrieves a particular operation status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityStatus](#schemafacilitystatus)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityStatus](schema#facilitystatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_status_partial_update
+### api facilities_facility_status_partial_update
 
-<a id="opIdapi_facilities_facility_status_partial_update"></a>
+
 
 > Code samples
 
@@ -9162,7 +9163,7 @@ Retrieves a particular operation status
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityStatus](#schemafacilitystatus)|true|none|
+|body|body|[FacilityStatus](schema#facilitystatus)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility status.|
 
 > Example responses
@@ -9193,16 +9194,16 @@ Retrieves a particular operation status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityStatus](#schemafacilitystatus)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityStatus](schema#facilitystatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_status_delete
+### api facilities_facility_status_delete
 
-<a id="opIdapi_facilities_facility_status_delete"></a>
+
 
 > Code samples
 
@@ -9242,9 +9243,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_types_list
+### api facilities_facility_types_list
 
-<a id="opIdapi_facilities_facility_types_list"></a>
+
 
 > Code samples
 
@@ -9339,7 +9340,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityType](#schemafacilitytype)]|true|none|none|
+|» results|[[FacilityType](schema#facilitytype)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» owner_type_name|string|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
@@ -9361,9 +9362,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_types_create
+### api facilities_facility_types_create
 
-<a id="opIdapi_facilities_facility_types_create"></a>
+
 
 > Code samples
 
@@ -9441,7 +9442,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityType](#schemafacilitytype)|true|none|
+|body|body|[FacilityType](schema#facilitytype)|true|none|
 
 > Example responses
 
@@ -9475,16 +9476,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityType](#schemafacilitytype)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityType](schema#facilitytype)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_types_read
+### api facilities_facility_types_read
 
-<a id="opIdapi_facilities_facility_types_read"></a>
+
 
 > Code samples
 
@@ -9550,16 +9551,16 @@ Retrieves a particular facility types detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityType](#schemafacilitytype)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityType](schema#facilitytype)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_types_update
+### api facilities_facility_types_update
 
-<a id="opIdapi_facilities_facility_types_update"></a>
+
 
 > Code samples
 
@@ -9628,7 +9629,7 @@ Retrieves a particular facility types detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityType](#schemafacilitytype)|true|none|
+|body|body|[FacilityType](schema#facilitytype)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility type.|
 
 > Example responses
@@ -9663,16 +9664,16 @@ Retrieves a particular facility types detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityType](#schemafacilitytype)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityType](schema#facilitytype)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_types_partial_update
+### api facilities_facility_types_partial_update
 
-<a id="opIdapi_facilities_facility_types_partial_update"></a>
+
 
 > Code samples
 
@@ -9741,7 +9742,7 @@ Retrieves a particular facility types detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityType](#schemafacilitytype)|true|none|
+|body|body|[FacilityType](schema#facilitytype)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility type.|
 
 > Example responses
@@ -9776,16 +9777,16 @@ Retrieves a particular facility types detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityType](#schemafacilitytype)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityType](schema#facilitytype)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_types_delete
+### api facilities_facility_types_delete
 
-<a id="opIdapi_facilities_facility_types_delete"></a>
+
 
 > Code samples
 
@@ -9825,9 +9826,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_types_details_list
+### api facilities_facility_types_details_list
 
-<a id="opIdapi_facilities_facility_types_details_list"></a>
+
 
 > Code samples
 
@@ -9921,7 +9922,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityType](#schemafacilitytype)]|true|none|none|
+|» results|[[FacilityType](schema#facilitytype)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» owner_type_name|string|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
@@ -9943,9 +9944,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_types_details_create
+### api facilities_facility_types_details_create
 
-<a id="opIdapi_facilities_facility_types_details_create"></a>
+
 
 > Code samples
 
@@ -10022,7 +10023,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityType](#schemafacilitytype)|true|none|
+|body|body|[FacilityType](schema#facilitytype)|true|none|
 
 > Example responses
 
@@ -10056,16 +10057,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityType](#schemafacilitytype)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityType](schema#facilitytype)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_unit_regulation_list
+### api facilities_facility_unit_regulation_list
 
-<a id="opIdapi_facilities_facility_unit_regulation_list"></a>
+
 
 > Code samples
 
@@ -10144,7 +10145,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityUnitRegulation](#schemafacilityunitregulation)]|true|none|none|
+|» results|[[FacilityUnitRegulation](schema#facilityunitregulation)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -10161,9 +10162,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_unit_regulation_create
+### api facilities_facility_unit_regulation_create
 
-<a id="opIdapi_facilities_facility_unit_regulation_create"></a>
+
 
 > Code samples
 
@@ -10222,7 +10223,7 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_unit_regulation/',
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityUnitRegulation](#schemafacilityunitregulation)|true|none|
+|body|body|[FacilityUnitRegulation](schema#facilityunitregulation)|true|none|
 
 > Example responses
 
@@ -10251,16 +10252,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_unit_regulation/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityUnitRegulation](#schemafacilityunitregulation)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityUnitRegulation](schema#facilityunitregulation)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_unit_regulation_read
+### api facilities_facility_unit_regulation_read
 
-<a id="opIdapi_facilities_facility_unit_regulation_read"></a>
+
 
 > Code samples
 
@@ -10319,16 +10320,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_unit_regulation/{i
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUnitRegulation](#schemafacilityunitregulation)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUnitRegulation](schema#facilityunitregulation)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_unit_regulation_update
+### api facilities_facility_unit_regulation_update
 
-<a id="opIdapi_facilities_facility_unit_regulation_update"></a>
+
 
 > Code samples
 
@@ -10387,7 +10388,7 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_unit_regulation/{i
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityUnitRegulation](#schemafacilityunitregulation)|true|none|
+|body|body|[FacilityUnitRegulation](schema#facilityunitregulation)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility unit regulation.|
 
 > Example responses
@@ -10417,16 +10418,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_unit_regulation/{i
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUnitRegulation](#schemafacilityunitregulation)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUnitRegulation](schema#facilityunitregulation)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_unit_regulation_partial_update
+### api facilities facility unit regulation partial update
 
-<a id="opIdapi_facilities_facility_unit_regulation_partial_update"></a>
+
 
 > Code samples
 
@@ -10485,7 +10486,7 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_unit_regulation/{i
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityUnitRegulation](#schemafacilityunitregulation)|true|none|
+|body|body|[FacilityUnitRegulation](schema#facilityunitregulation)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility unit regulation.|
 
 > Example responses
@@ -10515,16 +10516,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/facility_unit_regulation/{i
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUnitRegulation](#schemafacilityunitregulation)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUnitRegulation](schema#facilityunitregulation)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_unit_regulation_delete
+### api facilities_facility_unit_regulation_delete
 
-<a id="opIdapi_facilities_facility_unit_regulation_delete"></a>
+
 
 > Code samples
 
@@ -10562,9 +10563,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_units_list
+### api facilities_facility_units_list
 
-<a id="opIdapi_facilities_facility_units_list"></a>
+
 
 > Code samples
 
@@ -10660,7 +10661,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityUnit](#schemafacilityunit)]|true|none|none|
+|» results|[[FacilityUnit](schema#facilityunit)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» regulation_status|string|false|read-only|none|
 |»» unit_name|string|false|read-only|none|
@@ -10682,9 +10683,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_units_create
+### api facilities_facility_units_create
 
-<a id="opIdapi_facilities_facility_units_create"></a>
+
 
 > Code samples
 
@@ -10759,7 +10760,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityUnit](#schemafacilityunit)|true|none|
+|body|body|[FacilityUnit](schema#facilityunit)|true|none|
 
 > Example responses
 
@@ -10793,16 +10794,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityUnit](#schemafacilityunit)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityUnit](schema#facilityunit)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_units_read
+### api facilities_facility_units_read
 
-<a id="opIdapi_facilities_facility_units_read"></a>
+
 
 > Code samples
 
@@ -10868,16 +10869,16 @@ Retrieves a particular facility unit's detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUnit](#schemafacilityunit)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUnit](schema#facilityunit)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_units_update
+### api facilities_facility_units_update
 
-<a id="opIdapi_facilities_facility_units_update"></a>
+
 
 > Code samples
 
@@ -10942,7 +10943,7 @@ Retrieves a particular facility unit's detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityUnit](#schemafacilityunit)|true|none|
+|body|body|[FacilityUnit](schema#facilityunit)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility unit.|
 
 > Example responses
@@ -10977,16 +10978,16 @@ Retrieves a particular facility unit's detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUnit](#schemafacilityunit)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUnit](schema#facilityunit)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_units_partial_update
+### api facilities_facility_units_partial_update
 
-<a id="opIdapi_facilities_facility_units_partial_update"></a>
+
 
 > Code samples
 
@@ -11051,7 +11052,7 @@ Retrieves a particular facility unit's detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityUnit](#schemafacilityunit)|true|none|
+|body|body|[FacilityUnit](schema#facilityunit)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility unit.|
 
 > Example responses
@@ -11086,16 +11087,16 @@ Retrieves a particular facility unit's detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUnit](#schemafacilityunit)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUnit](schema#facilityunit)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_units_delete
+### api facilities_facility_units_delete
 
-<a id="opIdapi_facilities_facility_units_delete"></a>
+
 
 > Code samples
 
@@ -11135,9 +11136,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_updates_list
+### api facilities_facility_updates_list
 
-<a id="opIdapi_facilities_facility_updates_list"></a>
+
 
 > Code samples
 
@@ -11230,7 +11231,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityUpdates](#schemafacilityupdates)]|true|none|none|
+|» results|[[FacilityUpdates](schema#facilityupdates)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» facility_updated_json|string|false|read-only|none|
 |»» created_by_name|string|false|read-only|none|
@@ -11259,9 +11260,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_updates_create
+### api facilities_facility_updates_create
 
-<a id="opIdapi_facilities_facility_updates_create"></a>
+
 
 > Code samples
 
@@ -11342,7 +11343,7 @@ Lists and creates facility updates
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityUpdates](#schemafacilityupdates)|true|none|
+|body|body|[FacilityUpdates](schema#facilityupdates)|true|none|
 
 > Example responses
 
@@ -11383,16 +11384,16 @@ Lists and creates facility updates
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityUpdates](#schemafacilityupdates)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityUpdates](schema#facilityupdates)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_updates_read
+### api facilities_facility_updates_read
 
-<a id="opIdapi_facilities_facility_updates_read"></a>
+
 
 > Code samples
 
@@ -11465,16 +11466,16 @@ Retrieves a single facility update
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUpdates](#schemafacilityupdates)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUpdates](schema#facilityupdates)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_updates_update
+### api facilities_facility_updates_update
 
-<a id="opIdapi_facilities_facility_updates_update"></a>
+
 
 > Code samples
 
@@ -11555,7 +11556,7 @@ Retrieves a single facility update
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityUpdates](#schemafacilityupdates)|true|none|
+|body|body|[FacilityUpdates](schema#facilityupdates)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility updates.|
 
 > Example responses
@@ -11597,16 +11598,16 @@ Retrieves a single facility update
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUpdates](#schemafacilityupdates)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUpdates](schema#facilityupdates)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_updates_partial_update
+### api facilities_facility_updates_partial_update
 
-<a id="opIdapi_facilities_facility_updates_partial_update"></a>
+
 
 > Code samples
 
@@ -11687,7 +11688,7 @@ Retrieves a single facility update
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityUpdates](#schemafacilityupdates)|true|none|
+|body|body|[FacilityUpdates](schema#facilityupdates)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility updates.|
 
 > Example responses
@@ -11729,16 +11730,16 @@ Retrieves a single facility update
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUpdates](#schemafacilityupdates)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUpdates](schema#facilityupdates)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_updates_delete
+### api facilities_facility_updates_delete
 
-<a id="opIdapi_facilities_facility_updates_delete"></a>
+
 
 > Code samples
 
@@ -11778,9 +11779,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_upgrade_list
+### api facilities_facility_upgrade_list
 
-<a id="opIdapi_facilities_facility_upgrade_list"></a>
+
 
 > Code samples
 
@@ -11877,7 +11878,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityUpgrade](#schemafacilityupgrade)]|true|none|none|
+|» results|[[FacilityUpgrade](schema#facilityupgrade)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» current_keph_level|string|false|read-only|none|
 |»» current_facility_type|string|false|read-only|none|
@@ -11903,9 +11904,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_facility_upgrade_create
+### api facilities_facility_upgrade_create
 
-<a id="opIdapi_facilities_facility_upgrade_create"></a>
+
 
 > Code samples
 
@@ -11987,7 +11988,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityUpgrade](#schemafacilityupgrade)|true|none|
+|body|body|[FacilityUpgrade](schema#facilityupgrade)|true|none|
 
 > Example responses
 
@@ -12025,16 +12026,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityUpgrade](#schemafacilityupgrade)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityUpgrade](schema#facilityupgrade)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_upgrade_read
+### api facilities_facility_upgrade_read
 
-<a id="opIdapi_facilities_facility_upgrade_read"></a>
+
 
 > Code samples
 
@@ -12104,16 +12105,16 @@ Retrieves a particular facility upgrade or downgrade
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUpgrade](#schemafacilityupgrade)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUpgrade](schema#facilityupgrade)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_upgrade_update
+### api facilities_facility_upgrade_update
 
-<a id="opIdapi_facilities_facility_upgrade_update"></a>
+
 
 > Code samples
 
@@ -12188,7 +12189,7 @@ Retrieves a particular facility upgrade or downgrade
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityUpgrade](#schemafacilityupgrade)|true|none|
+|body|body|[FacilityUpgrade](schema#facilityupgrade)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility upgrade.|
 
 > Example responses
@@ -12227,16 +12228,16 @@ Retrieves a particular facility upgrade or downgrade
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUpgrade](#schemafacilityupgrade)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUpgrade](schema#facilityupgrade)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_upgrade_partial_update
+### api facilities_facility_upgrade_partial_update
 
-<a id="opIdapi_facilities_facility_upgrade_partial_update"></a>
+
 
 > Code samples
 
@@ -12311,7 +12312,7 @@ Retrieves a particular facility upgrade or downgrade
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityUpgrade](#schemafacilityupgrade)|true|none|
+|body|body|[FacilityUpgrade](schema#facilityupgrade)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility upgrade.|
 
 > Example responses
@@ -12350,16 +12351,16 @@ Retrieves a particular facility upgrade or downgrade
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUpgrade](#schemafacilityupgrade)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityUpgrade](schema#facilityupgrade)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_facility_upgrade_delete
+### api facilities_facility_upgrade_delete
 
-<a id="opIdapi_facilities_facility_upgrade_delete"></a>
+
 
 > Code samples
 
@@ -12399,9 +12400,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_flattened_categories_list
+### api facilities_flattened_categories_list
 
-<a id="opIdapi_facilities_flattened_categories_list"></a>
+
 
 > Code samples
 
@@ -12446,9 +12447,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_infrastructure_list
+### api facilities_infrastructure_list
 
-<a id="opIdapi_facilities_infrastructure_list"></a>
+
 
 > Code samples
 
@@ -12542,7 +12543,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[Infrastructure](#schemainfrastructure)]|true|none|none|
+|» results|[[Infrastructure](schema#infrastructure)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» category_name|string|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
@@ -12564,9 +12565,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_infrastructure_create
+### api facilities_infrastructure_create
 
-<a id="opIdapi_facilities_infrastructure_create"></a>
+
 
 > Code samples
 
@@ -12641,7 +12642,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Infrastructure](#schemainfrastructure)|true|none|
+|body|body|[Infrastructure](schema#infrastructure)|true|none|
 
 > Example responses
 
@@ -12675,16 +12676,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Infrastructure](#schemainfrastructure)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Infrastructure](schema#infrastructure)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_infrastructure_read
+### api facilities_infrastructure_read
 
-<a id="opIdapi_facilities_infrastructure_read"></a>
+
 
 > Code samples
 
@@ -12750,16 +12751,16 @@ Retrieves a particular infrastructure detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Infrastructure](#schemainfrastructure)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Infrastructure](schema#infrastructure)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_infrastructure_update
+### api facilities_infrastructure_update
 
-<a id="opIdapi_facilities_infrastructure_update"></a>
+
 
 > Code samples
 
@@ -12826,7 +12827,7 @@ Retrieves a particular infrastructure detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Infrastructure](#schemainfrastructure)|true|none|
+|body|body|[Infrastructure](schema#infrastructure)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this infrastructure.|
 
 > Example responses
@@ -12861,16 +12862,16 @@ Retrieves a particular infrastructure detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Infrastructure](#schemainfrastructure)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Infrastructure](schema#infrastructure)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_infrastructure_partial_update
+### api facilities_infrastructure_partial_update
 
-<a id="opIdapi_facilities_infrastructure_partial_update"></a>
+
 
 > Code samples
 
@@ -12937,7 +12938,7 @@ Retrieves a particular infrastructure detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Infrastructure](#schemainfrastructure)|true|none|
+|body|body|[Infrastructure](schema#infrastructure)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this infrastructure.|
 
 > Example responses
@@ -12972,16 +12973,16 @@ Retrieves a particular infrastructure detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Infrastructure](#schemainfrastructure)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Infrastructure](schema#infrastructure)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_infrastructure_delete
+### api facilities_infrastructure_delete
 
-<a id="opIdapi_facilities_infrastructure_delete"></a>
+
 
 > Code samples
 
@@ -13021,9 +13022,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_infrastructure_categories_list
+### api facilities_infrastructure_categories_list
 
-<a id="opIdapi_facilities_infrastructure_categories_list"></a>
+
 
 > Code samples
 
@@ -13113,7 +13114,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[InfrastructureCategory](#schemainfrastructurecategory)]|true|none|none|
+|» results|[[InfrastructureCategory](schema#infrastructurecategory)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -13132,9 +13133,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_infrastructure_categories_create
+### api facilities_infrastructure_categories_create
 
-<a id="opIdapi_facilities_infrastructure_categories_create"></a>
+
 
 > Code samples
 
@@ -13206,7 +13207,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[InfrastructureCategory](#schemainfrastructurecategory)|true|none|
+|body|body|[InfrastructureCategory](schema#infrastructurecategory)|true|none|
 
 > Example responses
 
@@ -13237,16 +13238,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[InfrastructureCategory](#schemainfrastructurecategory)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[InfrastructureCategory](schema#infrastructurecategory)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_infrastructure_categories_read
+### api facilities_infrastructure_categories_read
 
-<a id="opIdapi_facilities_infrastructure_categories_read"></a>
+
 
 > Code samples
 
@@ -13309,16 +13310,16 @@ Retrieves a particular speciality category.
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[InfrastructureCategory](#schemainfrastructurecategory)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[InfrastructureCategory](schema#infrastructurecategory)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_infrastructure_categories_update
+### api facilities_infrastructure_categories_update
 
-<a id="opIdapi_facilities_infrastructure_categories_update"></a>
+
 
 > Code samples
 
@@ -13383,7 +13384,7 @@ Retrieves a particular speciality category.
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[InfrastructureCategory](#schemainfrastructurecategory)|true|none|
+|body|body|[InfrastructureCategory](schema#infrastructurecategory)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this infrastructure category.|
 
 > Example responses
@@ -13415,16 +13416,16 @@ Retrieves a particular speciality category.
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[InfrastructureCategory](#schemainfrastructurecategory)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[InfrastructureCategory](schema#infrastructurecategory)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_infrastructure_categories_partial_update
+### api facilities_infrastructure_categories_partial_update
 
-<a id="opIdapi_facilities_infrastructure_categories_partial_update"></a>
+
 
 > Code samples
 
@@ -13489,7 +13490,7 @@ Retrieves a particular speciality category.
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[InfrastructureCategory](#schemainfrastructurecategory)|true|none|
+|body|body|[InfrastructureCategory](schema#infrastructurecategory)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this infrastructure category.|
 
 > Example responses
@@ -13521,16 +13522,16 @@ Retrieves a particular speciality category.
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[InfrastructureCategory](#schemainfrastructurecategory)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[InfrastructureCategory](schema#infrastructurecategory)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_infrastructure_categories_delete
+### api facilities_infrastructure_categories_delete
 
-<a id="opIdapi_facilities_infrastructure_categories_delete"></a>
+
 
 > Code samples
 
@@ -13570,9 +13571,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_job_titles_list
+### api facilities_job_titles_list
 
-<a id="opIdapi_facilities_job_titles_list"></a>
+
 
 > Code samples
 
@@ -13657,7 +13658,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[JobTitle](#schemajobtitle)]|true|none|none|
+|» results|[[JobTitle](schema#jobtitle)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» name|string|true|none|A short name for the job title|
 |»» abbreviation|string¦null|false|none|The short name for the title|
@@ -13671,9 +13672,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_job_titles_create
+### api facilities_job_titles_create
 
-<a id="opIdapi_facilities_job_titles_create"></a>
+
 
 > Code samples
 
@@ -13737,7 +13738,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[JobTitle](#schemajobtitle)|true|none|
+|body|body|[JobTitle](schema#jobtitle)|true|none|
 
 > Example responses
 
@@ -13763,16 +13764,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[JobTitle](#schemajobtitle)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[JobTitle](schema#jobtitle)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_job_titles_read
+### api facilities_job_titles_read
 
-<a id="opIdapi_facilities_job_titles_read"></a>
+
 
 > Code samples
 
@@ -13830,16 +13831,16 @@ Retrieves a particular job title
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[JobTitle](#schemajobtitle)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[JobTitle](schema#jobtitle)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_job_titles_update
+### api facilities_job_titles_update
 
-<a id="opIdapi_facilities_job_titles_update"></a>
+
 
 > Code samples
 
@@ -13896,7 +13897,7 @@ Retrieves a particular job title
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[JobTitle](#schemajobtitle)|true|none|
+|body|body|[JobTitle](schema#jobtitle)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this job title.|
 
 > Example responses
@@ -13923,16 +13924,16 @@ Retrieves a particular job title
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[JobTitle](#schemajobtitle)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[JobTitle](schema#jobtitle)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_job_titles_partial_update
+### api facilities_job_titles_partial_update
 
-<a id="opIdapi_facilities_job_titles_partial_update"></a>
+
 
 > Code samples
 
@@ -13989,7 +13990,7 @@ Retrieves a particular job title
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[JobTitle](#schemajobtitle)|true|none|
+|body|body|[JobTitle](schema#jobtitle)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this job title.|
 
 > Example responses
@@ -14016,16 +14017,16 @@ Retrieves a particular job title
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[JobTitle](#schemajobtitle)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[JobTitle](schema#jobtitle)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_job_titles_delete
+### api facilities_job_titles_delete
 
-<a id="opIdapi_facilities_job_titles_delete"></a>
+
 
 > Code samples
 
@@ -14065,9 +14066,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_keph_list
+### api facilities_keph_list
 
-<a id="opIdapi_facilities_keph_list"></a>
+
 
 > Code samples
 
@@ -14157,7 +14158,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[KephLevel](#schemakephlevel)]|true|none|none|
+|» results|[[KephLevel](schema#kephlevel)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -14175,9 +14176,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_keph_create
+### api facilities_keph_create
 
-<a id="opIdapi_facilities_keph_create"></a>
+
 
 > Code samples
 
@@ -14248,7 +14249,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[KephLevel](#schemakephlevel)|true|none|
+|body|body|[KephLevel](schema#kephlevel)|true|none|
 
 > Example responses
 
@@ -14278,16 +14279,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[KephLevel](#schemakephlevel)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[KephLevel](schema#kephlevel)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_keph_read
+### api facilities_keph_read
 
-<a id="opIdapi_facilities_keph_read"></a>
+
 
 > Code samples
 
@@ -14349,16 +14350,16 @@ Retrieves a single KEPH level
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[KephLevel](#schemakephlevel)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[KephLevel](schema#kephlevel)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_keph_update
+### api facilities_keph_update
 
-<a id="opIdapi_facilities_keph_update"></a>
+
 
 > Code samples
 
@@ -14421,7 +14422,7 @@ Retrieves a single KEPH level
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[KephLevel](#schemakephlevel)|true|none|
+|body|body|[KephLevel](schema#kephlevel)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this keph level.|
 
 > Example responses
@@ -14452,16 +14453,16 @@ Retrieves a single KEPH level
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[KephLevel](#schemakephlevel)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[KephLevel](schema#kephlevel)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_keph_partial_update
+### api facilities_keph_partial_update
 
-<a id="opIdapi_facilities_keph_partial_update"></a>
+
 
 > Code samples
 
@@ -14524,7 +14525,7 @@ Retrieves a single KEPH level
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[KephLevel](#schemakephlevel)|true|none|
+|body|body|[KephLevel](schema#kephlevel)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this keph level.|
 
 > Example responses
@@ -14555,16 +14556,16 @@ Retrieves a single KEPH level
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[KephLevel](#schemakephlevel)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[KephLevel](schema#kephlevel)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_keph_delete
+### api facilities_keph_delete
 
-<a id="opIdapi_facilities_keph_delete"></a>
+
 
 > Code samples
 
@@ -14604,9 +14605,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_level_change_reasons_list
+### api facilities_level_change_reasons_list
 
-<a id="opIdapi_facilities_level_change_reasons_list"></a>
+
 
 > Code samples
 
@@ -14695,7 +14696,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityLevelChangeReason](#schemafacilitylevelchangereason)]|true|none|none|
+|» results|[[FacilityLevelChangeReason](schema#facilitylevelchangereason)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -14712,9 +14713,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_level_change_reasons_create
+### api facilities_level_change_reasons_create
 
-<a id="opIdapi_facilities_level_change_reasons_create"></a>
+
 
 > Code samples
 
@@ -14783,7 +14784,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityLevelChangeReason](#schemafacilitylevelchangereason)|true|none|
+|body|body|[FacilityLevelChangeReason](schema#facilitylevelchangereason)|true|none|
 
 > Example responses
 
@@ -14812,16 +14813,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityLevelChangeReason](#schemafacilitylevelchangereason)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityLevelChangeReason](schema#facilitylevelchangereason)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_level_change_reasons_read
+### api facilities_level_change_reasons_read
 
-<a id="opIdapi_facilities_level_change_reasons_read"></a>
+
 
 > Code samples
 
@@ -14882,16 +14883,16 @@ Retrieves a single facility level change reason
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityLevelChangeReason](#schemafacilitylevelchangereason)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityLevelChangeReason](schema#facilitylevelchangereason)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_level_change_reasons_update
+### api facilities_level_change_reasons_update
 
-<a id="opIdapi_facilities_level_change_reasons_update"></a>
+
 
 > Code samples
 
@@ -14952,7 +14953,7 @@ Retrieves a single facility level change reason
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityLevelChangeReason](#schemafacilitylevelchangereason)|true|none|
+|body|body|[FacilityLevelChangeReason](schema#facilitylevelchangereason)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility level change reason.|
 
 > Example responses
@@ -14982,16 +14983,16 @@ Retrieves a single facility level change reason
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityLevelChangeReason](#schemafacilitylevelchangereason)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityLevelChangeReason](schema#facilitylevelchangereason)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_level_change_reasons_partial_update
+### api facilities level change reasons partial update
 
-<a id="opIdapi_facilities_level_change_reasons_partial_update"></a>
+
 
 > Code samples
 
@@ -15052,7 +15053,7 @@ Retrieves a single facility level change reason
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[FacilityLevelChangeReason](#schemafacilitylevelchangereason)|true|none|
+|body|body|[FacilityLevelChangeReason](schema#facilitylevelchangereason)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this facility level change reason.|
 
 > Example responses
@@ -15082,16 +15083,16 @@ Retrieves a single facility level change reason
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityLevelChangeReason](#schemafacilitylevelchangereason)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityLevelChangeReason](schema#facilitylevelchangereason)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_level_change_reasons_delete
+### api facilities_level_change_reasons_delete
 
-<a id="opIdapi_facilities_level_change_reasons_delete"></a>
+
 
 > Code samples
 
@@ -15131,9 +15132,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_material_list
+### api facilities_material_list
 
-<a id="opIdapi_facilities_material_list"></a>
+
 
 > Code samples
 
@@ -15251,7 +15252,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[FacilityExportExcelMaterialView](#schemafacilityexportexcelmaterialview)]|true|none|none|
+|» results|[[FacilityExportExcelMaterialView](schema#facilityexportexcelmaterialview)]|true|none|none|
 |»» code|integer|true|none|The facility code|
 |»» name|string|true|none|Unique name of the facility|
 |»» officialname|string|true|none|Official name of the facility|
@@ -15304,9 +15305,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_officer_contacts_list
+### api facilities_officer_contacts_list
 
-<a id="opIdapi_facilities_officer_contacts_list"></a>
+
 
 > Code samples
 
@@ -15396,7 +15397,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[OfficerContact](#schemaofficercontact)]|true|none|none|
+|» results|[[OfficerContact](schema#officercontact)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -15413,9 +15414,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_officer_contacts_create
+### api facilities_officer_contacts_create
 
-<a id="opIdapi_facilities_officer_contacts_create"></a>
+
 
 > Code samples
 
@@ -15485,7 +15486,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[OfficerContact](#schemaofficercontact)|true|none|
+|body|body|[OfficerContact](schema#officercontact)|true|none|
 
 > Example responses
 
@@ -15514,16 +15515,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[OfficerContact](#schemaofficercontact)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[OfficerContact](schema#officercontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_officer_contacts_read
+### api facilities_officer_contacts_read
 
-<a id="opIdapi_facilities_officer_contacts_read"></a>
+
 
 > Code samples
 
@@ -15584,16 +15585,16 @@ Retrieves a particular officer contact detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OfficerContact](#schemaofficercontact)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OfficerContact](schema#officercontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_officer_contacts_update
+### api facilities_officer_contacts_update
 
-<a id="opIdapi_facilities_officer_contacts_update"></a>
+
 
 > Code samples
 
@@ -15654,7 +15655,7 @@ Retrieves a particular officer contact detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[OfficerContact](#schemaofficercontact)|true|none|
+|body|body|[OfficerContact](schema#officercontact)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this officer contact.|
 
 > Example responses
@@ -15684,16 +15685,16 @@ Retrieves a particular officer contact detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OfficerContact](#schemaofficercontact)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OfficerContact](schema#officercontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_officer_contacts_partial_update
+### api facilities_officer_contacts_partial_update
 
-<a id="opIdapi_facilities_officer_contacts_partial_update"></a>
+
 
 > Code samples
 
@@ -15754,7 +15755,7 @@ Retrieves a particular officer contact detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[OfficerContact](#schemaofficercontact)|true|none|
+|body|body|[OfficerContact](schema#officercontact)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this officer contact.|
 
 > Example responses
@@ -15784,16 +15785,16 @@ Retrieves a particular officer contact detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OfficerContact](#schemaofficercontact)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OfficerContact](schema#officercontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_officer_contacts_delete
+### api facilities_officer_contacts_delete
 
-<a id="opIdapi_facilities_officer_contacts_delete"></a>
+
 
 > Code samples
 
@@ -15833,9 +15834,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_officer_facade_list
+### api facilities_officer_facade_list
 
-<a id="opIdapi_facilities_officer_facade_list"></a>
+
 
 > Code samples
 
@@ -15870,9 +15871,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_officer_facade_create
+### api facilities_officer_facade_create
 
-<a id="opIdapi_facilities_officer_facade_create"></a>
+
 
 > Code samples
 
@@ -15913,9 +15914,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_officer_facade_delete
+### api facilities_officer_facade_delete
 
-<a id="opIdapi_facilities_officer_facade_delete"></a>
+
 
 > Code samples
 
@@ -15956,9 +15957,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_officer_facade_delete_read
+### api facilities_officer_facade_delete_read
 
-<a id="opIdapi_facilities_officer_facade_delete_read"></a>
+
 
 > Code samples
 
@@ -15999,9 +16000,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_officer_facade_delete_create
+### api facilities_officer_facade_delete_create
 
-<a id="opIdapi_facilities_officer_facade_delete_create"></a>
+
 
 > Code samples
 
@@ -16042,9 +16043,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_officer_facade_delete_delete
+### api facilities_officer_facade_delete_delete
 
-<a id="opIdapi_facilities_officer_facade_delete_delete"></a>
+
 
 > Code samples
 
@@ -16085,9 +16086,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_officer_facade_read
+### api facilities_officer_facade_read
 
-<a id="opIdapi_facilities_officer_facade_read"></a>
+
 
 > Code samples
 
@@ -16128,9 +16129,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_officers_list
+### api facilities_officers_list
 
-<a id="opIdapi_facilities_officers_list"></a>
+
 
 > Code samples
 
@@ -16227,7 +16228,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[Officer](#schemaofficer)]|true|none|none|
+|» results|[[Officer](schema#officer)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» job_title_name|string|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
@@ -16248,9 +16249,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_officers_create
+### api facilities_officers_create
 
-<a id="opIdapi_facilities_officers_create"></a>
+
 
 > Code samples
 
@@ -16325,7 +16326,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Officer](#schemaofficer)|true|none|
+|body|body|[Officer](schema#officer)|true|none|
 
 > Example responses
 
@@ -16360,16 +16361,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Officer](#schemaofficer)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Officer](schema#officer)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_officers_incharge_read
+### api facilities_officers_incharge_read
 
-<a id="opIdapi_facilities_officers_incharge_read"></a>
+
 
 > Code samples
 
@@ -16436,16 +16437,16 @@ Retrieves a particular officer
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Officer](#schemaofficer)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Officer](schema#officer)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_officers_incharge_update
+### api facilities_officers_incharge_update
 
-<a id="opIdapi_facilities_officers_incharge_update"></a>
+
 
 > Code samples
 
@@ -16510,7 +16511,7 @@ Retrieves a particular officer
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Officer](#schemaofficer)|true|none|
+|body|body|[Officer](schema#officer)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this officer.|
 
 > Example responses
@@ -16546,16 +16547,16 @@ Retrieves a particular officer
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Officer](#schemaofficer)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Officer](schema#officer)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_officers_incharge_partial_update
+### api facilities_officers_incharge_partial_update
 
-<a id="opIdapi_facilities_officers_incharge_partial_update"></a>
+
 
 > Code samples
 
@@ -16620,7 +16621,7 @@ Retrieves a particular officer
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Officer](#schemaofficer)|true|none|
+|body|body|[Officer](schema#officer)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this officer.|
 
 > Example responses
@@ -16656,16 +16657,16 @@ Retrieves a particular officer
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Officer](#schemaofficer)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Officer](schema#officer)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_officers_incharge_delete
+### api facilities_officers_incharge_delete
 
-<a id="opIdapi_facilities_officers_incharge_delete"></a>
+
 
 > Code samples
 
@@ -16705,9 +16706,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_option_group_with_options_create
+### api facilities option group with options create
 
-<a id="opIdapi_facilities_option_group_with_options_create"></a>
+
 
 > Code samples
 
@@ -16745,9 +16746,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_option_group_with_options_delete
+### api facilities option group with options delete
 
-<a id="opIdapi_facilities_option_group_with_options_delete"></a>
+
 
 > Code samples
 
@@ -16785,9 +16786,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_option_groups_list
+### api facilities_option_groups_list
 
-<a id="opIdapi_facilities_option_groups_list"></a>
+
 
 > Code samples
 
@@ -16882,9 +16883,9 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[OptionGroup](#schemaoptiongroup)]|true|none|none|
+|» results|[[OptionGroup](schema#optiongroup)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
-|»» options|[[Option](#schemaoption)]|false|none|none|
+|»» options|[[Option](schema#option)]|false|none|none|
 |»»» id|string(uuid)|false|read-only|none|
 |»»» created|string(date-time)|false|none|none|
 |»»» updated|string(date-time)|false|none|none|
@@ -16921,9 +16922,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_option_groups_create
+### api facilities_option_groups_create
 
-<a id="opIdapi_facilities_option_groups_create"></a>
+
 
 > Code samples
 
@@ -17010,7 +17011,7 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/option_groups/',
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[OptionGroup](#schemaoptiongroup)|true|none|
+|body|body|[OptionGroup](schema#optiongroup)|true|none|
 
 > Example responses
 
@@ -17055,16 +17056,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/option_groups/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[OptionGroup](#schemaoptiongroup)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[OptionGroup](schema#optiongroup)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_option_groups_read
+### api facilities_option_groups_read
 
-<a id="opIdapi_facilities_option_groups_read"></a>
+
 
 > Code samples
 
@@ -17139,16 +17140,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/option_groups/{id}/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OptionGroup](#schemaoptiongroup)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OptionGroup](schema#optiongroup)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_option_groups_update
+### api facilities_option_groups_update
 
-<a id="opIdapi_facilities_option_groups_update"></a>
+
 
 > Code samples
 
@@ -17235,7 +17236,7 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/option_groups/{id}/',
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[OptionGroup](#schemaoptiongroup)|true|none|
+|body|body|[OptionGroup](schema#optiongroup)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this option group.|
 
 > Example responses
@@ -17281,16 +17282,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/option_groups/{id}/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OptionGroup](#schemaoptiongroup)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OptionGroup](schema#optiongroup)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_option_groups_partial_update
+### api facilities_option_groups_partial_update
 
-<a id="opIdapi_facilities_option_groups_partial_update"></a>
+
 
 > Code samples
 
@@ -17377,7 +17378,7 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/option_groups/{id}/',
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[OptionGroup](#schemaoptiongroup)|true|none|
+|body|body|[OptionGroup](schema#optiongroup)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this option group.|
 
 > Example responses
@@ -17423,16 +17424,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/option_groups/{id}/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OptionGroup](#schemaoptiongroup)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OptionGroup](schema#optiongroup)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_option_groups_delete
+### api facilities_option_groups_delete
 
-<a id="opIdapi_facilities_option_groups_delete"></a>
+
 
 > Code samples
 
@@ -17470,9 +17471,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_options_list
+### api facilities_options_list
 
-<a id="opIdapi_facilities_options_list"></a>
+
 
 > Code samples
 
@@ -17563,7 +17564,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[Option](#schemaoption)]|true|none|none|
+|» results|[[Option](schema#option)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -17592,9 +17593,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_options_create
+### api facilities_options_create
 
-<a id="opIdapi_facilities_options_create"></a>
+
 
 > Code samples
 
@@ -17668,7 +17669,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Option](#schemaoption)|true|none|
+|body|body|[Option](schema#option)|true|none|
 
 > Example responses
 
@@ -17700,16 +17701,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Option](#schemaoption)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Option](schema#option)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_options_read
+### api facilities_options_read
 
-<a id="opIdapi_facilities_options_read"></a>
+
 
 > Code samples
 
@@ -17773,16 +17774,16 @@ Retrieves a a particular option
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Option](#schemaoption)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Option](schema#option)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_options_update
+### api facilities_options_update
 
-<a id="opIdapi_facilities_options_update"></a>
+
 
 > Code samples
 
@@ -17849,7 +17850,7 @@ Retrieves a a particular option
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Option](#schemaoption)|true|none|
+|body|body|[Option](schema#option)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this option.|
 
 > Example responses
@@ -17882,16 +17883,16 @@ Retrieves a a particular option
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Option](#schemaoption)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Option](schema#option)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_options_partial_update
+### api facilities_options_partial_update
 
-<a id="opIdapi_facilities_options_partial_update"></a>
+
 
 > Code samples
 
@@ -17958,7 +17959,7 @@ Retrieves a a particular option
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Option](#schemaoption)|true|none|
+|body|body|[Option](schema#option)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this option.|
 
 > Example responses
@@ -17991,16 +17992,16 @@ Retrieves a a particular option
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Option](#schemaoption)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Option](schema#option)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_options_delete
+### api facilities_options_delete
 
-<a id="opIdapi_facilities_options_delete"></a>
+
 
 > Code samples
 
@@ -18040,9 +18041,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_owner_types_list
+### api facilities_owner_types_list
 
-<a id="opIdapi_facilities_owner_types_list"></a>
+
 
 > Code samples
 
@@ -18133,7 +18134,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[OwnerType](#schemaownertype)]|true|none|none|
+|» results|[[OwnerType](schema#ownertype)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -18151,9 +18152,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_owner_types_create
+### api facilities_owner_types_create
 
-<a id="opIdapi_facilities_owner_types_create"></a>
+
 
 > Code samples
 
@@ -18225,7 +18226,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[OwnerType](#schemaownertype)|true|none|
+|body|body|[OwnerType](schema#ownertype)|true|none|
 
 > Example responses
 
@@ -18255,16 +18256,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[OwnerType](#schemaownertype)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[OwnerType](schema#ownertype)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_owner_types_read
+### api facilities_owner_types_read
 
-<a id="opIdapi_facilities_owner_types_read"></a>
+
 
 > Code samples
 
@@ -18326,16 +18327,16 @@ Retrieves a particular owner type
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OwnerType](#schemaownertype)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OwnerType](schema#ownertype)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_owner_types_update
+### api facilities_owner_types_update
 
-<a id="opIdapi_facilities_owner_types_update"></a>
+
 
 > Code samples
 
@@ -18398,7 +18399,7 @@ Retrieves a particular owner type
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[OwnerType](#schemaownertype)|true|none|
+|body|body|[OwnerType](schema#ownertype)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this owner type.|
 
 > Example responses
@@ -18429,16 +18430,16 @@ Retrieves a particular owner type
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OwnerType](#schemaownertype)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OwnerType](schema#ownertype)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_owner_types_partial_update
+### api facilities_owner_types_partial_update
 
-<a id="opIdapi_facilities_owner_types_partial_update"></a>
+
 
 > Code samples
 
@@ -18501,7 +18502,7 @@ Retrieves a particular owner type
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[OwnerType](#schemaownertype)|true|none|
+|body|body|[OwnerType](schema#ownertype)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this owner type.|
 
 > Example responses
@@ -18532,16 +18533,16 @@ Retrieves a particular owner type
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OwnerType](#schemaownertype)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OwnerType](schema#ownertype)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_owner_types_delete
+### api facilities_owner_types_delete
 
-<a id="opIdapi_facilities_owner_types_delete"></a>
+
 
 > Code samples
 
@@ -18581,9 +18582,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_owners_list
+### api facilities_owners_list
 
-<a id="opIdapi_facilities_owners_list"></a>
+
 
 > Code samples
 
@@ -18680,7 +18681,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[Owner](#schemaowner)]|true|none|none|
+|» results|[[Owner](schema#owner)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» owner_type_name|string|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
@@ -18701,9 +18702,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_owners_create
+### api facilities_owners_create
 
-<a id="opIdapi_facilities_owners_create"></a>
+
 
 > Code samples
 
@@ -18780,7 +18781,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Owner](#schemaowner)|true|none|
+|body|body|[Owner](schema#owner)|true|none|
 
 > Example responses
 
@@ -18813,16 +18814,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Owner](#schemaowner)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Owner](schema#owner)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_owners_read
+### api facilities_owners_read
 
-<a id="opIdapi_facilities_owners_read"></a>
+
 
 > Code samples
 
@@ -18887,16 +18888,16 @@ Retrieves a particular owner's details
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Owner](#schemaowner)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Owner](schema#owner)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_owners_update
+### api facilities_owners_update
 
-<a id="opIdapi_facilities_owners_update"></a>
+
 
 > Code samples
 
@@ -18961,7 +18962,7 @@ Retrieves a particular owner's details
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Owner](#schemaowner)|true|none|
+|body|body|[Owner](schema#owner)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this owner.|
 
 > Example responses
@@ -18995,16 +18996,16 @@ Retrieves a particular owner's details
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Owner](#schemaowner)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Owner](schema#owner)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_owners_partial_update
+### api facilities_owners_partial_update
 
-<a id="opIdapi_facilities_owners_partial_update"></a>
+
 
 > Code samples
 
@@ -19069,7 +19070,7 @@ Retrieves a particular owner's details
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Owner](#schemaowner)|true|none|
+|body|body|[Owner](schema#owner)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this owner.|
 
 > Example responses
@@ -19103,16 +19104,16 @@ Retrieves a particular owner's details
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Owner](#schemaowner)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Owner](schema#owner)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_owners_delete
+### api facilities_owners_delete
 
-<a id="opIdapi_facilities_owners_delete"></a>
+
 
 > Code samples
 
@@ -19152,9 +19153,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_regulating_bodies_list
+### api facilities_regulating_bodies_list
 
-<a id="opIdapi_facilities_regulating_bodies_list"></a>
+
 
 > Code samples
 
@@ -19249,7 +19250,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[RegulatingBody](#schemaregulatingbody)]|true|none|none|
+|» results|[[RegulatingBody](schema#regulatingbody)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» regulatory_body_type_name|string|false|read-only|none|
 |»» contacts|string|false|read-only|none|
@@ -19271,9 +19272,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_regulating_bodies_create
+### api facilities_regulating_bodies_create
 
-<a id="opIdapi_facilities_regulating_bodies_create"></a>
+
 
 > Code samples
 
@@ -19349,7 +19350,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulatingBody](#schemaregulatingbody)|true|none|
+|body|body|[RegulatingBody](schema#regulatingbody)|true|none|
 
 > Example responses
 
@@ -19383,16 +19384,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[RegulatingBody](#schemaregulatingbody)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[RegulatingBody](schema#regulatingbody)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulating_bodies_read
+### api facilities_regulating_bodies_read
 
-<a id="opIdapi_facilities_regulating_bodies_read"></a>
+
 
 > Code samples
 
@@ -19458,16 +19459,16 @@ Retrieves a particular regulatory body details
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatingBody](#schemaregulatingbody)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatingBody](schema#regulatingbody)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulating_bodies_update
+### api facilities_regulating_bodies_update
 
-<a id="opIdapi_facilities_regulating_bodies_update"></a>
+
 
 > Code samples
 
@@ -19534,7 +19535,7 @@ Retrieves a particular regulatory body details
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulatingBody](#schemaregulatingbody)|true|none|
+|body|body|[RegulatingBody](schema#regulatingbody)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this regulating body.|
 
 > Example responses
@@ -19569,16 +19570,16 @@ Retrieves a particular regulatory body details
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatingBody](#schemaregulatingbody)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatingBody](schema#regulatingbody)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulating_bodies_partial_update
+### api facilities_regulating_bodies_partial_update
 
-<a id="opIdapi_facilities_regulating_bodies_partial_update"></a>
+
 
 > Code samples
 
@@ -19645,7 +19646,7 @@ Retrieves a particular regulatory body details
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulatingBody](#schemaregulatingbody)|true|none|
+|body|body|[RegulatingBody](schema#regulatingbody)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this regulating body.|
 
 > Example responses
@@ -19680,16 +19681,16 @@ Retrieves a particular regulatory body details
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatingBody](#schemaregulatingbody)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatingBody](schema#regulatingbody)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulating_bodies_delete
+### api facilities_regulating_bodies_delete
 
-<a id="opIdapi_facilities_regulating_bodies_delete"></a>
+
 
 > Code samples
 
@@ -19729,9 +19730,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_regulating_body_contacts_list
+### api facilities_regulating_body_contacts_list
 
-<a id="opIdapi_facilities_regulating_body_contacts_list"></a>
+
 
 > Code samples
 
@@ -19823,7 +19824,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[RegulatingBodyContact](#schemaregulatingbodycontact)]|true|none|none|
+|» results|[[RegulatingBodyContact](schema#regulatingbodycontact)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» contact_text|string|false|read-only|none|
 |»» contact_type|string|false|read-only|none|
@@ -19842,9 +19843,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_regulating_body_contacts_create
+### api facilities_regulating_body_contacts_create
 
-<a id="opIdapi_facilities_regulating_body_contacts_create"></a>
+
 
 > Code samples
 
@@ -19914,7 +19915,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulatingBodyContact](#schemaregulatingbodycontact)|true|none|
+|body|body|[RegulatingBodyContact](schema#regulatingbodycontact)|true|none|
 
 > Example responses
 
@@ -19945,16 +19946,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[RegulatingBodyContact](#schemaregulatingbodycontact)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[RegulatingBodyContact](schema#regulatingbodycontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulating_body_contacts_read
+### api facilities_regulating_body_contacts_read
 
-<a id="opIdapi_facilities_regulating_body_contacts_read"></a>
+
 
 > Code samples
 
@@ -20017,16 +20018,16 @@ Retrieves a particular regulatory body contact.
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatingBodyContact](#schemaregulatingbodycontact)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatingBodyContact](schema#regulatingbodycontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulating_body_contacts_update
+### api facilities_regulating_body_contacts_update
 
-<a id="opIdapi_facilities_regulating_body_contacts_update"></a>
+
 
 > Code samples
 
@@ -20087,7 +20088,7 @@ Retrieves a particular regulatory body contact.
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulatingBodyContact](#schemaregulatingbodycontact)|true|none|
+|body|body|[RegulatingBodyContact](schema#regulatingbodycontact)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this regulating body contact.|
 
 > Example responses
@@ -20119,16 +20120,16 @@ Retrieves a particular regulatory body contact.
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatingBodyContact](#schemaregulatingbodycontact)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatingBodyContact](schema#regulatingbodycontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulating_body_contacts_partial_update
+### api facilities regulating body contacts partial update
 
-<a id="opIdapi_facilities_regulating_body_contacts_partial_update"></a>
+
 
 > Code samples
 
@@ -20189,7 +20190,7 @@ Retrieves a particular regulatory body contact.
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulatingBodyContact](#schemaregulatingbodycontact)|true|none|
+|body|body|[RegulatingBodyContact](schema#regulatingbodycontact)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this regulating body contact.|
 
 > Example responses
@@ -20221,16 +20222,16 @@ Retrieves a particular regulatory body contact.
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatingBodyContact](#schemaregulatingbodycontact)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatingBodyContact](schema#regulatingbodycontact)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulating_body_contacts_delete
+### api facilities_regulating_body_contacts_delete
 
-<a id="opIdapi_facilities_regulating_body_contacts_delete"></a>
+
 
 > Code samples
 
@@ -20270,9 +20271,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_regulation_status_read
+### api facilities_regulation_status_read
 
-<a id="opIdapi_facilities_regulation_status_read"></a>
+
 
 > Code samples
 
@@ -20340,16 +20341,16 @@ Retrieves a particular regulation status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulationStatus](#schemaregulationstatus)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulationStatus](schema#regulationstatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulation_status_create
+### api facilities_regulation_status_create
 
-<a id="opIdapi_facilities_regulation_status_create"></a>
+
 
 > Code samples
 
@@ -20429,7 +20430,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulationStatus](#schemaregulationstatus)|true|none|
+|body|body|[RegulationStatus](schema#regulationstatus)|true|none|
 
 > Example responses
 
@@ -20465,16 +20466,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[RegulationStatus](#schemaregulationstatus)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[RegulationStatus](schema#regulationstatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulation_status_update
+### api facilities_regulation_status_update
 
-<a id="opIdapi_facilities_regulation_status_update"></a>
+
 
 > Code samples
 
@@ -20545,7 +20546,7 @@ Retrieves a particular regulation status
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulationStatus](#schemaregulationstatus)|true|none|
+|body|body|[RegulationStatus](schema#regulationstatus)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this regulation status.|
 
 > Example responses
@@ -20582,16 +20583,16 @@ Retrieves a particular regulation status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulationStatus](#schemaregulationstatus)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulationStatus](schema#regulationstatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulation_status_partial_update
+### api facilities_regulation_status_partial_update
 
-<a id="opIdapi_facilities_regulation_status_partial_update"></a>
+
 
 > Code samples
 
@@ -20662,7 +20663,7 @@ Retrieves a particular regulation status
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulationStatus](#schemaregulationstatus)|true|none|
+|body|body|[RegulationStatus](schema#regulationstatus)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this regulation status.|
 
 > Example responses
@@ -20699,16 +20700,16 @@ Retrieves a particular regulation status
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulationStatus](#schemaregulationstatus)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulationStatus](schema#regulationstatus)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulation_status_delete
+### api facilities_regulation_status_delete
 
-<a id="opIdapi_facilities_regulation_status_delete"></a>
+
 
 > Code samples
 
@@ -20748,9 +20749,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_regulator_sync_list
+### api facilities_regulator_sync_list
 
-<a id="opIdapi_facilities_regulator_sync_list"></a>
+
 
 > Code samples
 
@@ -20839,7 +20840,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[RegulatorSync](#schemaregulatorsync)]|true|none|none|
+|» results|[[RegulatorSync](schema#regulatorsync)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» county_name|string|false|read-only|none|
 |»» owner_name|string|false|read-only|none|
@@ -20866,9 +20867,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_regulator_sync_create
+### api facilities_regulator_sync_create
 
-<a id="opIdapi_facilities_regulator_sync_create"></a>
+
 
 > Code samples
 
@@ -20933,7 +20934,7 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/regulator_sync/',
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulatorSync](#schemaregulatorsync)|true|none|
+|body|body|[RegulatorSync](schema#regulatorsync)|true|none|
 
 > Example responses
 
@@ -20972,16 +20973,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/regulator_sync/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[RegulatorSync](#schemaregulatorsync)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[RegulatorSync](schema#regulatorsync)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulator_sync_read
+### api facilities_regulator_sync_read
 
-<a id="opIdapi_facilities_regulator_sync_read"></a>
+
 
 > Code samples
 
@@ -21050,16 +21051,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/regulator_sync/{id}/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatorSync](#schemaregulatorsync)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatorSync](schema#regulatorsync)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulator_sync_update
+### api facilities_regulator_sync_update
 
-<a id="opIdapi_facilities_regulator_sync_update"></a>
+
 
 > Code samples
 
@@ -21124,7 +21125,7 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/regulator_sync/{id}/',
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulatorSync](#schemaregulatorsync)|true|none|
+|body|body|[RegulatorSync](schema#regulatorsync)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this regulator sync.|
 
 > Example responses
@@ -21164,16 +21165,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/regulator_sync/{id}/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatorSync](#schemaregulatorsync)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatorSync](schema#regulatorsync)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulator_sync_partial_update
+### api facilities_regulator_sync_partial_update
 
-<a id="opIdapi_facilities_regulator_sync_partial_update"></a>
+
 
 > Code samples
 
@@ -21238,7 +21239,7 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/regulator_sync/{id}/',
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulatorSync](#schemaregulatorsync)|true|none|
+|body|body|[RegulatorSync](schema#regulatorsync)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this regulator sync.|
 
 > Example responses
@@ -21278,16 +21279,16 @@ fetch('https://api.kmhfr.health.go.ke/api/facilities/regulator_sync/{id}/',
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatorSync](#schemaregulatorsync)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatorSync](schema#regulatorsync)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulator_sync_delete
+### api facilities_regulator_sync_delete
 
-<a id="opIdapi_facilities_regulator_sync_delete"></a>
+
 
 > Code samples
 
@@ -21325,9 +21326,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_regulator_sync_update_create
+### api facilities_regulator_sync_update_create
 
-<a id="opIdapi_facilities_regulator_sync_update_create"></a>
+
 
 > Code samples
 
@@ -21394,7 +21395,7 @@ Updates RegulatorSync object with an MFL code
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulatorSync](#schemaregulatorsync)|true|none|
+|body|body|[RegulatorSync](schema#regulatorsync)|true|none|
 |id|path|string|true|none|
 
 > Example responses
@@ -21434,16 +21435,16 @@ Updates RegulatorSync object with an MFL code
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[RegulatorSync](#schemaregulatorsync)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[RegulatorSync](schema#regulatorsync)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulatory_body_users_list
+### api facilities_regulatory_body_users_list
 
-<a id="opIdapi_facilities_regulatory_body_users_list"></a>
+
 
 > Code samples
 
@@ -21527,7 +21528,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[RegulatoryBodyUser](#schemaregulatorybodyuser)]|true|none|none|
+|» results|[[RegulatoryBodyUser](schema#regulatorybodyuser)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» user_email|string|false|read-only|none|
 |»» user_name|string|false|read-only|none|
@@ -21547,9 +21548,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_regulatory_body_users_create
+### api facilities_regulatory_body_users_create
 
-<a id="opIdapi_facilities_regulatory_body_users_create"></a>
+
 
 > Code samples
 
@@ -21610,7 +21611,7 @@ Lists and creates a regulatory body's users
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulatoryBodyUser](#schemaregulatorybodyuser)|true|none|
+|body|body|[RegulatoryBodyUser](schema#regulatorybodyuser)|true|none|
 
 > Example responses
 
@@ -21642,16 +21643,16 @@ Lists and creates a regulatory body's users
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[RegulatoryBodyUser](#schemaregulatorybodyuser)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[RegulatoryBodyUser](schema#regulatorybodyuser)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulatory_body_users_read
+### api facilities_regulatory_body_users_read
 
-<a id="opIdapi_facilities_regulatory_body_users_read"></a>
+
 
 > Code samples
 
@@ -21715,16 +21716,16 @@ Retrieves a single regulatory body user
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatoryBodyUser](#schemaregulatorybodyuser)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatoryBodyUser](schema#regulatorybodyuser)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulatory_body_users_update
+### api facilities_regulatory_body_users_update
 
-<a id="opIdapi_facilities_regulatory_body_users_update"></a>
+
 
 > Code samples
 
@@ -21785,7 +21786,7 @@ Retrieves a single regulatory body user
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulatoryBodyUser](#schemaregulatorybodyuser)|true|none|
+|body|body|[RegulatoryBodyUser](schema#regulatorybodyuser)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this regulatory body user.|
 
 > Example responses
@@ -21818,16 +21819,16 @@ Retrieves a single regulatory body user
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatoryBodyUser](#schemaregulatorybodyuser)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatoryBodyUser](schema#regulatorybodyuser)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulatory_body_users_partial_update
+### api facilities regulatory body users partial update
 
-<a id="opIdapi_facilities_regulatory_body_users_partial_update"></a>
+
 
 > Code samples
 
@@ -21888,7 +21889,7 @@ Retrieves a single regulatory body user
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[RegulatoryBodyUser](#schemaregulatorybodyuser)|true|none|
+|body|body|[RegulatoryBodyUser](schema#regulatorybodyuser)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this regulatory body user.|
 
 > Example responses
@@ -21921,16 +21922,16 @@ Retrieves a single regulatory body user
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatoryBodyUser](#schemaregulatorybodyuser)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulatoryBodyUser](schema#regulatorybodyuser)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_regulatory_body_users_delete
+### api facilities_regulatory_body_users_delete
 
-<a id="opIdapi_facilities_regulatory_body_users_delete"></a>
+
 
 > Code samples
 
@@ -21970,9 +21971,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_reports_static_reports_list
+### api facilities_reports_static_reports_list
 
-<a id="opIdapi_facilities_reports_static_reports_list"></a>
+
 
 > Code samples
 
@@ -22004,9 +22005,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_service_categories_list
+### api facilities_service_categories_list
 
-<a id="opIdapi_facilities_service_categories_list"></a>
+
 
 > Code samples
 
@@ -22096,7 +22097,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[ServiceCategory](#schemaservicecategory)]|true|none|none|
+|» results|[[ServiceCategory](schema#servicecategory)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -22115,9 +22116,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_service_categories_create
+### api facilities_service_categories_create
 
-<a id="opIdapi_facilities_service_categories_create"></a>
+
 
 > Code samples
 
@@ -22189,7 +22190,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[ServiceCategory](#schemaservicecategory)|true|none|
+|body|body|[ServiceCategory](schema#servicecategory)|true|none|
 
 > Example responses
 
@@ -22220,16 +22221,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[ServiceCategory](#schemaservicecategory)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[ServiceCategory](schema#servicecategory)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_service_categories_read
+### api facilities_service_categories_read
 
-<a id="opIdapi_facilities_service_categories_read"></a>
+
 
 > Code samples
 
@@ -22292,16 +22293,16 @@ Retrieves a particular service category
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ServiceCategory](#schemaservicecategory)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ServiceCategory](schema#servicecategory)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_service_categories_update
+### api facilities_service_categories_update
 
-<a id="opIdapi_facilities_service_categories_update"></a>
+
 
 > Code samples
 
@@ -22366,7 +22367,7 @@ Retrieves a particular service category
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[ServiceCategory](#schemaservicecategory)|true|none|
+|body|body|[ServiceCategory](schema#servicecategory)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this service category.|
 
 > Example responses
@@ -22398,16 +22399,16 @@ Retrieves a particular service category
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ServiceCategory](#schemaservicecategory)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ServiceCategory](schema#servicecategory)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_service_categories_partial_update
+### api facilities_service_categories_partial_update
 
-<a id="opIdapi_facilities_service_categories_partial_update"></a>
+
 
 > Code samples
 
@@ -22472,7 +22473,7 @@ Retrieves a particular service category
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[ServiceCategory](#schemaservicecategory)|true|none|
+|body|body|[ServiceCategory](schema#servicecategory)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this service category.|
 
 > Example responses
@@ -22504,16 +22505,16 @@ Retrieves a particular service category
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ServiceCategory](#schemaservicecategory)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ServiceCategory](schema#servicecategory)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_service_categories_delete
+### api facilities_service_categories_delete
 
-<a id="opIdapi_facilities_service_categories_delete"></a>
+
 
 > Code samples
 
@@ -22553,9 +22554,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_services_list
+### api facilities_services_list
 
-<a id="opIdapi_facilities_services_list"></a>
+
 
 > Code samples
 
@@ -22651,7 +22652,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[Service](#schemaservice)]|true|none|none|
+|» results|[[Service](schema#service)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» category_name|string|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
@@ -22675,9 +22676,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_services_create
+### api facilities_services_create
 
-<a id="opIdapi_facilities_services_create"></a>
+
 
 > Code samples
 
@@ -22756,7 +22757,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Service](#schemaservice)|true|none|
+|body|body|[Service](schema#service)|true|none|
 
 > Example responses
 
@@ -22792,16 +22793,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Service](#schemaservice)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Service](schema#service)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_services_read
+### api facilities_services_read
 
-<a id="opIdapi_facilities_services_read"></a>
+
 
 > Code samples
 
@@ -22869,16 +22870,16 @@ Retrieves a particular service
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Service](#schemaservice)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Service](schema#service)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_services_update
+### api facilities_services_update
 
-<a id="opIdapi_facilities_services_update"></a>
+
 
 > Code samples
 
@@ -22949,7 +22950,7 @@ Retrieves a particular service
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Service](#schemaservice)|true|none|
+|body|body|[Service](schema#service)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this service.|
 
 > Example responses
@@ -22986,16 +22987,16 @@ Retrieves a particular service
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Service](#schemaservice)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Service](schema#service)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_services_partial_update
+### api facilities_services_partial_update
 
-<a id="opIdapi_facilities_services_partial_update"></a>
+
 
 > Code samples
 
@@ -23066,7 +23067,7 @@ Retrieves a particular service
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Service](#schemaservice)|true|none|
+|body|body|[Service](schema#service)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this service.|
 
 > Example responses
@@ -23103,16 +23104,16 @@ Retrieves a particular service
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Service](#schemaservice)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Service](schema#service)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_services_delete
+### api facilities_services_delete
 
-<a id="opIdapi_facilities_services_delete"></a>
+
 
 > Code samples
 
@@ -23152,9 +23153,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_specialities_list
+### api facilities_specialities_list
 
-<a id="opIdapi_facilities_specialities_list"></a>
+
 
 > Code samples
 
@@ -23247,7 +23248,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[Speciality](#schemaspeciality)]|true|none|none|
+|» results|[[Speciality](schema#speciality)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» category_name|string|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
@@ -23268,9 +23269,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_specialities_create
+### api facilities_specialities_create
 
-<a id="opIdapi_facilities_specialities_create"></a>
+
 
 > Code samples
 
@@ -23343,7 +23344,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Speciality](#schemaspeciality)|true|none|
+|body|body|[Speciality](schema#speciality)|true|none|
 
 > Example responses
 
@@ -23376,16 +23377,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Speciality](#schemaspeciality)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Speciality](schema#speciality)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_specialities_read
+### api facilities_specialities_read
 
-<a id="opIdapi_facilities_specialities_read"></a>
+
 
 > Code samples
 
@@ -23450,16 +23451,16 @@ Retrieves a particular speciality detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Speciality](#schemaspeciality)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Speciality](schema#speciality)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_specialities_update
+### api facilities_specialities_update
 
-<a id="opIdapi_facilities_specialities_update"></a>
+
 
 > Code samples
 
@@ -23524,7 +23525,7 @@ Retrieves a particular speciality detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Speciality](#schemaspeciality)|true|none|
+|body|body|[Speciality](schema#speciality)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this speciality.|
 
 > Example responses
@@ -23558,16 +23559,16 @@ Retrieves a particular speciality detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Speciality](#schemaspeciality)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Speciality](schema#speciality)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_specialities_partial_update
+### api facilities_specialities_partial_update
 
-<a id="opIdapi_facilities_specialities_partial_update"></a>
+
 
 > Code samples
 
@@ -23632,7 +23633,7 @@ Retrieves a particular speciality detail
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[Speciality](#schemaspeciality)|true|none|
+|body|body|[Speciality](schema#speciality)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this speciality.|
 
 > Example responses
@@ -23666,16 +23667,16 @@ Retrieves a particular speciality detail
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Speciality](#schemaspeciality)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Speciality](schema#speciality)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_specialities_delete
+### api facilities_specialities_delete
 
-<a id="opIdapi_facilities_specialities_delete"></a>
+
 
 > Code samples
 
@@ -23715,9 +23716,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_speciality_categories_list
+### api facilities_speciality_categories_list
 
-<a id="opIdapi_facilities_speciality_categories_list"></a>
+
 
 > Code samples
 
@@ -23807,7 +23808,7 @@ Status Code **200**
 |» count|integer|true|none|none|
 |» next|string(uri)¦null|false|none|none|
 |» previous|string(uri)¦null|false|none|none|
-|» results|[[SpecialityCategory](#schemaspecialitycategory)]|true|none|none|
+|» results|[[SpecialityCategory](schema#specialitycategory)]|true|none|none|
 |»» id|string(uuid)|false|read-only|none|
 |»» created|string(date-time)|false|none|none|
 |»» updated|string(date-time)|false|none|none|
@@ -23826,9 +23827,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
-## api_facilities_speciality_categories_create
+### api facilities_speciality_categories_create
 
-<a id="opIdapi_facilities_speciality_categories_create"></a>
+
 
 > Code samples
 
@@ -23900,7 +23901,7 @@ deleted -- Boolean is the record deleted
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[SpecialityCategory](#schemaspecialitycategory)|true|none|
+|body|body|[SpecialityCategory](schema#specialitycategory)|true|none|
 
 > Example responses
 
@@ -23931,16 +23932,16 @@ deleted -- Boolean is the record deleted
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[SpecialityCategory](#schemaspecialitycategory)|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[SpecialityCategory](schema#specialitycategory)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_speciality_categories_read
+### api facilities_speciality_categories_read
 
-<a id="opIdapi_facilities_speciality_categories_read"></a>
+
 
 > Code samples
 
@@ -24003,16 +24004,16 @@ Retrieves a particular speciality category.
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[SpecialityCategory](#schemaspecialitycategory)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[SpecialityCategory](schema#specialitycategory)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_speciality_categories_update
+### api facilities_speciality_categories_update
 
-<a id="opIdapi_facilities_speciality_categories_update"></a>
+
 
 > Code samples
 
@@ -24077,7 +24078,7 @@ Retrieves a particular speciality category.
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[SpecialityCategory](#schemaspecialitycategory)|true|none|
+|body|body|[SpecialityCategory](schema#specialitycategory)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this speciality category.|
 
 > Example responses
@@ -24109,16 +24110,16 @@ Retrieves a particular speciality category.
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[SpecialityCategory](#schemaspecialitycategory)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[SpecialityCategory](schema#specialitycategory)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_speciality_categories_partial_update
+### api facilities_speciality_categories_partial_update
 
-<a id="opIdapi_facilities_speciality_categories_partial_update"></a>
+
 
 > Code samples
 
@@ -24183,7 +24184,7 @@ Retrieves a particular speciality category.
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[SpecialityCategory](#schemaspecialitycategory)|true|none|
+|body|body|[SpecialityCategory](schema#specialitycategory)|true|none|
 |id|path|string(uuid)|true|A UUID string identifying this speciality category.|
 
 > Example responses
@@ -24215,16 +24216,16 @@ Retrieves a particular speciality category.
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[SpecialityCategory](#schemaspecialitycategory)|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[SpecialityCategory](schema#specialitycategory)|
 
 :::note
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
 
-## api_facilities_speciality_categories_delete
+### api facilities_speciality_categories_delete
 
-<a id="opIdapi_facilities_speciality_categories_delete"></a>
+
 
 > Code samples
 
@@ -24264,232 +24265,9 @@ To perform this operation, you must be authenticated by means of one of the foll
 Basic
 :::
 
+## Schema
 
+:::info[Facility Schema]
+Please see the [Facility Schema](schema#facility)
+:::
 
-# Schema
-
-<h2 id="tocS_Facility">Facility</h2>
-<!-- backwards compatibility -->
-<a id="schemafacility"></a>
-<a id="schema_Facility"></a>
-<a id="tocSfacility"></a>
-<a id="tocsfacility"></a>
-
-<BrowserWindow>
-```json
-{
-  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
-  "regulatory_status_name": "string",
-  "facility_type_name": "string",
-  "facility_type_parent": "string",
-  "owner_name": "string",
-  "owner_type_name": "string",
-  "owner_type": "string",
-  "operation_status_name": "string",
-  "admission_status_name": "string",
-  "county": "string",
-  "constituency": "string",
-  "constituency_name": "string",
-  "ward_name": "string",
-  "average_rating": "string",
-  "facility_services": "string",
-  "facility_infrastructure": "string",
-  "facility_contacts": "string",
-  "facility_humanresources": "string",
-  "is_approved": "string",
-  "has_edits": "string",
-  "latest_update": "string",
-  "regulatory_body_name": "string",
-  "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
-  "date_requested": "string",
-  "date_approved": "string",
-  "latest_approval_or_rejection": "string",
-  "sub_county_name": "string",
-  "sub_county_id": "string",
-  "county_name": "string",
-  "constituency_id": "string",
-  "county_id": "string",
-  "keph_level_name": "string",
-  "lat_long": "string",
-  "is_complete": "string",
-  "in_complete_details": "string",
-  "facility_checklist_document": "string",
-  "facility_license_document": "string",
-  "created": "2019-08-24T14:15:22Z",
-  "updated": "2019-08-24T14:15:22Z",
-  "deleted": true,
-  "active": true,
-  "search": "string",
-  "name": "string",
-  "official_name": "string",
-  "code": "string",
-  "registration_number": "string",
-  "abbreviation": "string",
-  "description": "string",
-  "number_of_beds": 2147483647,
-  "number_of_cots": 2147483647,
-  "number_of_emergency_casualty_beds": 2147483647,
-  "number_of_icu_beds": 2147483647,
-  "number_of_hdu_beds": 2147483647,
-  "number_of_inpatient_beds": 2147483647,
-  "number_of_maternity_beds": 2147483647,
-  "number_of_isolation_beds": 2147483647,
-  "number_of_general_theatres": 2147483647,
-  "number_of_maternity_theatres": 2147483647,
-  "open_whole_day": true,
-  "open_public_holidays": true,
-  "open_normal_day": true,
-  "open_weekends": true,
-  "open_late_night": true,
-  "is_classified": true,
-  "is_published": true,
-  "accredited_lab_iso_15189": true,
-  "attributes": "string",
-  "regulated": true,
-  "approved": true,
-  "rejected": true,
-  "bank_name": "string",
-  "branch_name": "string",
-  "bank_account": "string",
-  "facility_catchment_population": -2147483648,
-  "town_name": "string",
-  "nearest_landmark": "string",
-  "plot_number": "string",
-  "location_desc": "string",
-  "closed": true,
-  "closed_date": "2019-08-24T14:15:22Z",
-  "approvalrejection_date": "2019-08-24T14:15:22Z",
-  "closing_reason": "string",
-  "date_established": "2019-08-24",
-  "license_number": "string",
-  "admitting_maternity_only": true,
-  "admitting_maternity_general": true,
-  "reporting_in_dhis": true,
-  "nhif_accreditation": true,
-  "approved_national_level": true,
-  "created_by": 0,
-  "updated_by": 0,
-  "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
-  "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
-  "ward": "432f3cbe-d829-4f01-af47-94064c183942",
-  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999",
-  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
-  "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2",
-  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
-  "town": "4fd742fe-0df3-471a-94cf-f763f28ca892",
-  "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394",
-  "admission_status": "1ed11bc0-fe01-422d-a28d-7189f7c454c6",
-  "contacts": [
-    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
-  ]
-}
-
-```
-</BrowserWindow>
-
-### Properties
-
-|Name|Type|Required|Restrictions|Description|
-|---|---|---|---|---|
-|id|string(uuid)|false|read-only|none|
-|regulatory_status_name|string|false|read-only|none|
-|facility_type_name|string|false|read-only|none|
-|facility_type_parent|string|false|read-only|none|
-|owner_name|string|false|read-only|none|
-|owner_type_name|string|false|read-only|none|
-|owner_type|string|false|read-only|none|
-|operation_status_name|string|false|read-only|none|
-|admission_status_name|string|false|read-only|none|
-|county|string|false|read-only|none|
-|constituency|string|false|read-only|none|
-|constituency_name|string|false|read-only|none|
-|ward_name|string|false|read-only|none|
-|average_rating|string|false|read-only|none|
-|facility_services|string|false|read-only|none|
-|facility_infrastructure|string|false|read-only|none|
-|facility_contacts|string|false|read-only|none|
-|facility_humanresources|string|false|read-only|none|
-|is_approved|string|false|read-only|none|
-|has_edits|string|false|read-only|none|
-|latest_update|string|false|read-only|none|
-|regulatory_body_name|string|false|read-only|none|
-|owner|string(uuid)|false|none|none|
-|date_requested|string|false|read-only|none|
-|date_approved|string|false|read-only|none|
-|latest_approval_or_rejection|string|false|read-only|none|
-|sub_county_name|string|false|read-only|none|
-|sub_county_id|string|false|read-only|none|
-|county_name|string|false|read-only|none|
-|constituency_id|string|false|read-only|none|
-|county_id|string|false|read-only|none|
-|keph_level_name|string|false|read-only|none|
-|lat_long|string|false|read-only|none|
-|is_complete|string|false|read-only|none|
-|in_complete_details|string|false|read-only|none|
-|facility_checklist_document|string|false|read-only|none|
-|facility_license_document|string|false|read-only|none|
-|created|string(date-time)|false|none|none|
-|updated|string(date-time)|false|none|none|
-|deleted|boolean|false|none|none|
-|active|boolean|false|none|Indicates whether the record has been retired?|
-|search|string|false|read-only|none|
-|name|string|true|none|This is the unique name of the facility|
-|official_name|string¦null|false|none|The official name of the facility|
-|code|string|false|read-only|A sequential number allocated to each facility|
-|registration_number|string¦null|false|none|The registration number given by the regulator|
-|abbreviation|string¦null|false|none|A short name for the facility.|
-|description|string¦null|false|none|A brief summary of the Facility|
-|number_of_beds|integer|false|none|The number of authorized inpatient beds that a facility has. e.g 0|
-|number_of_cots|integer|false|none|The number of authorized cots that a facility has e.g 0|
-|number_of_emergency_casualty_beds|integer|false|none|The number of emergency casualty beds  that a facility has e.g 0|
-|number_of_icu_beds|integer|false|none|The number of Intensive Care Units (ICU) beds that a facility has e.g 0|
-|number_of_hdu_beds|integer|false|none|The number of High Dependency Units (HDU) beds that a facility has e.g 0|
-|number_of_inpatient_beds|integer|false|none|The number of General In-patient beds that a facility has e.g 0|
-|number_of_maternity_beds|integer|false|none|The number of maternity beds that a facility has e.g 0|
-|number_of_isolation_beds|integer|false|none|The number of isolation beds that a facility has e.g 0|
-|number_of_general_theatres|integer|false|none|The number of general theatres  that a facility has e.g 0|
-|number_of_maternity_theatres|integer|false|none|The number of maternity theatres  that a facility has e.g 0|
-|open_whole_day|boolean|false|none|Does the facility operate 24 hours a day|
-|open_public_holidays|boolean|false|none|Is the facility open on public holidays?|
-|open_normal_day|boolean|false|none|Is the facility open from 8 am to 5 pm|
-|open_weekends|boolean|false|none|Is the facility_open during weekends?|
-|open_late_night|boolean|false|none|Indicates if a facility is open late night e.g upto 11 pm|
-|is_classified|boolean|false|none|Should the facility geo-codes be visible to the public?Certain facilities are kept 'off-the-map'|
-|is_published|boolean|false|none|COnfirmation by the CHRIO that the facility is okay|
-|accredited_lab_iso_15189|boolean|false|none|Indicate if facility is accredited Lab ISO 15189|
-|attributes|string¦null|false|none|none|
-|regulated|boolean|false|none|none|
-|approved|boolean¦null|false|none|Has the facility been approved at the county level|
-|rejected|boolean|false|none|none|
-|bank_name|string¦null|false|none|The name of the facility's banker e.g Equity Bank|
-|branch_name|string¦null|false|none|Branch name of the facility's bank|
-|bank_account|string¦null|false|none|none|
-|facility_catchment_population|integer¦null|false|none|The population size which the facility serves|
-|town_name|string¦null|false|none|The town where the entity is located e.g Nakuru|
-|nearest_landmark|string¦null|false|none|well-known physical features /structure that can be used to simplify directions to a given place. e.g town market or village|
-|plot_number|string¦null|false|none|This is the same number found on the title deeds of thepiece of land on which this facility is located|
-|location_desc|string¦null|false|none|This field allows a more detailed description of the location|
-|closed|boolean|false|none|Indicates whether a facility has been closed by the regulator|
-|closed_date|string(date-time)¦null|false|none|Date the facility was closed|
-|approvalrejection_date|string(date-time)¦null|false|none|Date the facility was approved or rejected|
-|closing_reason|string¦null|false|none|Reason for closing the facility|
-|date_established|string(date)¦null|false|none|The date when the facility became operational|
-|license_number|string¦null|false|none|The license number given to the hospital by the regulator|
-|admitting_maternity_only|boolean¦null|false|none|A flag to indicate whether facility admits only maternity patients|
-|admitting_maternity_general|boolean¦null|false|none|A flag to indicate whether facility admits both maternity & general casualty patients|
-|reporting_in_dhis|boolean¦null|false|none|A flag to indicate whether facility should have reporting in dhis|
-|nhif_accreditation|boolean¦null|false|none|A flag to indicate whether facility is accredited by nhif|
-|approved_national_level|boolean¦null|false|none|Has the facility been approved at the national level|
-|created_by|integer|false|none|none|
-|updated_by|integer|false|none|none|
-|facility_type|string(uuid)|true|none|This depends on who owns the facility. For MOH facilities,type is the gazetted classification of the facility.For Non-MOH check under the respective owners.|
-|operation_status|string(uuid)¦null|false|none|Indicates whether the facilityhas been approved to operate, is operating, is temporarilynon-operational, or is closed down|
-|ward|string(uuid)¦null|false|none|County ward in which the facility is located|
-|parent|string(uuid)¦null|false|none|Indicates the umbrella facility of a facility|
-|regulatory_body|string(uuid)¦null|false|none|none|
-|keph_level|string(uuid)¦null|false|none|The keph level of the facility|
-|sub_county|string(uuid)¦null|false|none|The sub county in which the facility has been assigned|
-|town|string(uuid)¦null|false|none|The town where the entity is located e.g Nakuru|
-|regulation_status|string(uuid)¦null|false|none|The regulatory status of the hospital|
-|admission_status|string(uuid)¦null|false|none|Indicates whether the facilityhas been approved to admit and the admission categories it caters for|
-|contacts|[string]|false|read-only|Facility contacts - email, phone, fax, postal etc|
