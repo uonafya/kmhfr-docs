@@ -84,7 +84,7 @@ Basic
 
 
 
-## Registering a new OAuth2 application
+### Registering a new OAuth2 application
 You can learn all that you need to know about oauth2 by reading
 
 <h3 id="api_users_applications_list-parameters">Parameters</h3>
@@ -292,5 +292,78 @@ You can learn all that you need to know about oauth2 by reading
 To perform this operation, you must be authenticated by means of one of the following methods:
 Basic
 :::
+
+
+### Create Token
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "username": "string",
+  "password": "string"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('http://api.kmhfr.health.go.ke/api/token/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/token/`
+
+> Body parameter
+
+```json
+{
+  "username": "string",
+  "password": "string"
+}
+```
+
+<h3 id="api_token_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[AuthToken](schema#authtoken)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "username": "string",
+  "password": "string",
+  "token": "string"
+}
+```
+</BrowserWindow>
+
+<h3 id="api_token_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[AuthToken](#schemaauthtoken)|
+
+:::info
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
 
 
