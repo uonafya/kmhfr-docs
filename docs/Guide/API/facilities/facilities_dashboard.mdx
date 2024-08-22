@@ -1,0 +1,47 @@
+---
+sidebar_position: 19
+title: Facilities-Dashboard
+---
+
+
+# API
+
+This is a guide of facilities-dashboard enpoint
+
+import BrowserWindow from '../../../../src/components/BrowserWindow'
+
+
+
+### api facilities_dashboard_list
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/dashboard/',
+{
+  method: 'GET'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/dashboard/`
+
+<h3 id="api_facilities_dashboard_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::

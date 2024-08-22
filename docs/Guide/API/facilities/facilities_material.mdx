@@ -1,0 +1,185 @@
+---
+sidebar_position: 7
+title: Facilities-Material
+---
+
+
+# API
+
+This is a guide of facilities-material enpoint
+
+import BrowserWindow from '../../../../src/components/BrowserWindow'
+
+
+### api facilities_material_list
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/material/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/material/`
+
+<h3 id="api_facilities_material_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "code": -2147483648,
+      "name": "string",
+      "officialname": "string",
+      "registration_number": "string",
+      "keph_level_name": "5e2f7ef2-98aa-42b4-9a96-5828b8fa9307",
+      "facility_type_name": "string",
+      "facility_type_category": "string",
+      "county": "6ba3a16d-ada8-4cd1-814e-7a95d2345923",
+      "constituency": "3b302467-f666-41c9-bbd5-ab5a690d8c29",
+      "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+      "owner_name": "string",
+      "owner_type_name": "string",
+      "regulatory_body_name": "string",
+      "beds": -2147483648,
+      "cots": -2147483648,
+      "search": "string",
+      "county_name": "string",
+      "constituency_name": "string",
+      "sub_county": "string",
+      "sub_county_name": "string",
+      "ward_name": "string",
+      "keph_level": "string",
+      "facility_type": "string",
+      "owner_type": "string",
+      "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+      "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+      "operation_status_name": "string",
+      "admission_status_name": "string",
+      "open_whole_day": true,
+      "open_public_holidays": true,
+      "open_weekends": true,
+      "open_late_night": true,
+      "services": [
+        "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+      ],
+      "categories": [
+        "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+      ],
+      "service_names": [
+        "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+      ],
+      "approved": true,
+      "is_public_visible": true,
+      "created": "2019-08-24T14:15:22Z",
+      "closed": true,
+      "is_published": true,
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "lat": "string",
+      "long": "string"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_material_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_facilities_material_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[FacilityExportExcelMaterialView](/docs/Guide/API/schema#facilityexportexcelmaterialview)]|true|none|none|
+|»» code|integer|true|none|The facility code|
+|»» name|string|true|none|Unique name of the facility|
+|»» officialname|string|true|none|Official name of the facility|
+|»» registration_number|string|true|none|The facilities registration_number|
+|»» keph_level_name|string(uuid)¦null|false|none|The facility's keph-level|
+|»» facility_type_name|string|true|none|The facility type|
+|»» facility_type_category|string|true|none|The facility category name|
+|»» county|string(uuid)¦null|false|none|Name of the facility's county|
+|»» constituency|string(uuid)¦null|false|none|The name of the facility's constituency|
+|»» ward|string(uuid)|true|none|Name of the facility's ward|
+|»» owner_name|string|true|none|The facility's owner|
+|»» owner_type_name|string|true|none|The facility's owner type name|
+|»» regulatory_body_name|string|true|none|The name of the facility's regulator|
+|»» beds|integer|true|none|The number of beds in the facility|
+|»» cots|integer|true|none|The number of cots in the facility|
+|»» search|string¦null|false|none|A dummy search field|
+|»» county_name|string¦null|false|none|none|
+|»» constituency_name|string¦null|false|none|none|
+|»» sub_county|string¦null|false|none|none|
+|»» sub_county_name|string¦null|false|none|none|
+|»» ward_name|string¦null|false|none|none|
+|»» keph_level|string¦null|false|none|none|
+|»» facility_type|string¦null|false|none|none|
+|»» owner_type|string¦null|false|none|none|
+|»» owner|string(uuid)¦null|false|none|none|
+|»» operation_status|string(uuid)¦null|false|none|none|
+|»» operation_status_name|string¦null|false|none|none|
+|»» admission_status_name|string¦null|false|none|none|
+|»» open_whole_day|boolean|false|none|Does the facility operate 24 hours a day|
+|»» open_public_holidays|boolean|false|none|Is the facility open on public holidays?|
+|»» open_weekends|boolean|false|none|Is the facility_open during weekends?|
+|»» open_late_night|boolean|false|none|Indicates if a facility is open late night e.g up-to 11 pm|
+|»» services|[string]¦null|false|none|none|
+|»»» Services|string(uuid)¦null|false|none|none|
+|»» categories|[string]¦null|false|none|none|
+|»»» Categories|string(uuid)¦null|false|none|none|
+|»» service_names|[string]¦null|false|none|none|
+|»»» Service names|string(uuid)¦null|false|none|none|
+|»» approved|boolean|false|none|none|
+|»» is_public_visible|boolean|false|none|none|
+|»» created|string(date-time)|true|none|none|
+|»» closed|boolean|false|none|none|
+|»» is_published|boolean|false|none|none|
+|»» id|string(uuid)|true|none|none|
+|»» lat|string¦null|false|none|none|
+|»» long|string¦null|false|none|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::

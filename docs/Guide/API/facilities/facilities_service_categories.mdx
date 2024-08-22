@@ -1,0 +1,562 @@
+---
+sidebar_position: 15
+title: Facilities-Service-Categories
+---
+
+
+# API
+
+This is a guide of facilities-service-categories enpoint
+
+import BrowserWindow from '../../../../src/components/BrowserWindow'
+
+
+
+### api facilities_service_categories_list
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/service_categories/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/service_categories/`
+
+*Lists and creates service categories*
+
+Created ---  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_facilities_service_categories_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "name": "string",
+      "description": "string",
+      "abbreviation": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_service_categories_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_facilities_service_categories_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[ServiceCategory](/docs/Guide/API/schema#servicecategory)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» created|string(date-time)|false|none|none|
+|»» updated|string(date-time)|false|none|none|
+|»» deleted|boolean|false|none|none|
+|»» active|boolean|false|none|Indicates whether the record has been retired?|
+|»» search|string|false|read-only|none|
+|»» name|string|true|none|What is the name of the category?|
+|»» description|string¦null|false|none|none|
+|»» abbreviation|string¦null|false|none|A short form of the category e.g ANC for antenatal|
+|»» created_by|integer|false|none|none|
+|»» updated_by|integer|false|none|none|
+|»» parent|string(uuid)¦null|false|none|The parent category under which the category falls|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_service_categories_create
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/service_categories/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/facilities/service_categories/`
+
+*Lists and creates service categories*
+
+Created ---  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_service_categories_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[ServiceCategory](/docs/Guide/API/schema#servicecategory)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_service_categories_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[ServiceCategory](/docs/Guide/API/schema#servicecategory)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_service_categories_read
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/service_categories/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/service_categories/{id}/`
+
+Retrieves a particular service category
+
+<h3 id="api_facilities_service_categories_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this service category.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_service_categories_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ServiceCategory](/docs/Guide/API/schema#servicecategory)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_service_categories_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/service_categories/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/facilities/service_categories/{id}/`
+
+Retrieves a particular service category
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_service_categories_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[ServiceCategory](/docs/Guide/API/schema#servicecategory)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this service category.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_service_categories_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ServiceCategory](/docs/Guide/API/schema#servicecategory)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_service_categories_partial_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/service_categories/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/facilities/service_categories/{id}/`
+
+Retrieves a particular service category
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_service_categories_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[ServiceCategory](/docs/Guide/API/schema#servicecategory)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this service category.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "abbreviation": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_service_categories_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[ServiceCategory](/docs/Guide/API/schema#servicecategory)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_service_categories_delete
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/service_categories/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/facilities/service_categories/{id}/`
+
+Retrieves a particular service category
+
+<h3 id="api_facilities_service_categories_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this service category.|
+
+<h3 id="api_facilities_service_categories_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::

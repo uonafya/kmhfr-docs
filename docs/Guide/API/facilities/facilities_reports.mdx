@@ -1,0 +1,47 @@
+---
+sidebar_position: 14
+title: Facilities-Reports
+---
+
+
+# API
+
+This is a guide of facilities-reports enpoint
+
+import BrowserWindow from '../../../../src/components/BrowserWindow'
+
+
+
+### api facilities_reports_static_reports_list
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/reports/static_reports/',
+{
+  method: 'GET'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/reports/static_reports/`
+
+<h3 id="api_facilities_reports_static_reports_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::

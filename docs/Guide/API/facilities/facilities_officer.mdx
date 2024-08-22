@@ -1,0 +1,1413 @@
+---
+sidebar_position: 8
+title: Facilities-Officer
+---
+
+
+# API
+
+This is a guide of facilities-officer enpoint
+
+import BrowserWindow from '../../../../src/components/BrowserWindow'
+
+
+### api facilities_officer_contacts_list
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officer_contacts/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/officer_contacts/`
+
+*Lists and creates officer contacts*
+
+officer -- An officer's pk
+contact --  A contacts pk
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_facilities_officer_contacts_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "officer": "8481ed7f-8db9-4614-a252-b14694bf5ad4",
+      "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officer_contacts_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_facilities_officer_contacts_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[OfficerContact](/docs/Guide/API/schema#officercontact)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» created|string(date-time)|false|none|none|
+|»» updated|string(date-time)|false|none|none|
+|»» deleted|boolean|false|none|none|
+|»» active|boolean|false|none|Indicates whether the record has been retired?|
+|»» search|string|false|read-only|none|
+|»» created_by|integer|false|none|none|
+|»» updated_by|integer|false|none|none|
+|»» officer|string(uuid)|true|none|The is the officer in charge|
+|»» contact|string(uuid)|true|none|The contact of the officer in-charge may it be email,  mobile number etc|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officer_contacts_create
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "officer": "8481ed7f-8db9-4614-a252-b14694bf5ad4",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officer_contacts/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/facilities/officer_contacts/`
+
+*Lists and creates officer contacts*
+
+officer -- An officer's pk
+contact --  A contacts pk
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "officer": "8481ed7f-8db9-4614-a252-b14694bf5ad4",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officer_contacts_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[OfficerContact](/docs/Guide/API/schema#officercontact)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "officer": "8481ed7f-8db9-4614-a252-b14694bf5ad4",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officer_contacts_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[OfficerContact](/docs/Guide/API/schema#officercontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officer_contacts_read
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officer_contacts/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/officer_contacts/{id}/`
+
+Retrieves a particular officer contact detail
+
+<h3 id="api_facilities_officer_contacts_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this officer contact.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "officer": "8481ed7f-8db9-4614-a252-b14694bf5ad4",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officer_contacts_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OfficerContact](/docs/Guide/API/schema#officercontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officer_contacts_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "officer": "8481ed7f-8db9-4614-a252-b14694bf5ad4",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officer_contacts/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/facilities/officer_contacts/{id}/`
+
+Retrieves a particular officer contact detail
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "officer": "8481ed7f-8db9-4614-a252-b14694bf5ad4",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officer_contacts_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[OfficerContact](/docs/Guide/API/schema#officercontact)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this officer contact.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "officer": "8481ed7f-8db9-4614-a252-b14694bf5ad4",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officer_contacts_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OfficerContact](/docs/Guide/API/schema#officercontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officer_contacts_partial_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "officer": "8481ed7f-8db9-4614-a252-b14694bf5ad4",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officer_contacts/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/facilities/officer_contacts/{id}/`
+
+Retrieves a particular officer contact detail
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "officer": "8481ed7f-8db9-4614-a252-b14694bf5ad4",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officer_contacts_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[OfficerContact](/docs/Guide/API/schema#officercontact)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this officer contact.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "officer": "8481ed7f-8db9-4614-a252-b14694bf5ad4",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officer_contacts_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[OfficerContact](/docs/Guide/API/schema#officercontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officer_contacts_delete
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officer_contacts/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/facilities/officer_contacts/{id}/`
+
+Retrieves a particular officer contact detail
+
+<h3 id="api_facilities_officer_contacts_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this officer contact.|
+
+<h3 id="api_facilities_officer_contacts_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officer_facade_list
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officer_facade/',
+{
+  method: 'GET'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/officer_facade/`
+
+A custom view for creating facility officers.
+Make it less painful to create facility officers via the frontend.
+
+<h3 id="api_facilities_officer_facade_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officer_facade_create
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officer_facade/{facility_id}/',
+{
+  method: 'POST'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/facilities/officer_facade/{facility_id}/`
+
+A custom view for creating facility officers.
+Make it less painful to create facility officers via the frontend.
+
+<h3 id="api_facilities_officer_facade_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|facility_id|path|string|true|none|
+
+<h3 id="api_facilities_officer_facade_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officer_facade_delete
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officer_facade/{facility_id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/facilities/officer_facade/{facility_id}/`
+
+A custom view for creating facility officers.
+Make it less painful to create facility officers via the frontend.
+
+<h3 id="api_facilities_officer_facade_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|facility_id|path|string|true|none|
+
+<h3 id="api_facilities_officer_facade_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officer_facade_delete_read
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officer_facade/delete/{id}/',
+{
+  method: 'GET'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/officer_facade/delete/{id}/`
+
+A custom view for creating facility officers.
+Make it less painful to create facility officers via the frontend.
+
+<h3 id="api_facilities_officer_facade_delete_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string|true|none|
+
+<h3 id="api_facilities_officer_facade_delete_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officer_facade_delete_create
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officer_facade/delete/{id}/',
+{
+  method: 'POST'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/facilities/officer_facade/delete/{id}/`
+
+A custom view for creating facility officers.
+Make it less painful to create facility officers via the frontend.
+
+<h3 id="api_facilities_officer_facade_delete_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string|true|none|
+
+<h3 id="api_facilities_officer_facade_delete_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officer_facade_delete_delete
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officer_facade/delete/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/facilities/officer_facade/delete/{id}/`
+
+A custom view for creating facility officers.
+Make it less painful to create facility officers via the frontend.
+
+<h3 id="api_facilities_officer_facade_delete_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string|true|none|
+
+<h3 id="api_facilities_officer_facade_delete_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officer_facade_read
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officer_facade/{facility_id}/',
+{
+  method: 'GET'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/officer_facade/{facility_id}/`
+
+A custom view for creating facility officers.
+Make it less painful to create facility officers via the frontend.
+
+<h3 id="api_facilities_officer_facade_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|facility_id|path|string|true|none|
+
+<h3 id="api_facilities_officer_facade_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officers_list
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officers/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/officers/`
+
+*Lists and creates officers*
+
+name  -- name of an officer
+registration_number -- The official registration  number of an officer
+job_title --  A job title's pk
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_facilities_officers_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "job_title_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "name": "string",
+      "id_number": "string",
+      "registration_number": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "job_title": "07cff277-c099-4115-be2b-d9f439458a4a",
+      "contacts": [
+        "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+      ]
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officers_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_facilities_officers_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[Officer](/docs/Guide/API/schema#officer)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» job_title_name|string|false|read-only|none|
+|»» created|string(date-time)|false|none|none|
+|»» updated|string(date-time)|false|none|none|
+|»» deleted|boolean|false|none|none|
+|»» active|boolean|false|none|Indicates whether the record has been retired?|
+|»» search|string|false|read-only|none|
+|»» name|string|true|none|the name of the officer in-charge e.g Roselyne Wiyanga|
+|»» id_number|string¦null|false|none|The  National Identity number of the officer|
+|»» registration_number|string¦null|false|none|This is the license number of the officer. e.g for a nurse use the NCK registration number.|
+|»» created_by|integer|false|none|none|
+|»» updated_by|integer|false|none|none|
+|»» job_title|string(uuid)|true|none|none|
+|»» contacts|[string]|false|read-only|Personal contacts of the officer in charge|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officers_create
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "id_number": "string",
+  "registration_number": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officers/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/facilities/officers/`
+
+*Lists and creates officers*
+
+name  -- name of an officer
+registration_number -- The official registration  number of an officer
+job_title --  A job title's pk
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "id_number": "string",
+  "registration_number": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officers_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[Officer](/docs/Guide/API/schema#officer)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "job_title_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "id_number": "string",
+  "registration_number": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a",
+  "contacts": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officers_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Officer](/docs/Guide/API/schema#officer)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officers_incharge_read
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officers_incharge/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/officers_incharge/{id}/`
+
+Retrieves a particular officer
+
+<h3 id="api_facilities_officers_incharge_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this officer.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "job_title_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "id_number": "string",
+  "registration_number": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a",
+  "contacts": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officers_incharge_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Officer](/docs/Guide/API/schema#officer)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officers_incharge_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "id_number": "string",
+  "registration_number": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officers_incharge/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/facilities/officers_incharge/{id}/`
+
+Retrieves a particular officer
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "id_number": "string",
+  "registration_number": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officers_incharge_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[Officer](/docs/Guide/API/schema#officer)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this officer.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "job_title_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "id_number": "string",
+  "registration_number": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a",
+  "contacts": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officers_incharge_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Officer](/docs/Guide/API/schema#officer)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officers_incharge_partial_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "id_number": "string",
+  "registration_number": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officers_incharge/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/facilities/officers_incharge/{id}/`
+
+Retrieves a particular officer
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "id_number": "string",
+  "registration_number": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officers_incharge_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[Officer](/docs/Guide/API/schema#officer)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this officer.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "job_title_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "id_number": "string",
+  "registration_number": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "job_title": "07cff277-c099-4115-be2b-d9f439458a4a",
+  "contacts": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_officers_incharge_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[Officer](/docs/Guide/API/schema#officer)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_officers_incharge_delete
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/officers_incharge/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/facilities/officers_incharge/{id}/`
+
+Retrieves a particular officer
+
+<h3 id="api_facilities_officers_incharge_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this officer.|
+
+<h3 id="api_facilities_officers_incharge_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::

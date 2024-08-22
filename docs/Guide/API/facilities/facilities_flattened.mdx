@@ -1,0 +1,59 @@
+---
+sidebar_position: 21
+title: Facilities-Flattened
+---
+
+
+# API
+
+This is a guide of facilities-flattened enpoint
+
+import BrowserWindow from '../../../../src/components/BrowserWindow'
+
+
+### api facilities_flattened_categories_list
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/flattened_categories/',
+{
+  method: 'GET'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/flattened_categories/`
+
+Specialized endpoint to filter out :
+- parent categories
+- categories without services
+This is a temporary fix and will be removed
+
+<h3 id="api_facilities_flattened_categories_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+<h3 id="api_facilities_flattened_categories_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::

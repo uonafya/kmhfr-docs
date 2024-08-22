@@ -1,0 +1,1917 @@
+---
+sidebar_position: 20
+title: Facilities-Facilities
+---
+
+
+# API
+
+This is a guide of facilities-facilities enpoint
+
+import BrowserWindow from '../../../../src/components/BrowserWindow'
+
+### api facilities_facilities_list
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/facilities/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/facilities/`
+
+*Lists and creates facilities*
+
+name -- The name of the facility<br/>
+code -- A list of comma separated facility codes (one or more)<br/>
+description -- The description of the facility<br/>
+facility_type -- A list of comma separated facility type's pk<br/>
+operation_status -- A list of comma separated operation statuses pks<br/>
+ward -- A list of comma separated ward pks (one or more)<br/>
+ward_code -- A list of comma separated ward codes<br/>
+county_code -- A list of comma separated county codes<br/>
+constituency_code -- A list of comma separated constituency codes<br/>
+county -- A list of comma separated county pks<br/>
+constituency -- A list of comma separated constituency pks<br/>
+owner -- A list of comma separated owner pks<br/>
+number_of_inpatient_beds -- A list of comma separated integers<br/>
+number_of_beds -- A list of comma separated integers<br/>
+number_of_cots -- A list of comma separated integers<br/>
+open_whole_day -- Boolean True/False<br/>
+is_classified -- Boolean True/False<br/>
+is_published -- Boolean True/False<br/>
+is_regulated -- Boolean True/False<br/>
+service_category -- A service category's pk<br/>
+Created --  Date the record was Created<br/>
+Updated -- Date the record was Updated<br/>
+Created_by -- User who created the record<br/>
+Updated_by -- User who updated the record<br/>
+active  -- Boolean is the record active<br/>
+deleted -- Boolean is the record deleted<br/>
+
+<h3 id="api_facilities_facilities_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "regulatory_status_name": "string",
+      "facility_type_name": "string",
+      "facility_type_parent": "string",
+      "owner_name": "string",
+      "owner_type_name": "string",
+      "owner_type": "string",
+      "operation_status_name": "string",
+      "admission_status_name": "string",
+      "county": "string",
+      "constituency": "string",
+      "constituency_name": "string",
+      "ward_name": "string",
+      "average_rating": "string",
+      "facility_services": "string",
+      "facility_infrastructure": "string",
+      "facility_contacts": "string",
+      "facility_humanresources": "string",
+      "is_approved": "string",
+      "has_edits": "string",
+      "latest_update": "string",
+      "regulatory_body_name": "string",
+      "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+      "date_requested": "string",
+      "date_approved": "string",
+      "latest_approval_or_rejection": "string",
+      "sub_county_name": "string",
+      "sub_county_id": "string",
+      "county_name": "string",
+      "constituency_id": "string",
+      "county_id": "string",
+      "keph_level_name": "string",
+      "lat_long": "string",
+      "is_complete": "string",
+      "in_complete_details": "string",
+      "facility_checklist_document": "string",
+      "facility_license_document": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "name": "string",
+      "official_name": "string",
+      "code": "string",
+      "registration_number": "string",
+      "abbreviation": "string",
+      "description": "string",
+      "number_of_beds": 2147483647,
+      "number_of_cots": 2147483647,
+      "number_of_emergency_casualty_beds": 2147483647,
+      "number_of_icu_beds": 2147483647,
+      "number_of_hdu_beds": 2147483647,
+      "number_of_inpatient_beds": 2147483647,
+      "number_of_maternity_beds": 2147483647,
+      "number_of_isolation_beds": 2147483647,
+      "number_of_general_theatres": 2147483647,
+      "number_of_maternity_theatres": 2147483647,
+      "open_whole_day": true,
+      "open_public_holidays": true,
+      "open_normal_day": true,
+      "open_weekends": true,
+      "open_late_night": true,
+      "is_classified": true,
+      "is_published": true,
+      "accredited_lab_iso_15189": true,
+      "attributes": "string",
+      "regulated": true,
+      "approved": true,
+      "rejected": true,
+      "bank_name": "string",
+      "branch_name": "string",
+      "bank_account": "string",
+      "facility_catchment_population": -2147483648,
+      "town_name": "string",
+      "nearest_landmark": "string",
+      "plot_number": "string",
+      "location_desc": "string",
+      "closed": true,
+      "closed_date": "2019-08-24T14:15:22Z",
+      "approvalrejection_date": "2019-08-24T14:15:22Z",
+      "closing_reason": "string",
+      "date_established": "2019-08-24",
+      "license_number": "string",
+      "admitting_maternity_only": true,
+      "admitting_maternity_general": true,
+      "reporting_in_dhis": true,
+      "nhif_accreditation": true,
+      "approved_national_level": true,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
+      "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+      "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+      "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999",
+      "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+      "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2",
+      "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+      "town": "4fd742fe-0df3-471a-94cf-f763f28ca892",
+      "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394",
+      "admission_status": "1ed11bc0-fe01-422d-a28d-7189f7c454c6",
+      "contacts": [
+        "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+      ]
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_facilities_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_facilities_facilities_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[Facility](/docs/Guide/API/schema#facility)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» regulatory_status_name|string|false|read-only|none|
+|»» facility_type_name|string|false|read-only|none|
+|»» facility_type_parent|string|false|read-only|none|
+|»» owner_name|string|false|read-only|none|
+|»» owner_type_name|string|false|read-only|none|
+|»» owner_type|string|false|read-only|none|
+|»» operation_status_name|string|false|read-only|none|
+|»» admission_status_name|string|false|read-only|none|
+|»» county|string|false|read-only|none|
+|»» constituency|string|false|read-only|none|
+|»» constituency_name|string|false|read-only|none|
+|»» ward_name|string|false|read-only|none|
+|»» average_rating|string|false|read-only|none|
+|»» facility_services|string|false|read-only|none|
+|»» facility_infrastructure|string|false|read-only|none|
+|»» facility_contacts|string|false|read-only|none|
+|»» facility_humanresources|string|false|read-only|none|
+|»» is_approved|string|false|read-only|none|
+|»» has_edits|string|false|read-only|none|
+|»» latest_update|string|false|read-only|none|
+|»» regulatory_body_name|string|false|read-only|none|
+|»» owner|string(uuid)|false|none|none|
+|»» date_requested|string|false|read-only|none|
+|»» date_approved|string|false|read-only|none|
+|»» latest_approval_or_rejection|string|false|read-only|none|
+|»» sub_county_name|string|false|read-only|none|
+|»» sub_county_id|string|false|read-only|none|
+|»» county_name|string|false|read-only|none|
+|»» constituency_id|string|false|read-only|none|
+|»» county_id|string|false|read-only|none|
+|»» keph_level_name|string|false|read-only|none|
+|»» lat_long|string|false|read-only|none|
+|»» is_complete|string|false|read-only|none|
+|»» in_complete_details|string|false|read-only|none|
+|»» facility_checklist_document|string|false|read-only|none|
+|»» facility_license_document|string|false|read-only|none|
+|»» created|string(date-time)|false|none|none|
+|»» updated|string(date-time)|false|none|none|
+|»» deleted|boolean|false|none|none|
+|»» active|boolean|false|none|Indicates whether the record has been retired?|
+|»» search|string|false|read-only|none|
+|»» name|string|true|none|This is the unique name of the facility|
+|»» official_name|string¦null|false|none|The official name of the facility|
+|»» code|string|false|read-only|A sequential number allocated to each facility|
+|»» registration_number|string¦null|false|none|The registration number given by the regulator|
+|»» abbreviation|string¦null|false|none|A short name for the facility.|
+|»» description|string¦null|false|none|A brief summary of the Facility|
+|»» number_of_beds|integer|false|none|The number of authorized inpatient beds that a facility has. e.g 0|
+|»» number_of_cots|integer|false|none|The number of authorized cots that a facility has e.g 0|
+|»» number_of_emergency_casualty_beds|integer|false|none|The number of emergency casualty beds  that a facility has e.g 0|
+|»» number_of_icu_beds|integer|false|none|The number of Intensive Care Units (ICU) beds that a facility has e.g 0|
+|»» number_of_hdu_beds|integer|false|none|The number of High Dependency Units (HDU) beds that a facility has e.g 0|
+|»» number_of_inpatient_beds|integer|false|none|The number of General In-patient beds that a facility has e.g 0|
+|»» number_of_maternity_beds|integer|false|none|The number of maternity beds that a facility has e.g 0|
+|»» number_of_isolation_beds|integer|false|none|The number of isolation beds that a facility has e.g 0|
+|»» number_of_general_theatres|integer|false|none|The number of general theatres  that a facility has e.g 0|
+|»» number_of_maternity_theatres|integer|false|none|The number of maternity theatres  that a facility has e.g 0|
+|»» open_whole_day|boolean|false|none|Does the facility operate 24 hours a day|
+|»» open_public_holidays|boolean|false|none|Is the facility open on public holidays?|
+|»» open_normal_day|boolean|false|none|Is the facility open from 8 am to 5 pm|
+|»» open_weekends|boolean|false|none|Is the facility_open during weekends?|
+|»» open_late_night|boolean|false|none|Indicates if a facility is open late night e.g upto 11 pm|
+|»» is_classified|boolean|false|none|Should the facility geo-codes be visible to the public?Certain facilities are kept 'off-the-map'|
+|»» is_published|boolean|false|none|COnfirmation by the CHRIO that the facility is okay|
+|»» accredited_lab_iso_15189|boolean|false|none|Indicate if facility is accredited Lab ISO 15189|
+|»» attributes|string¦null|false|none|none|
+|»» regulated|boolean|false|none|none|
+|»» approved|boolean¦null|false|none|Has the facility been approved at the county level|
+|»» rejected|boolean|false|none|none|
+|»» bank_name|string¦null|false|none|The name of the facility's banker e.g Equity Bank|
+|»» branch_name|string¦null|false|none|Branch name of the facility's bank|
+|»» bank_account|string¦null|false|none|none|
+|»» facility_catchment_population|integer¦null|false|none|The population size which the facility serves|
+|»» town_name|string¦null|false|none|The town where the entity is located e.g Nakuru|
+|»» nearest_landmark|string¦null|false|none|well-known physical features /structure that can be used to simplify directions to a given place. e.g town market or village|
+|»» plot_number|string¦null|false|none|This is the same number found on the title deeds of thepiece of land on which this facility is located|
+|»» location_desc|string¦null|false|none|This field allows a more detailed description of the location|
+|»» closed|boolean|false|none|Indicates whether a facility has been closed by the regulator|
+|»» closed_date|string(date-time)¦null|false|none|Date the facility was closed|
+|»» approvalrejection_date|string(date-time)¦null|false|none|Date the facility was approved or rejected|
+|»» closing_reason|string¦null|false|none|Reason for closing the facility|
+|»» date_established|string(date)¦null|false|none|The date when the facility became operational|
+|»» license_number|string¦null|false|none|The license number given to the hospital by the regulator|
+|»» admitting_maternity_only|boolean¦null|false|none|A flag to indicate whether facility admits only maternity patients|
+|»» admitting_maternity_general|boolean¦null|false|none|A flag to indicate whether facility admits both maternity & general casualty patients|
+|»» reporting_in_dhis|boolean¦null|false|none|A flag to indicate whether facility should have reporting in dhis|
+|»» nhif_accreditation|boolean¦null|false|none|A flag to indicate whether facility is accredited by nhif|
+|»» approved_national_level|boolean¦null|false|none|Has the facility been approved at the national level|
+|»» created_by|integer|false|none|none|
+|»» updated_by|integer|false|none|none|
+|»» facility_type|string(uuid)|true|none|This depends on who owns the facility. For MOH facilities,type is the gazetted classification of the facility.For Non-MOH check under the respective owners.|
+|»» operation_status|string(uuid)¦null|false|none|Indicates whether the facilityhas been approved to operate, is operating, is temporarilynon-operational, or is closed down|
+|»» ward|string(uuid)¦null|false|none|County ward in which the facility is located|
+|»» parent|string(uuid)¦null|false|none|Indicates the umbrella facility of a facility|
+|»» regulatory_body|string(uuid)¦null|false|none|none|
+|»» keph_level|string(uuid)¦null|false|none|The keph level of the facility|
+|»» sub_county|string(uuid)¦null|false|none|The sub county in which the facility has been assigned|
+|»» town|string(uuid)¦null|false|none|The town where the entity is located e.g Nakuru|
+|»» regulation_status|string(uuid)¦null|false|none|The regulatory status of the hospital|
+|»» admission_status|string(uuid)¦null|false|none|Indicates whether the facilityhas been approved to admit and the admission categories it caters for|
+|»» contacts|[string]|false|read-only|Facility contacts - email, phone, fax, postal etc|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_facilities_create
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "official_name": "string",
+  "registration_number": "string",
+  "abbreviation": "string",
+  "description": "string",
+  "number_of_beds": 2147483647,
+  "number_of_cots": 2147483647,
+  "number_of_emergency_casualty_beds": 2147483647,
+  "number_of_icu_beds": 2147483647,
+  "number_of_hdu_beds": 2147483647,
+  "number_of_inpatient_beds": 2147483647,
+  "number_of_maternity_beds": 2147483647,
+  "number_of_isolation_beds": 2147483647,
+  "number_of_general_theatres": 2147483647,
+  "number_of_maternity_theatres": 2147483647,
+  "open_whole_day": true,
+  "open_public_holidays": true,
+  "open_normal_day": true,
+  "open_weekends": true,
+  "open_late_night": true,
+  "is_classified": true,
+  "is_published": true,
+  "accredited_lab_iso_15189": true,
+  "attributes": "string",
+  "regulated": true,
+  "approved": true,
+  "rejected": true,
+  "bank_name": "string",
+  "branch_name": "string",
+  "bank_account": "string",
+  "facility_catchment_population": -2147483648,
+  "town_name": "string",
+  "nearest_landmark": "string",
+  "plot_number": "string",
+  "location_desc": "string",
+  "closed": true,
+  "closed_date": "2019-08-24T14:15:22Z",
+  "approvalrejection_date": "2019-08-24T14:15:22Z",
+  "closing_reason": "string",
+  "date_established": "2019-08-24",
+  "license_number": "string",
+  "admitting_maternity_only": true,
+  "admitting_maternity_general": true,
+  "reporting_in_dhis": true,
+  "nhif_accreditation": true,
+  "approved_national_level": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
+  "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+  "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999",
+  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+  "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "town": "4fd742fe-0df3-471a-94cf-f763f28ca892",
+  "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394",
+  "admission_status": "1ed11bc0-fe01-422d-a28d-7189f7c454c6"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/facilities/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/facilities/facilities/`
+
+*Lists and creates facilities*
+
+name -- The name of the facility<br/>
+code -- A list of comma separated facility codes (one or more)<br/>
+description -- The description of the facility<br/>
+facility_type -- A list of comma separated facility type's pk<br/>
+operation_status -- A list of comma separated operation statuses pks<br/>
+ward -- A list of comma separated ward pks (one or more)<br/>
+ward_code -- A list of comma separated ward codes<br/>
+county_code -- A list of comma separated county codes<br/>
+constituency_code -- A list of comma separated constituency codes<br/>
+county -- A list of comma separated county pks<br/>
+constituency -- A list of comma separated constituency pks<br/>
+owner -- A list of comma separated owner pks<br/>
+number_of_inpatient_beds -- A list of comma separated integers<br/>
+number_of_beds -- A list of comma separated integers<br/>
+number_of_cots -- A list of comma separated integers<br/>
+open_whole_day -- Boolean True/False<br/>
+is_classified -- Boolean True/False<br/>
+is_published -- Boolean True/False<br/>
+is_regulated -- Boolean True/False<br/>
+service_category -- A service category's pk<br/>
+Created --  Date the record was Created<br/>
+Updated -- Date the record was Updated<br/>
+Created_by -- User who created the record<br/>
+Updated_by -- User who updated the record<br/>
+active  -- Boolean is the record active<br/>
+deleted -- Boolean is the record deleted<br/>
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "official_name": "string",
+  "registration_number": "string",
+  "abbreviation": "string",
+  "description": "string",
+  "number_of_beds": 2147483647,
+  "number_of_cots": 2147483647,
+  "number_of_emergency_casualty_beds": 2147483647,
+  "number_of_icu_beds": 2147483647,
+  "number_of_hdu_beds": 2147483647,
+  "number_of_inpatient_beds": 2147483647,
+  "number_of_maternity_beds": 2147483647,
+  "number_of_isolation_beds": 2147483647,
+  "number_of_general_theatres": 2147483647,
+  "number_of_maternity_theatres": 2147483647,
+  "open_whole_day": true,
+  "open_public_holidays": true,
+  "open_normal_day": true,
+  "open_weekends": true,
+  "open_late_night": true,
+  "is_classified": true,
+  "is_published": true,
+  "accredited_lab_iso_15189": true,
+  "attributes": "string",
+  "regulated": true,
+  "approved": true,
+  "rejected": true,
+  "bank_name": "string",
+  "branch_name": "string",
+  "bank_account": "string",
+  "facility_catchment_population": -2147483648,
+  "town_name": "string",
+  "nearest_landmark": "string",
+  "plot_number": "string",
+  "location_desc": "string",
+  "closed": true,
+  "closed_date": "2019-08-24T14:15:22Z",
+  "approvalrejection_date": "2019-08-24T14:15:22Z",
+  "closing_reason": "string",
+  "date_established": "2019-08-24",
+  "license_number": "string",
+  "admitting_maternity_only": true,
+  "admitting_maternity_general": true,
+  "reporting_in_dhis": true,
+  "nhif_accreditation": true,
+  "approved_national_level": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
+  "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+  "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999",
+  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+  "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "town": "4fd742fe-0df3-471a-94cf-f763f28ca892",
+  "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394",
+  "admission_status": "1ed11bc0-fe01-422d-a28d-7189f7c454c6"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_facilities_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[Facility](/docs/Guide/API/schema#facility)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "regulatory_status_name": "string",
+  "facility_type_name": "string",
+  "facility_type_parent": "string",
+  "owner_name": "string",
+  "owner_type_name": "string",
+  "owner_type": "string",
+  "operation_status_name": "string",
+  "admission_status_name": "string",
+  "county": "string",
+  "constituency": "string",
+  "constituency_name": "string",
+  "ward_name": "string",
+  "average_rating": "string",
+  "facility_services": "string",
+  "facility_infrastructure": "string",
+  "facility_contacts": "string",
+  "facility_humanresources": "string",
+  "is_approved": "string",
+  "has_edits": "string",
+  "latest_update": "string",
+  "regulatory_body_name": "string",
+  "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+  "date_requested": "string",
+  "date_approved": "string",
+  "latest_approval_or_rejection": "string",
+  "sub_county_name": "string",
+  "sub_county_id": "string",
+  "county_name": "string",
+  "constituency_id": "string",
+  "county_id": "string",
+  "keph_level_name": "string",
+  "lat_long": "string",
+  "is_complete": "string",
+  "in_complete_details": "string",
+  "facility_checklist_document": "string",
+  "facility_license_document": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "official_name": "string",
+  "code": "string",
+  "registration_number": "string",
+  "abbreviation": "string",
+  "description": "string",
+  "number_of_beds": 2147483647,
+  "number_of_cots": 2147483647,
+  "number_of_emergency_casualty_beds": 2147483647,
+  "number_of_icu_beds": 2147483647,
+  "number_of_hdu_beds": 2147483647,
+  "number_of_inpatient_beds": 2147483647,
+  "number_of_maternity_beds": 2147483647,
+  "number_of_isolation_beds": 2147483647,
+  "number_of_general_theatres": 2147483647,
+  "number_of_maternity_theatres": 2147483647,
+  "open_whole_day": true,
+  "open_public_holidays": true,
+  "open_normal_day": true,
+  "open_weekends": true,
+  "open_late_night": true,
+  "is_classified": true,
+  "is_published": true,
+  "accredited_lab_iso_15189": true,
+  "attributes": "string",
+  "regulated": true,
+  "approved": true,
+  "rejected": true,
+  "bank_name": "string",
+  "branch_name": "string",
+  "bank_account": "string",
+  "facility_catchment_population": -2147483648,
+  "town_name": "string",
+  "nearest_landmark": "string",
+  "plot_number": "string",
+  "location_desc": "string",
+  "closed": true,
+  "closed_date": "2019-08-24T14:15:22Z",
+  "approvalrejection_date": "2019-08-24T14:15:22Z",
+  "closing_reason": "string",
+  "date_established": "2019-08-24",
+  "license_number": "string",
+  "admitting_maternity_only": true,
+  "admitting_maternity_general": true,
+  "reporting_in_dhis": true,
+  "nhif_accreditation": true,
+  "approved_national_level": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
+  "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+  "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999",
+  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+  "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "town": "4fd742fe-0df3-471a-94cf-f763f28ca892",
+  "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394",
+  "admission_status": "1ed11bc0-fe01-422d-a28d-7189f7c454c6",
+  "contacts": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_facilities_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[Facility](/docs/Guide/API/schema#facility)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_facilities_read
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/facilities/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/facilities/{id}/`
+
+Retrieves a particular facility
+
+<h3 id="api_facilities_facilities_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this facility.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "regulatory_status_name": "string",
+  "facility_type_name": "string",
+  "facility_type_parent": "string",
+  "owner_name": "string",
+  "owner_type_name": "string",
+  "owner_type": "string",
+  "operation_status_name": "string",
+  "admission_status_name": "string",
+  "county": "string",
+  "constituency": "string",
+  "constituency_name": "string",
+  "ward_name": "string",
+  "average_rating": "string",
+  "facility_services": "string",
+  "facility_infrastructure": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "infrastructure_name": "string",
+      "option_display_value": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "count": -2147483648,
+      "present": true,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "infrastructure": "1d1f492c-f2d6-4e1d-bc79-8be05af7e78c"
+    }
+  ],
+  "facility_contacts": "string",
+  "facility_humanresources": "string",
+  "is_approved": "string",
+  "has_edits": "string",
+  "latest_update": "string",
+  "regulatory_body_name": "string",
+  "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+  "date_requested": "string",
+  "date_approved": "string",
+  "latest_approval_or_rejection": "string",
+  "sub_county_name": "string",
+  "sub_county_id": "string",
+  "county_name": "string",
+  "constituency_id": "string",
+  "county_id": "string",
+  "keph_level_name": "string",
+  "lat_long": "string",
+  "is_complete": "string",
+  "in_complete_details": "string",
+  "facility_checklist_document": "string",
+  "facility_license_document": "string",
+  "coordinates": "string",
+  "latest_approval": "string",
+  "county_code": "string",
+  "constituency_code": "string",
+  "facility_specialists": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "speciality_name": "string",
+      "option_display_value": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "count": -2147483648,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "speciality": "3cbdb815-046e-48df-9567-acbaf1b59428"
+    }
+  ],
+  "ward_code": "string",
+  "service_catalogue_active": "string",
+  "facility_units": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "regulation_status": "string",
+      "unit_name": "string",
+      "regulating_body_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "license_number": "string",
+      "registration_number": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "unit": "96a6aa1e-fb68-45e6-a443-0913abfa47dd"
+    }
+  ],
+  "officer_in_charge": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "official_name": "string",
+  "code": "string",
+  "registration_number": "string",
+  "abbreviation": "string",
+  "description": "string",
+  "number_of_beds": 2147483647,
+  "number_of_cots": 2147483647,
+  "number_of_emergency_casualty_beds": 2147483647,
+  "number_of_icu_beds": 2147483647,
+  "number_of_hdu_beds": 2147483647,
+  "number_of_inpatient_beds": 2147483647,
+  "number_of_maternity_beds": 2147483647,
+  "number_of_isolation_beds": 2147483647,
+  "number_of_general_theatres": 2147483647,
+  "number_of_maternity_theatres": 2147483647,
+  "open_whole_day": true,
+  "open_public_holidays": true,
+  "open_normal_day": true,
+  "open_weekends": true,
+  "open_late_night": true,
+  "is_classified": true,
+  "is_published": true,
+  "accredited_lab_iso_15189": true,
+  "regulated": true,
+  "approved": true,
+  "rejected": true,
+  "bank_name": "string",
+  "branch_name": "string",
+  "bank_account": "string",
+  "facility_catchment_population": -2147483648,
+  "town_name": "string",
+  "nearest_landmark": "string",
+  "plot_number": "string",
+  "location_desc": "string",
+  "closed": true,
+  "closed_date": "2019-08-24T14:15:22Z",
+  "approvalrejection_date": "2019-08-24T14:15:22Z",
+  "closing_reason": "string",
+  "date_established": "2019-08-24",
+  "license_number": "string",
+  "admitting_maternity_only": true,
+  "admitting_maternity_general": true,
+  "reporting_in_dhis": true,
+  "nhif_accreditation": true,
+  "approved_national_level": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
+  "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+  "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999",
+  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+  "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "town": "4fd742fe-0df3-471a-94cf-f763f28ca892",
+  "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394",
+  "admission_status": "1ed11bc0-fe01-422d-a28d-7189f7c454c6",
+  "contacts": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_facilities_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityDetail](/docs/Guide/API/schema#facilitydetail)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_facilities_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "facility_infrastructure": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "count": -2147483648,
+      "present": true,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "infrastructure": "1d1f492c-f2d6-4e1d-bc79-8be05af7e78c"
+    }
+  ],
+  "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+  "facility_specialists": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "count": -2147483648,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "speciality": "3cbdb815-046e-48df-9567-acbaf1b59428"
+    }
+  ],
+  "facility_units": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "license_number": "string",
+      "registration_number": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "unit": "96a6aa1e-fb68-45e6-a443-0913abfa47dd"
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "official_name": "string",
+  "registration_number": "string",
+  "abbreviation": "string",
+  "description": "string",
+  "number_of_beds": 2147483647,
+  "number_of_cots": 2147483647,
+  "number_of_emergency_casualty_beds": 2147483647,
+  "number_of_icu_beds": 2147483647,
+  "number_of_hdu_beds": 2147483647,
+  "number_of_inpatient_beds": 2147483647,
+  "number_of_maternity_beds": 2147483647,
+  "number_of_isolation_beds": 2147483647,
+  "number_of_general_theatres": 2147483647,
+  "number_of_maternity_theatres": 2147483647,
+  "open_whole_day": true,
+  "open_public_holidays": true,
+  "open_normal_day": true,
+  "open_weekends": true,
+  "open_late_night": true,
+  "is_classified": true,
+  "is_published": true,
+  "accredited_lab_iso_15189": true,
+  "regulated": true,
+  "approved": true,
+  "rejected": true,
+  "bank_name": "string",
+  "branch_name": "string",
+  "bank_account": "string",
+  "facility_catchment_population": -2147483648,
+  "town_name": "string",
+  "nearest_landmark": "string",
+  "plot_number": "string",
+  "location_desc": "string",
+  "closed": true,
+  "closed_date": "2019-08-24T14:15:22Z",
+  "approvalrejection_date": "2019-08-24T14:15:22Z",
+  "closing_reason": "string",
+  "date_established": "2019-08-24",
+  "license_number": "string",
+  "admitting_maternity_only": true,
+  "admitting_maternity_general": true,
+  "reporting_in_dhis": true,
+  "nhif_accreditation": true,
+  "approved_national_level": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
+  "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+  "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999",
+  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+  "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "town": "4fd742fe-0df3-471a-94cf-f763f28ca892",
+  "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394",
+  "admission_status": "1ed11bc0-fe01-422d-a28d-7189f7c454c6"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/facilities/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/facilities/facilities/{id}/`
+
+Retrieves a particular facility
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "facility_infrastructure": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "count": -2147483648,
+      "present": true,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "infrastructure": "1d1f492c-f2d6-4e1d-bc79-8be05af7e78c"
+    }
+  ],
+  "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+  "facility_specialists": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "count": -2147483648,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "speciality": "3cbdb815-046e-48df-9567-acbaf1b59428"
+    }
+  ],
+  "facility_units": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "license_number": "string",
+      "registration_number": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "unit": "96a6aa1e-fb68-45e6-a443-0913abfa47dd"
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "official_name": "string",
+  "registration_number": "string",
+  "abbreviation": "string",
+  "description": "string",
+  "number_of_beds": 2147483647,
+  "number_of_cots": 2147483647,
+  "number_of_emergency_casualty_beds": 2147483647,
+  "number_of_icu_beds": 2147483647,
+  "number_of_hdu_beds": 2147483647,
+  "number_of_inpatient_beds": 2147483647,
+  "number_of_maternity_beds": 2147483647,
+  "number_of_isolation_beds": 2147483647,
+  "number_of_general_theatres": 2147483647,
+  "number_of_maternity_theatres": 2147483647,
+  "open_whole_day": true,
+  "open_public_holidays": true,
+  "open_normal_day": true,
+  "open_weekends": true,
+  "open_late_night": true,
+  "is_classified": true,
+  "is_published": true,
+  "accredited_lab_iso_15189": true,
+  "regulated": true,
+  "approved": true,
+  "rejected": true,
+  "bank_name": "string",
+  "branch_name": "string",
+  "bank_account": "string",
+  "facility_catchment_population": -2147483648,
+  "town_name": "string",
+  "nearest_landmark": "string",
+  "plot_number": "string",
+  "location_desc": "string",
+  "closed": true,
+  "closed_date": "2019-08-24T14:15:22Z",
+  "approvalrejection_date": "2019-08-24T14:15:22Z",
+  "closing_reason": "string",
+  "date_established": "2019-08-24",
+  "license_number": "string",
+  "admitting_maternity_only": true,
+  "admitting_maternity_general": true,
+  "reporting_in_dhis": true,
+  "nhif_accreditation": true,
+  "approved_national_level": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
+  "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+  "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999",
+  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+  "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "town": "4fd742fe-0df3-471a-94cf-f763f28ca892",
+  "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394",
+  "admission_status": "1ed11bc0-fe01-422d-a28d-7189f7c454c6"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_facilities_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[FacilityDetail](/docs/Guide/API/schema#facilitydetail)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this facility.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "regulatory_status_name": "string",
+  "facility_type_name": "string",
+  "facility_type_parent": "string",
+  "owner_name": "string",
+  "owner_type_name": "string",
+  "owner_type": "string",
+  "operation_status_name": "string",
+  "admission_status_name": "string",
+  "county": "string",
+  "constituency": "string",
+  "constituency_name": "string",
+  "ward_name": "string",
+  "average_rating": "string",
+  "facility_services": "string",
+  "facility_infrastructure": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "infrastructure_name": "string",
+      "option_display_value": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "count": -2147483648,
+      "present": true,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "infrastructure": "1d1f492c-f2d6-4e1d-bc79-8be05af7e78c"
+    }
+  ],
+  "facility_contacts": "string",
+  "facility_humanresources": "string",
+  "is_approved": "string",
+  "has_edits": "string",
+  "latest_update": "string",
+  "regulatory_body_name": "string",
+  "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+  "date_requested": "string",
+  "date_approved": "string",
+  "latest_approval_or_rejection": "string",
+  "sub_county_name": "string",
+  "sub_county_id": "string",
+  "county_name": "string",
+  "constituency_id": "string",
+  "county_id": "string",
+  "keph_level_name": "string",
+  "lat_long": "string",
+  "is_complete": "string",
+  "in_complete_details": "string",
+  "facility_checklist_document": "string",
+  "facility_license_document": "string",
+  "coordinates": "string",
+  "latest_approval": "string",
+  "county_code": "string",
+  "constituency_code": "string",
+  "facility_specialists": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "speciality_name": "string",
+      "option_display_value": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "count": -2147483648,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "speciality": "3cbdb815-046e-48df-9567-acbaf1b59428"
+    }
+  ],
+  "ward_code": "string",
+  "service_catalogue_active": "string",
+  "facility_units": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "regulation_status": "string",
+      "unit_name": "string",
+      "regulating_body_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "license_number": "string",
+      "registration_number": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "unit": "96a6aa1e-fb68-45e6-a443-0913abfa47dd"
+    }
+  ],
+  "officer_in_charge": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "official_name": "string",
+  "code": "string",
+  "registration_number": "string",
+  "abbreviation": "string",
+  "description": "string",
+  "number_of_beds": 2147483647,
+  "number_of_cots": 2147483647,
+  "number_of_emergency_casualty_beds": 2147483647,
+  "number_of_icu_beds": 2147483647,
+  "number_of_hdu_beds": 2147483647,
+  "number_of_inpatient_beds": 2147483647,
+  "number_of_maternity_beds": 2147483647,
+  "number_of_isolation_beds": 2147483647,
+  "number_of_general_theatres": 2147483647,
+  "number_of_maternity_theatres": 2147483647,
+  "open_whole_day": true,
+  "open_public_holidays": true,
+  "open_normal_day": true,
+  "open_weekends": true,
+  "open_late_night": true,
+  "is_classified": true,
+  "is_published": true,
+  "accredited_lab_iso_15189": true,
+  "regulated": true,
+  "approved": true,
+  "rejected": true,
+  "bank_name": "string",
+  "branch_name": "string",
+  "bank_account": "string",
+  "facility_catchment_population": -2147483648,
+  "town_name": "string",
+  "nearest_landmark": "string",
+  "plot_number": "string",
+  "location_desc": "string",
+  "closed": true,
+  "closed_date": "2019-08-24T14:15:22Z",
+  "approvalrejection_date": "2019-08-24T14:15:22Z",
+  "closing_reason": "string",
+  "date_established": "2019-08-24",
+  "license_number": "string",
+  "admitting_maternity_only": true,
+  "admitting_maternity_general": true,
+  "reporting_in_dhis": true,
+  "nhif_accreditation": true,
+  "approved_national_level": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
+  "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+  "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999",
+  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+  "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "town": "4fd742fe-0df3-471a-94cf-f763f28ca892",
+  "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394",
+  "admission_status": "1ed11bc0-fe01-422d-a28d-7189f7c454c6",
+  "contacts": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_facilities_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityDetail](/docs/Guide/API/schema#facilitydetail)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_facilities_partial_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "facility_infrastructure": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "count": -2147483648,
+      "present": true,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "infrastructure": "1d1f492c-f2d6-4e1d-bc79-8be05af7e78c"
+    }
+  ],
+  "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+  "facility_specialists": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "count": -2147483648,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "speciality": "3cbdb815-046e-48df-9567-acbaf1b59428"
+    }
+  ],
+  "facility_units": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "license_number": "string",
+      "registration_number": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "unit": "96a6aa1e-fb68-45e6-a443-0913abfa47dd"
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "official_name": "string",
+  "registration_number": "string",
+  "abbreviation": "string",
+  "description": "string",
+  "number_of_beds": 2147483647,
+  "number_of_cots": 2147483647,
+  "number_of_emergency_casualty_beds": 2147483647,
+  "number_of_icu_beds": 2147483647,
+  "number_of_hdu_beds": 2147483647,
+  "number_of_inpatient_beds": 2147483647,
+  "number_of_maternity_beds": 2147483647,
+  "number_of_isolation_beds": 2147483647,
+  "number_of_general_theatres": 2147483647,
+  "number_of_maternity_theatres": 2147483647,
+  "open_whole_day": true,
+  "open_public_holidays": true,
+  "open_normal_day": true,
+  "open_weekends": true,
+  "open_late_night": true,
+  "is_classified": true,
+  "is_published": true,
+  "accredited_lab_iso_15189": true,
+  "regulated": true,
+  "approved": true,
+  "rejected": true,
+  "bank_name": "string",
+  "branch_name": "string",
+  "bank_account": "string",
+  "facility_catchment_population": -2147483648,
+  "town_name": "string",
+  "nearest_landmark": "string",
+  "plot_number": "string",
+  "location_desc": "string",
+  "closed": true,
+  "closed_date": "2019-08-24T14:15:22Z",
+  "approvalrejection_date": "2019-08-24T14:15:22Z",
+  "closing_reason": "string",
+  "date_established": "2019-08-24",
+  "license_number": "string",
+  "admitting_maternity_only": true,
+  "admitting_maternity_general": true,
+  "reporting_in_dhis": true,
+  "nhif_accreditation": true,
+  "approved_national_level": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
+  "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+  "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999",
+  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+  "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "town": "4fd742fe-0df3-471a-94cf-f763f28ca892",
+  "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394",
+  "admission_status": "1ed11bc0-fe01-422d-a28d-7189f7c454c6"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/facilities/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/facilities/facilities/{id}/`
+
+Retrieves a particular facility
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "facility_infrastructure": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "count": -2147483648,
+      "present": true,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "infrastructure": "1d1f492c-f2d6-4e1d-bc79-8be05af7e78c"
+    }
+  ],
+  "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+  "facility_specialists": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "count": -2147483648,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "speciality": "3cbdb815-046e-48df-9567-acbaf1b59428"
+    }
+  ],
+  "facility_units": [
+    {
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "license_number": "string",
+      "registration_number": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "unit": "96a6aa1e-fb68-45e6-a443-0913abfa47dd"
+    }
+  ],
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "official_name": "string",
+  "registration_number": "string",
+  "abbreviation": "string",
+  "description": "string",
+  "number_of_beds": 2147483647,
+  "number_of_cots": 2147483647,
+  "number_of_emergency_casualty_beds": 2147483647,
+  "number_of_icu_beds": 2147483647,
+  "number_of_hdu_beds": 2147483647,
+  "number_of_inpatient_beds": 2147483647,
+  "number_of_maternity_beds": 2147483647,
+  "number_of_isolation_beds": 2147483647,
+  "number_of_general_theatres": 2147483647,
+  "number_of_maternity_theatres": 2147483647,
+  "open_whole_day": true,
+  "open_public_holidays": true,
+  "open_normal_day": true,
+  "open_weekends": true,
+  "open_late_night": true,
+  "is_classified": true,
+  "is_published": true,
+  "accredited_lab_iso_15189": true,
+  "regulated": true,
+  "approved": true,
+  "rejected": true,
+  "bank_name": "string",
+  "branch_name": "string",
+  "bank_account": "string",
+  "facility_catchment_population": -2147483648,
+  "town_name": "string",
+  "nearest_landmark": "string",
+  "plot_number": "string",
+  "location_desc": "string",
+  "closed": true,
+  "closed_date": "2019-08-24T14:15:22Z",
+  "approvalrejection_date": "2019-08-24T14:15:22Z",
+  "closing_reason": "string",
+  "date_established": "2019-08-24",
+  "license_number": "string",
+  "admitting_maternity_only": true,
+  "admitting_maternity_general": true,
+  "reporting_in_dhis": true,
+  "nhif_accreditation": true,
+  "approved_national_level": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
+  "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+  "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999",
+  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+  "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "town": "4fd742fe-0df3-471a-94cf-f763f28ca892",
+  "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394",
+  "admission_status": "1ed11bc0-fe01-422d-a28d-7189f7c454c6"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_facilities_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[FacilityDetail](/docs/Guide/API/schema#facilitydetail)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this facility.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "regulatory_status_name": "string",
+  "facility_type_name": "string",
+  "facility_type_parent": "string",
+  "owner_name": "string",
+  "owner_type_name": "string",
+  "owner_type": "string",
+  "operation_status_name": "string",
+  "admission_status_name": "string",
+  "county": "string",
+  "constituency": "string",
+  "constituency_name": "string",
+  "ward_name": "string",
+  "average_rating": "string",
+  "facility_services": "string",
+  "facility_infrastructure": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "infrastructure_name": "string",
+      "option_display_value": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "count": -2147483648,
+      "present": true,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "infrastructure": "1d1f492c-f2d6-4e1d-bc79-8be05af7e78c"
+    }
+  ],
+  "facility_contacts": "string",
+  "facility_humanresources": "string",
+  "is_approved": "string",
+  "has_edits": "string",
+  "latest_update": "string",
+  "regulatory_body_name": "string",
+  "owner": "534359f7-5407-4b19-ba92-c71c370022a5",
+  "date_requested": "string",
+  "date_approved": "string",
+  "latest_approval_or_rejection": "string",
+  "sub_county_name": "string",
+  "sub_county_id": "string",
+  "county_name": "string",
+  "constituency_id": "string",
+  "county_id": "string",
+  "keph_level_name": "string",
+  "lat_long": "string",
+  "is_complete": "string",
+  "in_complete_details": "string",
+  "facility_checklist_document": "string",
+  "facility_license_document": "string",
+  "coordinates": "string",
+  "latest_approval": "string",
+  "county_code": "string",
+  "constituency_code": "string",
+  "facility_specialists": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "speciality_name": "string",
+      "option_display_value": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "count": -2147483648,
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "speciality": "3cbdb815-046e-48df-9567-acbaf1b59428"
+    }
+  ],
+  "ward_code": "string",
+  "service_catalogue_active": "string",
+  "facility_units": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "regulation_status": "string",
+      "unit_name": "string",
+      "regulating_body_name": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "license_number": "string",
+      "registration_number": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "unit": "96a6aa1e-fb68-45e6-a443-0913abfa47dd"
+    }
+  ],
+  "officer_in_charge": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "official_name": "string",
+  "code": "string",
+  "registration_number": "string",
+  "abbreviation": "string",
+  "description": "string",
+  "number_of_beds": 2147483647,
+  "number_of_cots": 2147483647,
+  "number_of_emergency_casualty_beds": 2147483647,
+  "number_of_icu_beds": 2147483647,
+  "number_of_hdu_beds": 2147483647,
+  "number_of_inpatient_beds": 2147483647,
+  "number_of_maternity_beds": 2147483647,
+  "number_of_isolation_beds": 2147483647,
+  "number_of_general_theatres": 2147483647,
+  "number_of_maternity_theatres": 2147483647,
+  "open_whole_day": true,
+  "open_public_holidays": true,
+  "open_normal_day": true,
+  "open_weekends": true,
+  "open_late_night": true,
+  "is_classified": true,
+  "is_published": true,
+  "accredited_lab_iso_15189": true,
+  "regulated": true,
+  "approved": true,
+  "rejected": true,
+  "bank_name": "string",
+  "branch_name": "string",
+  "bank_account": "string",
+  "facility_catchment_population": -2147483648,
+  "town_name": "string",
+  "nearest_landmark": "string",
+  "plot_number": "string",
+  "location_desc": "string",
+  "closed": true,
+  "closed_date": "2019-08-24T14:15:22Z",
+  "approvalrejection_date": "2019-08-24T14:15:22Z",
+  "closing_reason": "string",
+  "date_established": "2019-08-24",
+  "license_number": "string",
+  "admitting_maternity_only": true,
+  "admitting_maternity_general": true,
+  "reporting_in_dhis": true,
+  "nhif_accreditation": true,
+  "approved_national_level": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility_type": "96f90b6c-0dda-4481-a6f6-685b40114998",
+  "operation_status": "ab22567a-552a-4f06-a7b6-149c21bde7c6",
+  "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+  "parent": "42e2bc1b-6741-4e2e-b138-97b4a342c999",
+  "regulatory_body": "5cc1a352-328e-4e0a-b0cc-f1e5c296e6ec",
+  "keph_level": "381f0930-1e91-44d4-9a50-de1036776cf2",
+  "sub_county": "c4b647d7-b523-4210-a0fc-ee9801d12947",
+  "town": "4fd742fe-0df3-471a-94cf-f763f28ca892",
+  "regulation_status": "ef875687-e0ca-4a9e-9e5b-d6434258e394",
+  "admission_status": "1ed11bc0-fe01-422d-a28d-7189f7c454c6",
+  "contacts": [
+    "497f6eca-6276-4993-bfeb-53cbbbba6f08"
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_facilities_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityDetail](/docs/Guide/API/schema#facilitydetail)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_facilities_delete
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/facilities/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/facilities/facilities/{id}/`
+
+Retrieves a particular facility
+
+<h3 id="api_facilities_facilities_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this facility.|
+
+<h3 id="api_facilities_facilities_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_facilities_list_list
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/facilities_list/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/facilities_list/`
+
+Returns a slimmed payload of the facility.
+
+<h3 id="api_facilities_facilities_list_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "code": "string",
+      "name": "string",
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "county": "string",
+      "constituency": "string",
+      "facility_type_name": "string",
+      "owner_name": "string",
+      "owner_type_name": "string",
+      "regulatory_status_name": "string",
+      "ward": "432f3cbe-d829-4f01-af47-94064c183942",
+      "operation_status_name": "string",
+      "admission_status_name": "string",
+      "ward_name": "string",
+      "is_published": true,
+      "is_approved": "string",
+      "has_edits": "string",
+      "rejected": true
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_facilities_list_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_facilities_facilities_list_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[FacilityList](/docs/Guide/API/schema#facilitylist)]|true|none|none|
+|»» code|string|false|read-only|A sequential number allocated to each facility|
+|»» name|string|true|none|This is the unique name of the facility|
+|»» id|string(uuid)|false|read-only|none|
+|»» county|string|false|read-only|none|
+|»» constituency|string|false|read-only|none|
+|»» facility_type_name|string|false|read-only|none|
+|»» owner_name|string|false|read-only|none|
+|»» owner_type_name|string|false|read-only|none|
+|»» regulatory_status_name|string|false|read-only|none|
+|»» ward|string(uuid)¦null|false|none|County ward in which the facility is located|
+|»» operation_status_name|string|false|read-only|none|
+|»» admission_status_name|string|false|read-only|none|
+|»» ward_name|string|false|read-only|none|
+|»» is_published|boolean|false|none|COnfirmation by the CHRIO that the facility is okay|
+|»» is_approved|string|false|read-only|none|
+|»» has_edits|string|false|read-only|none|
+|»» rejected|boolean|false|none|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::

@@ -1,0 +1,490 @@
+---
+sidebar_position: 11
+title: Facilities-Regulation-Status
+---
+
+
+# API
+
+This is a guide of facilities-regulation-status enpoint
+
+import BrowserWindow from '../../../../src/components/BrowserWindow'
+
+
+### api facilities_regulation_status_read
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/regulation_status/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/regulation_status/{id}/`
+
+Retrieves a particular regulation status
+
+<h3 id="api_facilities_regulation_status_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this regulation status.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "next_state_name": "string",
+  "previous_state_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "is_initial_state": true,
+  "is_final_state": true,
+  "is_default": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "previous_status": "e735b27b-e10f-476e-9c51-4e2f6baade73",
+  "next_status": "dd007b8c-2b00-49a9-a744-39cf59834d69"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_regulation_status_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulationStatus](/docs/Guide/API/schema#regulationstatus)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_regulation_status_create
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "is_initial_state": true,
+  "is_final_state": true,
+  "is_default": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "previous_status": "e735b27b-e10f-476e-9c51-4e2f6baade73",
+  "next_status": "dd007b8c-2b00-49a9-a744-39cf59834d69"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/regulation_status/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/facilities/regulation_status/`
+
+*Lists and creates regulation statuses*
+
+name -- name of a regulation status
+description -- description of a regulation status
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "is_initial_state": true,
+  "is_final_state": true,
+  "is_default": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "previous_status": "e735b27b-e10f-476e-9c51-4e2f6baade73",
+  "next_status": "dd007b8c-2b00-49a9-a744-39cf59834d69"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_regulation_status_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[RegulationStatus](/docs/Guide/API/schema#regulationstatus)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "next_state_name": "string",
+  "previous_state_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "is_initial_state": true,
+  "is_final_state": true,
+  "is_default": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "previous_status": "e735b27b-e10f-476e-9c51-4e2f6baade73",
+  "next_status": "dd007b8c-2b00-49a9-a744-39cf59834d69"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_regulation_status_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[RegulationStatus](/docs/Guide/API/schema#regulationstatus)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_regulation_status_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "is_initial_state": true,
+  "is_final_state": true,
+  "is_default": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "previous_status": "e735b27b-e10f-476e-9c51-4e2f6baade73",
+  "next_status": "dd007b8c-2b00-49a9-a744-39cf59834d69"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/regulation_status/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/facilities/regulation_status/{id}/`
+
+Retrieves a particular regulation status
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "is_initial_state": true,
+  "is_final_state": true,
+  "is_default": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "previous_status": "e735b27b-e10f-476e-9c51-4e2f6baade73",
+  "next_status": "dd007b8c-2b00-49a9-a744-39cf59834d69"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_regulation_status_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[RegulationStatus](/docs/Guide/API/schema#regulationstatus)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this regulation status.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "next_state_name": "string",
+  "previous_state_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "is_initial_state": true,
+  "is_final_state": true,
+  "is_default": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "previous_status": "e735b27b-e10f-476e-9c51-4e2f6baade73",
+  "next_status": "dd007b8c-2b00-49a9-a744-39cf59834d69"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_regulation_status_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulationStatus](/docs/Guide/API/schema#regulationstatus)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_regulation_status_partial_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "is_initial_state": true,
+  "is_final_state": true,
+  "is_default": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "previous_status": "e735b27b-e10f-476e-9c51-4e2f6baade73",
+  "next_status": "dd007b8c-2b00-49a9-a744-39cf59834d69"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/regulation_status/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/facilities/regulation_status/{id}/`
+
+Retrieves a particular regulation status
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "name": "string",
+  "description": "string",
+  "is_initial_state": true,
+  "is_final_state": true,
+  "is_default": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "previous_status": "e735b27b-e10f-476e-9c51-4e2f6baade73",
+  "next_status": "dd007b8c-2b00-49a9-a744-39cf59834d69"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_regulation_status_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[RegulationStatus](/docs/Guide/API/schema#regulationstatus)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this regulation status.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "next_state_name": "string",
+  "previous_state_name": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "name": "string",
+  "description": "string",
+  "is_initial_state": true,
+  "is_final_state": true,
+  "is_default": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "previous_status": "e735b27b-e10f-476e-9c51-4e2f6baade73",
+  "next_status": "dd007b8c-2b00-49a9-a744-39cf59834d69"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_regulation_status_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[RegulationStatus](/docs/Guide/API/schema#regulationstatus)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_regulation_status_delete
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/regulation_status/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/facilities/regulation_status/{id}/`
+
+Retrieves a particular regulation status
+
+<h3 id="api_facilities_regulation_status_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this regulation status.|
+
+<h3 id="api_facilities_regulation_status_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::

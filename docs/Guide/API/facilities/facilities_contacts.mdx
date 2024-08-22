@@ -1,0 +1,553 @@
+---
+sidebar_position: 1
+title: Facilities-Contacts
+---
+
+
+# API
+
+This is a guide of facilities-contacts enpoint
+
+import BrowserWindow from '../../../../src/components/BrowserWindow'
+
+### api facilities_contacts_list
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/contacts/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/contacts/`
+
+*Lists and creates facility contacts*
+
+facility -- A facility's pk
+contact -- A contact's pk
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+<h3 id="api_facilities_contacts_list-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|ordering|query|string|false|Which field to use when ordering the results.|
+|page|query|integer|false|A page number within the paginated result set.|
+|page_size|query|integer|false|Number of results to return per page.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "count": 0,
+  "next": "http://example.com",
+  "previous": "http://example.com",
+  "results": [
+    {
+      "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+      "contact_type": "string",
+      "actual_contact": "string",
+      "created": "2019-08-24T14:15:22Z",
+      "updated": "2019-08-24T14:15:22Z",
+      "deleted": true,
+      "active": true,
+      "search": "string",
+      "created_by": 0,
+      "updated_by": 0,
+      "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+      "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+    }
+  ]
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_contacts_list-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|Inline|
+
+<h3 id="api_facilities_contacts_list-responseschema">Response Schema</h3>
+
+Status Code **200**
+
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|» count|integer|true|none|none|
+|» next|string(uri)¦null|false|none|none|
+|» previous|string(uri)¦null|false|none|none|
+|» results|[[FacilityContact](/docs/Guide/API/schema#facilitycontact)]|true|none|none|
+|»» id|string(uuid)|false|read-only|none|
+|»» contact_type|string|false|read-only|none|
+|»» actual_contact|string|false|read-only|none|
+|»» created|string(date-time)|false|none|none|
+|»» updated|string(date-time)|false|none|none|
+|»» deleted|boolean|false|none|none|
+|»» active|boolean|false|none|Indicates whether the record has been retired?|
+|»» search|string|false|read-only|none|
+|»» created_by|integer|false|none|none|
+|»» updated_by|integer|false|none|none|
+|»» facility|string(uuid)|true|none|none|
+|»» contact|string(uuid)|true|none|none|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+
+### api facilities_contacts_create
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/contacts/',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`POST /api/facilities/contacts/`
+
+*Lists and creates facility contacts*
+
+facility -- A facility's pk
+contact -- A contact's pk
+Created --  Date the record was Created
+Updated -- Date the record was Updated
+Created_by -- User who created the record
+Updated_by -- User who updated the record
+active  -- Boolean is the record active
+deleted -- Boolean is the record deleted
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_contacts_create-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[FacilityContact](/docs/Guide/API/schema#facilitycontact)|true|none|
+
+> Example responses
+
+> 201 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "contact_type": "string",
+  "actual_contact": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_contacts_create-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|none|[FacilityContact](/docs/Guide/API/schema#facilitycontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_contacts_read
+
+
+
+> Code samples
+
+```javascript
+
+const headers = {
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/contacts/{id}/',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`GET /api/facilities/contacts/{id}/`
+
+Retrieves a particular facility contact
+
+<h3 id="api_facilities_contacts_read-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this facility contact.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "contact_type": "string",
+  "actual_contact": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_contacts_read-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityContact](/docs/Guide/API/schema#facilitycontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_contacts_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/contacts/{id}/',
+{
+  method: 'PUT',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PUT /api/facilities/contacts/{id}/`
+
+Retrieves a particular facility contact
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_contacts_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[FacilityContact](/docs/Guide/API/schema#facilitycontact)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this facility contact.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "contact_type": "string",
+  "actual_contact": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_contacts_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityContact](/docs/Guide/API/schema#facilitycontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_contacts_partial_update
+
+
+
+> Code samples
+
+```javascript
+const inputBody = '{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/contacts/{id}/',
+{
+  method: 'PATCH',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`PATCH /api/facilities/contacts/{id}/`
+
+Retrieves a particular facility contact
+
+> Body parameter
+
+<BrowserWindow>
+```json
+{
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_contacts_partial_update-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[FacilityContact](/docs/Guide/API/schema#facilitycontact)|true|none|
+|id|path|string(uuid)|true|A UUID string identifying this facility contact.|
+
+> Example responses
+
+> 200 Response
+
+<BrowserWindow>
+```json
+{
+  "id": "497f6eca-6276-4993-bfeb-53cbbbba6f08",
+  "contact_type": "string",
+  "actual_contact": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "updated": "2019-08-24T14:15:22Z",
+  "deleted": true,
+  "active": true,
+  "search": "string",
+  "created_by": 0,
+  "updated_by": 0,
+  "facility": "c7817696-f95c-43d7-adb1-358006544c72",
+  "contact": "ad596931-5d7c-4d2b-907e-5b64c9432eb4"
+}
+```
+</BrowserWindow>
+
+
+
+<h3 id="api_facilities_contacts_partial_update-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|none|[FacilityContact](/docs/Guide/API/schema#facilitycontact)|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
+
+### api facilities_contacts_delete
+
+
+
+> Code samples
+
+```javascript
+
+fetch('https://api.kmhfr.health.go.ke/api/facilities/contacts/{id}/',
+{
+  method: 'DELETE'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+`DELETE /api/facilities/contacts/{id}/`
+
+Retrieves a particular facility contact
+
+<h3 id="api_facilities_contacts_delete-parameters">Parameters</h3>
+
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string(uuid)|true|A UUID string identifying this facility contact.|
+
+<h3 id="api_facilities_contacts_delete-responses">Responses</h3>
+
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|none|None|
+
+:::note
+To perform this operation, you must be authenticated by means of one of the following methods:
+Basic
+:::
